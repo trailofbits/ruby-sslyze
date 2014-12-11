@@ -4,9 +4,9 @@ require File.expand_path('../lib/sslyze/version', __FILE__)
 
 Gem::Specification.new do |gem|
   gem.name          = "ruby-sslyze"
-  gem.version       = Sslyze::VERSION
-  gem.summary       = %q{TODO: Summary}
-  gem.description   = %q{TODO: Description}
+  gem.version       = SSLyze::VERSION
+  gem.summary       = %q{Ruby interface to sslyze}
+  gem.description   = %q{A ruby interface to the sslyze python utility}
   gem.license       = "MIT"
   gem.authors       = ["Hal Brodigan"]
   gem.email         = "hal@trailofbits.com"
@@ -17,9 +17,8 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ['lib']
 
+  gem.add_dependency 'rprogram', '~> 0.3'
+  gem.add_dependency 'nokogiri', '~> 1.0'
+
   gem.add_development_dependency 'bundler', '~> 1.0'
-  gem.add_development_dependency 'rake', '~> 0.8'
-  gem.add_development_dependency 'rspec', '~> 2.4'
-  gem.add_development_dependency 'rubygems-tasks', '~> 0.2'
-  gem.add_development_dependency 'yard', '~> 0.8'
 end

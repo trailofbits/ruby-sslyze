@@ -1,13 +1,13 @@
 # ruby-sslyze
 
-* [Homepage](https://github.com/postmodern/ruby-sslyze#readme)
-* [Issues](https://github.com/postmodern/ruby-sslyze/issues)
+* [Homepage](https://github.com/trailofbits/ruby-sslyze#readme)
+* [Issues](https://github.com/trailofbits/ruby-sslyze/issues)
 * [Documentation](http://rubydoc.info/gems/ruby-sslyze/frames)
 * [Email](mailto:hal at trailofbits.com)
 
 ## Description
 
-TODO: Description
+A Ruby interface to [sslyze] python utility.
 
 ## Features
 
@@ -16,6 +16,9 @@ TODO: Description
     require 'sslyze'
 
 ## Requirements
+
+* [rpgrogram] ~> 0.3
+* [nokogiri] ~> 1.0
 
 ## Install
 
@@ -26,3 +29,8 @@ TODO: Description
 Copyright (c) 2014 Hal Brodigan
 
 See {file:LICENSE.txt} for details.
+
+[sslyze]: https://github.com/nabla-c0d3/sslyze#readme
+
+[rpgoram]: https://github.com/postmodern/rprogram#readme
+[nokogiri]: http://www.nokogiri.org/
