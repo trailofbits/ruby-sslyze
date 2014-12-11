@@ -21,7 +21,7 @@ A Ruby interface to [sslyze] python utility.
 
 ## Requirements
 
-* [rpgrogram] ~> 0.3
+* [rprogram] ~> 0.3
 * [nokogiri] ~> 1.0
 
 ## Install
