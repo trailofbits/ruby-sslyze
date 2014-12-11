@@ -13,3 +13,6 @@ matrix:
 addons:
   code_climate:
     repo_token: 2a03fa37ce5a5cb21bb117a736be5d83dcf9f1c3ea2b248f7af4c0a7b330d8c8
+notifications:
+  webhooks:
+    secure: "MZpEWtCHZ2+kvWQeo3PwQQLwg/QeRwaxaUPynu1F1KsHOHhzzO1TOS4svF0kLOoRO7wNgqWo7WTUxtp/wQ//lJJd/e4Zl5phdR8acdxTnhRDEGUm9aE91LXq0zUSuXN8OsFtySRZ3sCAI4RYZKORU8XVSvAnk1X6hkexWcP7Q2M="
