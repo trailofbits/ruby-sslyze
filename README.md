@@ -1,5 +1,9 @@
 # ruby-sslyze
 
+[![Code Climate](https://codeclimate.com/github/trailofbits/ruby-sslyze/badges/gpa.svg)](https://codeclimate.com/github/trailofbits/ruby-sslyze)
+[![Test Coverage](https://codeclimate.com/github/trailofbits/ruby-sslyze/badges/coverage.svg)](https://codeclimate.com/github/trailofbits/ruby-sslyze)
+[![Build Status](https://travis-ci.org/trailofbits/ruby-sslyze.svg)](https://travis-ci.org/trailofbits/ruby-sslyze)
+
 * [Homepage](https://github.com/trailofbits/ruby-sslyze#readme)
 * [Issues](https://github.com/trailofbits/ruby-sslyze/issues)
 * [Documentation](http://rubydoc.info/gems/ruby-sslyze/frames)
