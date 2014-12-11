@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.license       = "MIT"
   gem.authors       = ["Hal Brodigan"]
   gem.email         = "hal@trailofbits.com"
-  gem.homepage      = "https://github.com/postmodern/ruby-sslyze#readme"
+  gem.homepage      = "https://github.com/trailofbits/ruby-sslyze#readme"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
