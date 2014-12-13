@@ -1,3 +1,4 @@
+require 'sslyze/cert_info'
 require 'sslyze/protocol'
 
 module SSLyze
