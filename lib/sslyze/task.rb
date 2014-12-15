@@ -56,5 +56,7 @@ module SSLyze
     # PluginCompression:
     long_option flag: '--compression'
 
+    non_option name: :targets, tailing: true
+
   end
 end
