@@ -3,15 +3,11 @@ require 'sslyze/cipher_suite'
 module SSLyze
   class Protocol
 
+    attr_reader :name
+
     def initialize(node)
       @node = node
-    end
-
-    #
-    # @return [String]
-    #
-    def name
-      @node.name
+      @name = @node.name.to_sym
     end
 
     #
