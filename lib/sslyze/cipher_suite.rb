@@ -4,6 +4,8 @@ require 'sslyze/key_exchange'
 module SSLyze
   class CipherSuite
 
+    include Types
+
     def initialize(node)
       @node = node
     end
