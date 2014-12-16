@@ -43,6 +43,12 @@ describe SSLyze::Target do
     end
   end
 
+  describe "#client_initiated_session_renegotiation?" do
+    it "should check canBeClientInitiated and !isSecure" do
+      expect(subject.client_initiated_session_renegotiation?).to be(false)
+    end
+  end
+
   describe "#sslv2" do
     it "must return a Protocol object" do
       expect(subject.sslv2).to be_kind_of(Protocol)

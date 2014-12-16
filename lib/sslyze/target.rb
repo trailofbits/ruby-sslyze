@@ -43,7 +43,14 @@ module SSLyze
     end
 
     def heartbleed?
-      @heartbleed ||= Boolean[@node.at('heartbleed/heartbleed/@isVulnerable').value]
+      Boolean[@node.at('heartbleed/heartbleed/@isVulnerable').value]
+    end
+
+    def client_initiated_session_renegotiation?
+      sessionRenegotiation = @node.at('reneg/sessionRenegotiation')
+
+      Boolean[sessionRenegotiation['canBeClientInitiated']] &&
+        !Boolean[sessionRenegotiation['isSecure']]
     end
 
     def sslv2
