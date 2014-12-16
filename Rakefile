@@ -32,5 +32,5 @@ YARD::Rake::YardocTask.new
 task :doc => :yard
 
 file 'spec/sslyze.xml' do
-  sh 'sslyze.py --xml_out spec/sslyze.xml --regular --timeout 5 twitter.com'
+  sh 'sslyze.py --xml_out spec/sslyze.xml --regular --timeout 5 twitter.com github.com:443'
 end

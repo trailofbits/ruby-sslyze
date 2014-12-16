@@ -1,8 +1,781 @@
 <?xml version="1.0" encoding="utf-8"?>
 <document SSLyzeVersion="SSLyze v0.10" SSLyzeWeb="https://github.com/nabla-c0d3/sslyze" title="SSLyze Scan Results">
   <invalidTargets/>
-  <results defaultTimeout="5" httpsTunnel="None" startTLS="None" totalScanTime="3.12702894211">
-    <target host="twitter.com" ip="199.59.148.82" port="443">
+  <results defaultTimeout="5" httpsTunnel="None" startTLS="None" totalScanTime="7.25445485115">
+    <target host="github.com" ip="192.30.252.131" port="443">
+      <certinfo argument="basic" title="Certificate Information">
+        <certificateChain>
+          <certificate position="leaf" sha1Fingerprint="a0c4a74600eda72dc0becb9a8cb607ca58ee745e">
+            <asPEM>-----BEGIN CERTIFICATE-----
+MIIF4DCCBMigAwIBAgIQDACTENIG2+M3VTWAEY3chzANBgkqhkiG9w0BAQsFADB1
+MQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3
+d3cuZGlnaWNlcnQuY29tMTQwMgYDVQQDEytEaWdpQ2VydCBTSEEyIEV4dGVuZGVk
+IFZhbGlkYXRpb24gU2VydmVyIENBMB4XDTE0MDQwODAwMDAwMFoXDTE2MDQxMjEy
+MDAwMFowgfAxHTAbBgNVBA8MFFByaXZhdGUgT3JnYW5pemF0aW9uMRMwEQYLKwYB
+BAGCNzwCAQMTAlVTMRkwFwYLKwYBBAGCNzwCAQITCERlbGF3YXJlMRAwDgYDVQQF
+Ewc1MTU3NTUwMRcwFQYDVQQJEw41NDggNHRoIFN0cmVldDEOMAwGA1UEERMFOTQx
+MDcxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1T
+YW4gRnJhbmNpc2NvMRUwEwYDVQQKEwxHaXRIdWIsIEluYy4xEzARBgNVBAMTCmdp
+dGh1Yi5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCx1Nw8r/3z
+Tu3BZ63myyLot+KrKPL33GJwCNEMr9YWaiGwNksXDTZjBK6/6iBRlWVm8r+5TaQM
+Kev1FbHoNbNwEJTVG1m0Jg/Wg1dZneF8Cd3gE8pNb0Obzc+HOhWnhd1mg+2TDP4r
+bTgceYiQz61YGC1R0cKj8keMbzgJubjvTJMLy4OUh+rgo7XZe5trD0P5yu6ADSin
+dvEl9ME1PPZ0rd5qM4J73P1LdqfC7vJqv6kkpl/nLnwO28N0c/p+xtjPYOs2ViG2
+wYq4JIJNeCS66R2hiqeHvmYlab++O3JuT+DkhSUIsZGJuNZ0ZXabLE9iH6H6Or6c
+JL+fyrDFwGeNAgMBAAGjggHuMIIB6jAfBgNVHSMEGDAWgBQ901Cl1qCt7vNKYApl
+0yHU+PjWDzAdBgNVHQ4EFgQUakOQfTuYFHJSlTqqKApD+FF+06YwJQYDVR0RBB4w
+HIIKZ2l0aHViLmNvbYIOd3d3LmdpdGh1Yi5jb20wDgYDVR0PAQH/BAQDAgWgMB0G
+A1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjB1BgNVHR8EbjBsMDSgMqAwhi5o
+dHRwOi8vY3JsMy5kaWdpY2VydC5jb20vc2hhMi1ldi1zZXJ2ZXItZzEuY3JsMDSg
+MqAwhi5odHRwOi8vY3JsNC5kaWdpY2VydC5jb20vc2hhMi1ldi1zZXJ2ZXItZzEu
+Y3JsMEIGA1UdIAQ7MDkwNwYJYIZIAYb9bAIBMCowKAYIKwYBBQUHAgEWHGh0dHBz
+Oi8vd3d3LmRpZ2ljZXJ0LmNvbS9DUFMwgYgGCCsGAQUFBwEBBHwwejAkBggrBgEF
+BQcwAYYYaHR0cDovL29jc3AuZGlnaWNlcnQuY29tMFIGCCsGAQUFBzAChkZodHRw
+Oi8vY2FjZXJ0cy5kaWdpY2VydC5jb20vRGlnaUNlcnRTSEEyRXh0ZW5kZWRWYWxp
+ZGF0aW9uU2VydmVyQ0EuY3J0MAwGA1UdEwEB/wQCMAAwDQYJKoZIhvcNAQELBQAD
+ggEBAG/nbcuC8++QhwnXDxUiLIz+06scipbbXRJd0XjAMbD/RciJ9wiYUhcfTEsg
+ZGpt21DXEL5+q/4vgNipSlhBaYFyGQiDm5IQTmIte0ZwQ26jUxMf4pOmI1v3kj43
+FHU7uUskQS6lPUgND5nqHkKXxv6V2qtHmssrA9YNQMEK93ga2rWDpK21mUkgLviT
+PB5sPdE7IzprOCp+Ynpf3RcFddAkXb6NqJoQRPrStMrv19C1dqUmJRwIQdhkkqev
+ff6IQDlhC8BIMKmCNK33cEYDfDWROtW7JNgBvBTwww8jO1gyug8SbGZ6bZ3k8OV8
+XX4C2NesiZcLYbc2n7B9O+63M2k=
+-----END CERTIFICATE-----</asPEM>
+            <subjectPublicKeyInfo>
+              <publicKey>
+                <modulus>00:b1:d4:dc:3c:af:fd:f3:4e:ed:c1:67:ad:e6:cb:22:e8:b7:e2:ab:28:f2:f7:dc:62:70:08:d1:0c:af:d6:16:6a:21:b0:36:4b:17:0d:36:63:04:ae:bf:ea:20:51:95:65:66:f2:bf:b9:4d:a4:0c:29:eb:f5:15:b1:e8:35:b3:70:10:94:d5:1b:59:b4:26:0f:d6:83:57:59:9d:e1:7c:09:dd:e0:13:ca:4d:6f:43:9b:cd:cf:87:3a:15:a7:85:dd:66:83:ed:93:0c:fe:2b:6d:38:1c:79:88:90:cf:ad:58:18:2d:51:d1:c2:a3:f2:47:8c:6f:38:09:b9:b8:ef:4c:93:0b:cb:83:94:87:ea:e0:a3:b5:d9:7b:9b:6b:0f:43:f9:ca:ee:80:0d:28:a7:76:f1:25:f4:c1:35:3c:f6:74:ad:de:6a:33:82:7b:dc:fd:4b:76:a7:c2:ee:f2:6a:bf:a9:24:a6:5f:e7:2e:7c:0e:db:c3:74:73:fa:7e:c6:d8:cf:60:eb:36:56:21:b6:c1:8a:b8:24:82:4d:78:24:ba:e9:1d:a1:8a:a7:87:be:66:25:69:bf:be:3b:72:6e:4f:e0:e4:85:25:08:b1:91:89:b8:d6:74:65:76:9b:2c:4f:62:1f:a1:fa:3a:be:9c:24:bf:9f:ca:b0:c5:c0:67:8d</modulus>
+                <exponent>65537</exponent>
+              </publicKey>
+              <publicKeyAlgorithm>rsaEncryption</publicKeyAlgorithm>
+              <publicKeySize>2048 bit</publicKeySize>
+            </subjectPublicKeyInfo>
+            <version>2</version>
+            <extensions>
+              <X509v3SubjectKeyIdentifier>6A:43:90:7D:3B:98:14:72:52:95:3A:AA:28:0A:43:F8:51:7E:D3:A6</X509v3SubjectKeyIdentifier>
+              <X509v3ExtendedKeyUsage>
+                <TLSWebClientAuthentication/>
+                <TLSWebServerAuthentication/>
+              </X509v3ExtendedKeyUsage>
+              <AuthorityInformationAccess>
+                <CAIssuers>
+                  <URI>
+                    <listEntry>http://cacerts.digicert.com/DigiCertSHA2ExtendedValidationServerCA.crt</listEntry>
+                  </URI>
+                </CAIssuers>
+                <OCSP>
+                  <URI>
+                    <listEntry>http://ocsp.digicert.com</listEntry>
+                  </URI>
+                </OCSP>
+              </AuthorityInformationAccess>
+              <X509v3CRLDistributionPoints>
+                <FullName>
+                  <listEntry/>
+                  <listEntry/>
+                </FullName>
+                <URI>
+                  <listEntry>http://crl3.digicert.com/sha2-ev-server-g1.crl</listEntry>
+                  <listEntry>http://crl4.digicert.com/sha2-ev-server-g1.crl</listEntry>
+                </URI>
+              </X509v3CRLDistributionPoints>
+              <X509v3BasicConstraints>CA:FALSE</X509v3BasicConstraints>
+              <X509v3KeyUsage>
+                <KeyEncipherment/>
+                <DigitalSignature/>
+              </X509v3KeyUsage>
+              <X509v3SubjectAlternativeName>
+                <DNS>
+                  <listEntry>github.com</listEntry>
+                  <listEntry>www.github.com</listEntry>
+                </DNS>
+              </X509v3SubjectAlternativeName>
+              <X509v3AuthorityKeyIdentifier>keyid:3D:D3:50:A5:D6:A0:AD:EE:F3:4A:60:0A:65:D3:21:D4:F8:F8:D6:0F</X509v3AuthorityKeyIdentifier>
+              <X509v3CertificatePolicies>
+                <Policy>
+                  <listEntry>2.16.840.1.114412.2.1</listEntry>
+                </Policy>
+                <CPS>
+                  <listEntry>https://www.digicert.com/CPS</listEntry>
+                </CPS>
+              </X509v3CertificatePolicies>
+            </extensions>
+            <signatureValue>6f:e7:6d:cb:82:f3:ef:90:87:09:d7:0f:15:22:2c:8c:fe:d3:ab:1c:8a:96:db:5d:12:5d:d1:78:c0:31:b0:ff:45:c8:89:f7:08:98:52:17:1f:4c:4b:20:64:6a:6d:db:50:d7:10:be:7e:ab:fe:2f:80:d8:a9:4a:58:41:69:81:72:19:08:83:9b:92:10:4e:62:2d:7b:46:70:43:6e:a3:53:13:1f:e2:93:a6:23:5b:f7:92:3e:37:14:75:3b:b9:4b:24:41:2e:a5:3d:48:0d:0f:99:ea:1e:42:97:c6:fe:95:da:ab:47:9a:cb:2b:03:d6:0d:40:c1:0a:f7:78:1a:da:b5:83:a4:ad:b5:99:49:20:2e:f8:93:3c:1e:6c:3d:d1:3b:23:3a:6b:38:2a:7e:62:7a:5f:dd:17:05:75:d0:24:5d:be:8d:a8:9a:10:44:fa:d2:b4:ca:ef:d7:d0:b5:76:a5:26:25:1c:08:41:d8:64:92:a7:af:7d:fe:88:40:39:61:0b:c0:48:30:a9:82:34:ad:f7:70:46:03:7c:35:91:3a:d5:bb:24:d8:01:bc:14:f0:c3:0f:23:3b:58:32:ba:0f:12:6c:66:7a:6d:9d:e4:f0:e5:7c:5d:7e:02:d8:d7:ac:89:97:0b:61:b7:36:9f:b0:7d:3b:ee:b7:33:69</signatureValue>
+            <signatureAlgorithm>sha256WithRSAEncryption</signatureAlgorithm>
+            <serialNumber>0C009310D206DBE337553580118DDC87</serialNumber>
+            <subject>
+              <organizationName>GitHub, Inc.</organizationName>
+              <businessCategory>Private Organization</businessCategory>
+              <serialNumber>5157550</serialNumber>
+              <commonName>github.com</commonName>
+              <stateOrProvinceName>California</stateOrProvinceName>
+              <countryName>US</countryName>
+              <streetAddress>548 4th Street</streetAddress>
+              <oid-1.3.6.1.4.1.311.60.2.1.2>Delaware</oid-1.3.6.1.4.1.311.60.2.1.2>
+              <oid-1.3.6.1.4.1.311.60.2.1.3>US</oid-1.3.6.1.4.1.311.60.2.1.3>
+              <localityName>San Francisco</localityName>
+              <postalCode>94107</postalCode>
+            </subject>
+            <validity>
+              <notAfter>Apr 12 12:00:00 2016 GMT</notAfter>
+              <notBefore>Apr  8 00:00:00 2014 GMT</notBefore>
+            </validity>
+            <issuer>
+              <countryName>US</countryName>
+              <commonName>DigiCert SHA2 Extended Validation Server CA</commonName>
+              <organizationalUnitName>www.digicert.com</organizationalUnitName>
+              <organizationName>DigiCert Inc</organizationName>
+            </issuer>
+          </certificate>
+          <certificate position="intermediate" sha1Fingerprint="7e2f3a4f8fe8fa8a5730aeca029696637e986f3f">
+            <asPEM>-----BEGIN CERTIFICATE-----
+MIIEtjCCA56gAwIBAgIQDHmpRLCMEZUgkmFf4msdgzANBgkqhkiG9w0BAQsFADBs
+MQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3
+d3cuZGlnaWNlcnQuY29tMSswKQYDVQQDEyJEaWdpQ2VydCBIaWdoIEFzc3VyYW5j
+ZSBFViBSb290IENBMB4XDTEzMTAyMjEyMDAwMFoXDTI4MTAyMjEyMDAwMFowdTEL
+MAkGA1UEBhMCVVMxFTATBgNVBAoTDERpZ2lDZXJ0IEluYzEZMBcGA1UECxMQd3d3
+LmRpZ2ljZXJ0LmNvbTE0MDIGA1UEAxMrRGlnaUNlcnQgU0hBMiBFeHRlbmRlZCBW
+YWxpZGF0aW9uIFNlcnZlciBDQTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC
+ggEBANdTpARR+JmmFkhLZyeqk0nQOe0MsLAAh/FnKIaFjI5j2ryxQDji0/XspQUY
+uD0+xZkXMuwYjPrxDKZkIYXLBxA0sFKIKx9om9KxjxKws9LniB8f7zh3VFNfgHk/
+LhqqqB5LKw2rt2O5Nbd9FLxZS99RStKh4gzikIKHaq7q12TWmFXo/a8aUGxUvBHy
+/Urynbt/DvTVvo4WiRJV2MBxNO723C3sxIclho3YIeSwTQyJ3DkmF93215SF2AQh
+cJ1vb/9cuhnhRctWVyh+HA1BV6q3uCe7seT6Ku8hI3UarS2bhjWMnHe1c63YlC3k
+8wyd7sFOYn4XwHGeLN7x+RAoGTMCAwEAAaOCAUkwggFFMBIGA1UdEwEB/wQIMAYB
+Af8CAQAwDgYDVR0PAQH/BAQDAgGGMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEF
+BQcDAjA0BggrBgEFBQcBAQQoMCYwJAYIKwYBBQUHMAGGGGh0dHA6Ly9vY3NwLmRp
+Z2ljZXJ0LmNvbTBLBgNVHR8ERDBCMECgPqA8hjpodHRwOi8vY3JsNC5kaWdpY2Vy
+dC5jb20vRGlnaUNlcnRIaWdoQXNzdXJhbmNlRVZSb290Q0EuY3JsMD0GA1UdIAQ2
+MDQwMgYEVR0gADAqMCgGCCsGAQUFBwIBFhxodHRwczovL3d3dy5kaWdpY2VydC5j
+b20vQ1BTMB0GA1UdDgQWBBQ901Cl1qCt7vNKYApl0yHU+PjWDzAfBgNVHSMEGDAW
+gBSxPsNpA/i/RwHUmCYaCALvY2QrwzANBgkqhkiG9w0BAQsFAAOCAQEAnbbQkIbh
+hgLtxaDwNBx0wY12zIYKqPBKikLWP8ipTa18CK3mtlC4ohpNiAexKSHc59rGPCHg
+4xFJcKx6HQGkyhE6V6t9VypAdP3THYUYUN9XR3WhfVUgLkc3UHKMf4Ib0mKPLQNa
+2sPIoc4sUqIAY+tzunHISScjl2SFnjgOrWNoPLpSgVh5oywM395t6zHyuqB8bPEs
+1OG9d4Q3A84ytciagRpKkk47RpqF/oOi+Z6Mo8wNXrM9zwR4jxQUezKcxwCmXMS1
+oVWNWlZopCJwqjyBcdmdqEU79OX2olHdx3ti6G8MdOu42vi/hw15UJGQmxg7kVkn
+8TUoE6smftX3eg==
+-----END CERTIFICATE-----</asPEM>
+            <subjectPublicKeyInfo>
+              <publicKey>
+                <modulus>00:d7:53:a4:04:51:f8:99:a6:16:48:4b:67:27:aa:93:49:d0:39:ed:0c:b0:b0:00:87:f1:67:28:86:85:8c:8e:63:da:bc:b1:40:38:e2:d3:f5:ec:a5:05:18:b8:3d:3e:c5:99:17:32:ec:18:8c:fa:f1:0c:a6:64:21:85:cb:07:10:34:b0:52:88:2b:1f:68:9b:d2:b1:8f:12:b0:b3:d2:e7:88:1f:1f:ef:38:77:54:53:5f:80:79:3f:2e:1a:aa:a8:1e:4b:2b:0d:ab:b7:63:b9:35:b7:7d:14:bc:59:4b:df:51:4a:d2:a1:e2:0c:e2:90:82:87:6a:ae:ea:d7:64:d6:98:55:e8:fd:af:1a:50:6c:54:bc:11:f2:fd:4a:f2:9d:bb:7f:0e:f4:d5:be:8e:16:89:12:55:d8:c0:71:34:ee:f6:dc:2d:ec:c4:87:25:86:8d:d8:21:e4:b0:4d:0c:89:dc:39:26:17:dd:f6:d7:94:85:d8:04:21:70:9d:6f:6f:ff:5c:ba:19:e1:45:cb:56:57:28:7e:1c:0d:41:57:aa:b7:b8:27:bb:b1:e4:fa:2a:ef:21:23:75:1a:ad:2d:9b:86:35:8c:9c:77:b5:73:ad:d8:94:2d:e4:f3:0c:9d:ee:c1:4e:62:7e:17:c0:71:9e:2c:de:f1:f9:10:28:19:33</modulus>
+                <exponent>65537</exponent>
+              </publicKey>
+              <publicKeyAlgorithm>rsaEncryption</publicKeyAlgorithm>
+              <publicKeySize>2048 bit</publicKeySize>
+            </subjectPublicKeyInfo>
+            <version>2</version>
+            <extensions>
+              <X509v3SubjectKeyIdentifier>3D:D3:50:A5:D6:A0:AD:EE:F3:4A:60:0A:65:D3:21:D4:F8:F8:D6:0F</X509v3SubjectKeyIdentifier>
+              <X509v3ExtendedKeyUsage>
+                <TLSWebClientAuthentication/>
+                <TLSWebServerAuthentication/>
+              </X509v3ExtendedKeyUsage>
+              <AuthorityInformationAccess>
+                <OCSP>
+                  <URI>
+                    <listEntry>http://ocsp.digicert.com</listEntry>
+                  </URI>
+                </OCSP>
+              </AuthorityInformationAccess>
+              <X509v3CRLDistributionPoints>
+                <FullName>
+                  <listEntry/>
+                </FullName>
+                <URI>
+                  <listEntry>http://crl4.digicert.com/DigiCertHighAssuranceEVRootCA.crl</listEntry>
+                </URI>
+              </X509v3CRLDistributionPoints>
+              <X509v3BasicConstraints>CA:TRUE, pathlen:0</X509v3BasicConstraints>
+              <X509v3KeyUsage>
+                <CRLSign/>
+                <CertificateSign/>
+                <DigitalSignature/>
+              </X509v3KeyUsage>
+              <X509v3AuthorityKeyIdentifier>keyid:B1:3E:C3:69:03:F8:BF:47:01:D4:98:26:1A:08:02:EF:63:64:2B:C3</X509v3AuthorityKeyIdentifier>
+              <X509v3CertificatePolicies>
+                <Policy>
+                  <listEntry>X509v3 Any Policy</listEntry>
+                </Policy>
+                <CPS>
+                  <listEntry>https://www.digicert.com/CPS</listEntry>
+                </CPS>
+              </X509v3CertificatePolicies>
+            </extensions>
+            <signatureValue>9d:b6:d0:90:86:e1:86:02:ed:c5:a0:f0:34:1c:74:c1:8d:76:cc:86:0a:a8:f0:4a:8a:42:d6:3f:c8:a9:4d:ad:7c:08:ad:e6:b6:50:b8:a2:1a:4d:88:07:b1:29:21:dc:e7:da:c6:3c:21:e0:e3:11:49:70:ac:7a:1d:01:a4:ca:11:3a:57:ab:7d:57:2a:40:74:fd:d3:1d:85:18:50:df:57:47:75:a1:7d:55:20:2e:47:37:50:72:8c:7f:82:1b:d2:62:8f:2d:03:5a:da:c3:c8:a1:ce:2c:52:a2:00:63:eb:73:ba:71:c8:49:27:23:97:64:85:9e:38:0e:ad:63:68:3c:ba:52:81:58:79:a3:2c:0c:df:de:6d:eb:31:f2:ba:a0:7c:6c:f1:2c:d4:e1:bd:77:84:37:03:ce:32:b5:c8:9a:81:1a:4a:92:4e:3b:46:9a:85:fe:83:a2:f9:9e:8c:a3:cc:0d:5e:b3:3d:cf:04:78:8f:14:14:7b:32:9c:c7:00:a6:5c:c4:b5:a1:55:8d:5a:56:68:a4:22:70:aa:3c:81:71:d9:9d:a8:45:3b:f4:e5:f6:a2:51:dd:c7:7b:62:e8:6f:0c:74:eb:b8:da:f8:bf:87:0d:79:50:91:90:9b:18:3b:91:59:27:f1:35:28:13:ab:26:7e:d5:f7:7a</signatureValue>
+            <signatureAlgorithm>sha256WithRSAEncryption</signatureAlgorithm>
+            <serialNumber>0C79A944B08C11952092615FE26B1D83</serialNumber>
+            <subject>
+              <countryName>US</countryName>
+              <commonName>DigiCert SHA2 Extended Validation Server CA</commonName>
+              <organizationalUnitName>www.digicert.com</organizationalUnitName>
+              <organizationName>DigiCert Inc</organizationName>
+            </subject>
+            <validity>
+              <notAfter>Oct 22 12:00:00 2028 GMT</notAfter>
+              <notBefore>Oct 22 12:00:00 2013 GMT</notBefore>
+            </validity>
+            <issuer>
+              <countryName>US</countryName>
+              <commonName>DigiCert High Assurance EV Root CA</commonName>
+              <organizationalUnitName>www.digicert.com</organizationalUnitName>
+              <organizationName>DigiCert Inc</organizationName>
+            </issuer>
+          </certificate>
+        </certificateChain>
+        <certificateValidation>
+          <hostnameValidation certificateMatchesServerHostname="True" serverHostname="github.com"/>
+          <pathValidation isExtendedValidationCertificate="True" usingTrustStore="Mozilla NSS - 08/2014" validationResult="ok"/>
+          <pathValidation usingTrustStore="Microsoft - 08/2014" validationResult="ok"/>
+          <pathValidation usingTrustStore="Apple - OS X 10.9.4" validationResult="ok"/>
+          <pathValidation usingTrustStore="Java 6 - Update 65" validationResult="ok"/>
+        </certificateValidation>
+        <ocspStapling error="Server did not send back an OCSP response"/>
+      </certinfo>
+      <compression title="Deflate Compression">
+        <compressionMethod isSupported="False" type="DEFLATE"/>
+      </compression>
+      <heartbleed title="OpenSSL Heartbleed">
+        <heartbleed isVulnerable="False"/>
+      </heartbleed>
+      <reneg title="Session Renegotiation">
+        <sessionRenegotiation canBeClientInitiated="False" isSecure="True"/>
+      </reneg>
+      <resum title="Session Resumption">
+        <sessionResumptionWithSessionIDs errors="0" failedAttempts="0" isSupported="True" successfulAttempts="5" totalAttempts="5"/>
+        <sessionResumptionWithTLSTickets isSupported="False" reason="TLS ticket not assigned"/>
+      </resum>
+      <sslv2 title="SSLV2 Cipher Suites">
+        <errors/>
+        <rejectedCipherSuites>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Unexpected EOF" name="DES-CBC-MD5"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Unexpected EOF" name="DES-CBC3-MD5"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Unexpected EOF" name="EXP-RC2-CBC-MD5"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Unexpected EOF" name="EXP-RC4-MD5"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Unexpected EOF" name="IDEA-CBC-MD5"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Unexpected EOF" name="RC2-CBC-MD5"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Unexpected EOF" name="RC4-MD5"/>
+        </rejectedCipherSuites>
+        <acceptedCipherSuites/>
+        <preferredCipherSuite/>
+      </sslv2>
+      <sslv3 title="SSLV3 Cipher Suites">
+        <errors/>
+        <rejectedCipherSuites>
+          <cipherSuite anonymous="True" connectionStatus="TLS / No ciphers available" name="ADH-AES128-GCM-SHA256"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="ADH-AES128-SHA"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / No ciphers available" name="ADH-AES128-SHA256"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / No ciphers available" name="ADH-AES256-GCM-SHA384"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="ADH-AES256-SHA"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / No ciphers available" name="ADH-AES256-SHA256"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="ADH-CAMELLIA128-SHA"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="ADH-CAMELLIA256-SHA"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="ADH-DES-CBC-SHA"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="ADH-DES-CBC3-SHA"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="ADH-RC4-MD5"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="ADH-SEED-SHA"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="AECDH-AES128-SHA"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="AECDH-AES256-SHA"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="AECDH-DES-CBC3-SHA"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="AECDH-NULL-SHA"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="AECDH-RC4-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="AES128-GCM-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="AES128-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="AES128-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="AES256-GCM-SHA384"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="AES256-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="AES256-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="CAMELLIA128-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="CAMELLIA256-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="DES-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="DES-CBC3-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="DHE-DSS-AES128-GCM-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="DHE-DSS-AES128-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="DHE-DSS-AES128-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="DHE-DSS-AES256-GCM-SHA384"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="DHE-DSS-AES256-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="DHE-DSS-AES256-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="DHE-DSS-CAMELLIA128-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="DHE-DSS-CAMELLIA256-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="DHE-DSS-SEED-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="DHE-RSA-AES128-GCM-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="DHE-RSA-AES128-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="DHE-RSA-AES128-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="DHE-RSA-AES256-GCM-SHA384"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="DHE-RSA-AES256-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="DHE-RSA-AES256-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="DHE-RSA-CAMELLIA128-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="DHE-RSA-CAMELLIA256-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="DHE-RSA-SEED-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="ECDH-ECDSA-AES128-GCM-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDH-ECDSA-AES128-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="ECDH-ECDSA-AES128-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="ECDH-ECDSA-AES256-GCM-SHA384"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDH-ECDSA-AES256-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="ECDH-ECDSA-AES256-SHA384"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDH-ECDSA-DES-CBC3-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDH-ECDSA-NULL-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDH-ECDSA-RC4-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="ECDH-RSA-AES128-GCM-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDH-RSA-AES128-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="ECDH-RSA-AES128-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="ECDH-RSA-AES256-GCM-SHA384"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDH-RSA-AES256-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="ECDH-RSA-AES256-SHA384"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDH-RSA-DES-CBC3-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDH-RSA-NULL-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDH-RSA-RC4-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="ECDHE-ECDSA-AES128-GCM-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDHE-ECDSA-AES128-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="ECDHE-ECDSA-AES128-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="ECDHE-ECDSA-AES256-GCM-SHA384"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDHE-ECDSA-AES256-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="ECDHE-ECDSA-AES256-SHA384"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDHE-ECDSA-DES-CBC3-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDHE-ECDSA-NULL-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDHE-ECDSA-RC4-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="ECDHE-RSA-AES128-GCM-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDHE-RSA-AES128-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="ECDHE-RSA-AES128-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="ECDHE-RSA-AES256-GCM-SHA384"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDHE-RSA-AES256-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="ECDHE-RSA-AES256-SHA384"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDHE-RSA-DES-CBC3-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDHE-RSA-NULL-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDHE-RSA-RC4-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="EDH-DSS-DES-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="EDH-DSS-DES-CBC3-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="EDH-RSA-DES-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="EDH-RSA-DES-CBC3-SHA"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="EXP-ADH-DES-CBC-SHA"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="EXP-ADH-RC4-MD5"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="EXP-DES-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="EXP-EDH-DSS-DES-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="EXP-EDH-RSA-DES-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="EXP-RC2-CBC-MD5"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="EXP-RC4-MD5"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="IDEA-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="NULL-MD5"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="NULL-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="NULL-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="PSK-3DES-EDE-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="PSK-AES128-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="PSK-AES256-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="PSK-RC4-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="RC4-MD5"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="RC4-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="SEED-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="SRP-3DES-EDE-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="SRP-AES-128-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="SRP-AES-256-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="SRP-DSS-3DES-EDE-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="SRP-DSS-AES-128-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="SRP-DSS-AES-256-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="SRP-RSA-3DES-EDE-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="SRP-RSA-AES-128-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="SRP-RSA-AES-256-CBC-SHA"/>
+        </rejectedCipherSuites>
+        <acceptedCipherSuites/>
+        <preferredCipherSuite/>
+      </sslv3>
+      <tlsv1 title="TLSV1 Cipher Suites">
+        <errors/>
+        <rejectedCipherSuites>
+          <cipherSuite anonymous="True" connectionStatus="TLS / No ciphers available" name="ADH-AES128-GCM-SHA256"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="ADH-AES128-SHA"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / No ciphers available" name="ADH-AES128-SHA256"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / No ciphers available" name="ADH-AES256-GCM-SHA384"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="ADH-AES256-SHA"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / No ciphers available" name="ADH-AES256-SHA256"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="ADH-CAMELLIA128-SHA"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="ADH-CAMELLIA256-SHA"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="ADH-DES-CBC-SHA"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="ADH-DES-CBC3-SHA"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="ADH-RC4-MD5"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="ADH-SEED-SHA"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="AECDH-AES128-SHA"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="AECDH-AES256-SHA"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="AECDH-DES-CBC3-SHA"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="AECDH-NULL-SHA"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="AECDH-RC4-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="AES128-GCM-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="AES128-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="AES256-GCM-SHA384"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="AES256-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="CAMELLIA128-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="CAMELLIA256-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="DES-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="DES-CBC3-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="DHE-DSS-AES128-GCM-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="DHE-DSS-AES128-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="DHE-DSS-AES128-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="DHE-DSS-AES256-GCM-SHA384"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="DHE-DSS-AES256-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="DHE-DSS-AES256-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="DHE-DSS-CAMELLIA128-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="DHE-DSS-CAMELLIA256-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="DHE-DSS-SEED-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="DHE-RSA-AES128-GCM-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="DHE-RSA-AES128-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="DHE-RSA-AES128-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="DHE-RSA-AES256-GCM-SHA384"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="DHE-RSA-AES256-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="DHE-RSA-AES256-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="DHE-RSA-CAMELLIA128-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="DHE-RSA-CAMELLIA256-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="DHE-RSA-SEED-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="ECDH-ECDSA-AES128-GCM-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDH-ECDSA-AES128-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="ECDH-ECDSA-AES128-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="ECDH-ECDSA-AES256-GCM-SHA384"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDH-ECDSA-AES256-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="ECDH-ECDSA-AES256-SHA384"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDH-ECDSA-DES-CBC3-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDH-ECDSA-NULL-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDH-ECDSA-RC4-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="ECDH-RSA-AES128-GCM-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDH-RSA-AES128-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="ECDH-RSA-AES128-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="ECDH-RSA-AES256-GCM-SHA384"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDH-RSA-AES256-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="ECDH-RSA-AES256-SHA384"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDH-RSA-DES-CBC3-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDH-RSA-NULL-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDH-RSA-RC4-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="ECDHE-ECDSA-AES128-GCM-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDHE-ECDSA-AES128-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="ECDHE-ECDSA-AES128-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="ECDHE-ECDSA-AES256-GCM-SHA384"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDHE-ECDSA-AES256-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="ECDHE-ECDSA-AES256-SHA384"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDHE-ECDSA-DES-CBC3-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDHE-ECDSA-NULL-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDHE-ECDSA-RC4-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="ECDHE-RSA-AES128-GCM-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="ECDHE-RSA-AES128-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="ECDHE-RSA-AES256-GCM-SHA384"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="ECDHE-RSA-AES256-SHA384"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDHE-RSA-DES-CBC3-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDHE-RSA-NULL-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="EDH-DSS-DES-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="EDH-DSS-DES-CBC3-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="EDH-RSA-DES-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="EDH-RSA-DES-CBC3-SHA"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="EXP-ADH-DES-CBC-SHA"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="EXP-ADH-RC4-MD5"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="EXP-DES-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="EXP-EDH-DSS-DES-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="EXP-EDH-RSA-DES-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="EXP-RC2-CBC-MD5"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="EXP-RC4-MD5"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="IDEA-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="NULL-MD5"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="NULL-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="NULL-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="PSK-3DES-EDE-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="PSK-AES128-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="PSK-AES256-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="PSK-RC4-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="RC4-MD5"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="SEED-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="SRP-3DES-EDE-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="SRP-AES-128-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="SRP-AES-256-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="SRP-DSS-3DES-EDE-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="SRP-DSS-AES-128-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="SRP-DSS-AES-256-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="SRP-RSA-3DES-EDE-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="SRP-RSA-AES-128-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="SRP-RSA-AES-256-CBC-SHA"/>
+        </rejectedCipherSuites>
+        <acceptedCipherSuites>
+          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="128" name="AES128-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="256" name="AES256-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="128" name="ECDHE-RSA-AES128-SHA">
+            <keyExchange A="0x00ffffffff00000001000000000000000000000000fffffffffffffffffffffffc" B="0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b" Cofactor="1" Field_Type="prime-field" Generator="0x046b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c2964fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5" GeneratorType="uncompressed" GroupSize="256" Order="0x00ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551" Prime="0x00ffffffff00000001000000000000000000000000ffffffffffffffffffffffff" Seed="0xc49d360886e704936a6678e1139d26b7819f7e90" Type="ECDH"/>
+          </cipherSuite>
+          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="256" name="ECDHE-RSA-AES256-SHA">
+            <keyExchange A="0x00ffffffff00000001000000000000000000000000fffffffffffffffffffffffc" B="0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b" Cofactor="1" Field_Type="prime-field" Generator="0x046b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c2964fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5" GeneratorType="uncompressed" GroupSize="256" Order="0x00ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551" Prime="0x00ffffffff00000001000000000000000000000000ffffffffffffffffffffffff" Seed="0xc49d360886e704936a6678e1139d26b7819f7e90" Type="ECDH"/>
+          </cipherSuite>
+          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="128" name="ECDHE-RSA-RC4-SHA">
+            <keyExchange A="0x00ffffffff00000001000000000000000000000000fffffffffffffffffffffffc" B="0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b" Cofactor="1" Field_Type="prime-field" Generator="0x046b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c2964fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5" GeneratorType="uncompressed" GroupSize="256" Order="0x00ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551" Prime="0x00ffffffff00000001000000000000000000000000ffffffffffffffffffffffff" Seed="0xc49d360886e704936a6678e1139d26b7819f7e90" Type="ECDH"/>
+          </cipherSuite>
+          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="128" name="RC4-SHA"/>
+        </acceptedCipherSuites>
+        <preferredCipherSuite>
+          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="128" name="ECDHE-RSA-AES128-SHA">
+            <keyExchange A="0x00ffffffff00000001000000000000000000000000fffffffffffffffffffffffc" B="0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b" Cofactor="1" Field_Type="prime-field" Generator="0x046b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c2964fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5" GeneratorType="uncompressed" GroupSize="256" Order="0x00ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551" Prime="0x00ffffffff00000001000000000000000000000000ffffffffffffffffffffffff" Seed="0xc49d360886e704936a6678e1139d26b7819f7e90" Type="ECDH"/>
+          </cipherSuite>
+        </preferredCipherSuite>
+      </tlsv1>
+      <tlsv1_1 title="TLSV1_1 Cipher Suites">
+        <errors/>
+        <rejectedCipherSuites>
+          <cipherSuite anonymous="True" connectionStatus="TLS / No ciphers available" name="ADH-AES128-GCM-SHA256"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="ADH-AES128-SHA"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / No ciphers available" name="ADH-AES128-SHA256"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / No ciphers available" name="ADH-AES256-GCM-SHA384"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="ADH-AES256-SHA"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / No ciphers available" name="ADH-AES256-SHA256"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="ADH-CAMELLIA128-SHA"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="ADH-CAMELLIA256-SHA"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="ADH-DES-CBC-SHA"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="ADH-DES-CBC3-SHA"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="ADH-RC4-MD5"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="ADH-SEED-SHA"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="AECDH-AES128-SHA"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="AECDH-AES256-SHA"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="AECDH-DES-CBC3-SHA"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="AECDH-NULL-SHA"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="AECDH-RC4-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="AES128-GCM-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="AES128-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="AES256-GCM-SHA384"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="AES256-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="CAMELLIA128-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="CAMELLIA256-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="DES-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="DES-CBC3-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="DHE-DSS-AES128-GCM-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="DHE-DSS-AES128-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="DHE-DSS-AES128-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="DHE-DSS-AES256-GCM-SHA384"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="DHE-DSS-AES256-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="DHE-DSS-AES256-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="DHE-DSS-CAMELLIA128-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="DHE-DSS-CAMELLIA256-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="DHE-DSS-SEED-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="DHE-RSA-AES128-GCM-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="DHE-RSA-AES128-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="DHE-RSA-AES128-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="DHE-RSA-AES256-GCM-SHA384"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="DHE-RSA-AES256-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="DHE-RSA-AES256-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="DHE-RSA-CAMELLIA128-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="DHE-RSA-CAMELLIA256-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="DHE-RSA-SEED-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="ECDH-ECDSA-AES128-GCM-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDH-ECDSA-AES128-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="ECDH-ECDSA-AES128-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="ECDH-ECDSA-AES256-GCM-SHA384"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDH-ECDSA-AES256-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="ECDH-ECDSA-AES256-SHA384"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDH-ECDSA-DES-CBC3-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDH-ECDSA-NULL-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDH-ECDSA-RC4-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="ECDH-RSA-AES128-GCM-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDH-RSA-AES128-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="ECDH-RSA-AES128-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="ECDH-RSA-AES256-GCM-SHA384"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDH-RSA-AES256-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="ECDH-RSA-AES256-SHA384"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDH-RSA-DES-CBC3-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDH-RSA-NULL-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDH-RSA-RC4-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="ECDHE-ECDSA-AES128-GCM-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDHE-ECDSA-AES128-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="ECDHE-ECDSA-AES128-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="ECDHE-ECDSA-AES256-GCM-SHA384"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDHE-ECDSA-AES256-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="ECDHE-ECDSA-AES256-SHA384"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDHE-ECDSA-DES-CBC3-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDHE-ECDSA-NULL-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDHE-ECDSA-RC4-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="ECDHE-RSA-AES128-GCM-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="ECDHE-RSA-AES128-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="ECDHE-RSA-AES256-GCM-SHA384"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="ECDHE-RSA-AES256-SHA384"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDHE-RSA-DES-CBC3-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDHE-RSA-NULL-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="EDH-DSS-DES-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="EDH-DSS-DES-CBC3-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="EDH-RSA-DES-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="EDH-RSA-DES-CBC3-SHA"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="EXP-ADH-DES-CBC-SHA"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="EXP-ADH-RC4-MD5"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="EXP-DES-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="EXP-EDH-DSS-DES-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="EXP-EDH-RSA-DES-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="EXP-RC2-CBC-MD5"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="EXP-RC4-MD5"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="IDEA-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="NULL-MD5"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="NULL-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="NULL-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="PSK-3DES-EDE-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="PSK-AES128-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="PSK-AES256-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="PSK-RC4-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="RC4-MD5"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="SEED-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="SRP-3DES-EDE-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="SRP-AES-128-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="SRP-AES-256-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="SRP-DSS-3DES-EDE-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="SRP-DSS-AES-128-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="SRP-DSS-AES-256-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="SRP-RSA-3DES-EDE-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="SRP-RSA-AES-128-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="SRP-RSA-AES-256-CBC-SHA"/>
+        </rejectedCipherSuites>
+        <acceptedCipherSuites>
+          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="128" name="AES128-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="256" name="AES256-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="128" name="ECDHE-RSA-AES128-SHA">
+            <keyExchange A="0x00ffffffff00000001000000000000000000000000fffffffffffffffffffffffc" B="0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b" Cofactor="1" Field_Type="prime-field" Generator="0x046b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c2964fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5" GeneratorType="uncompressed" GroupSize="256" Order="0x00ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551" Prime="0x00ffffffff00000001000000000000000000000000ffffffffffffffffffffffff" Seed="0xc49d360886e704936a6678e1139d26b7819f7e90" Type="ECDH"/>
+          </cipherSuite>
+          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="256" name="ECDHE-RSA-AES256-SHA">
+            <keyExchange A="0x00ffffffff00000001000000000000000000000000fffffffffffffffffffffffc" B="0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b" Cofactor="1" Field_Type="prime-field" Generator="0x046b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c2964fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5" GeneratorType="uncompressed" GroupSize="256" Order="0x00ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551" Prime="0x00ffffffff00000001000000000000000000000000ffffffffffffffffffffffff" Seed="0xc49d360886e704936a6678e1139d26b7819f7e90" Type="ECDH"/>
+          </cipherSuite>
+          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="128" name="ECDHE-RSA-RC4-SHA">
+            <keyExchange A="0x00ffffffff00000001000000000000000000000000fffffffffffffffffffffffc" B="0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b" Cofactor="1" Field_Type="prime-field" Generator="0x046b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c2964fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5" GeneratorType="uncompressed" GroupSize="256" Order="0x00ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551" Prime="0x00ffffffff00000001000000000000000000000000ffffffffffffffffffffffff" Seed="0xc49d360886e704936a6678e1139d26b7819f7e90" Type="ECDH"/>
+          </cipherSuite>
+          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="128" name="RC4-SHA"/>
+        </acceptedCipherSuites>
+        <preferredCipherSuite>
+          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="128" name="ECDHE-RSA-AES128-SHA">
+            <keyExchange A="0x00ffffffff00000001000000000000000000000000fffffffffffffffffffffffc" B="0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b" Cofactor="1" Field_Type="prime-field" Generator="0x046b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c2964fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5" GeneratorType="uncompressed" GroupSize="256" Order="0x00ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551" Prime="0x00ffffffff00000001000000000000000000000000ffffffffffffffffffffffff" Seed="0xc49d360886e704936a6678e1139d26b7819f7e90" Type="ECDH"/>
+          </cipherSuite>
+        </preferredCipherSuite>
+      </tlsv1_1>
+      <tlsv1_2 title="TLSV1_2 Cipher Suites">
+        <errors/>
+        <rejectedCipherSuites>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="ADH-AES128-GCM-SHA256"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="ADH-AES128-SHA"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="ADH-AES128-SHA256"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="ADH-AES256-GCM-SHA384"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="ADH-AES256-SHA"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="ADH-AES256-SHA256"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="ADH-CAMELLIA128-SHA"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="ADH-CAMELLIA256-SHA"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="ADH-DES-CBC-SHA"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="ADH-DES-CBC3-SHA"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="ADH-RC4-MD5"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="ADH-SEED-SHA"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="AECDH-AES128-SHA"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="AECDH-AES256-SHA"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="AECDH-DES-CBC3-SHA"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="AECDH-NULL-SHA"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="AECDH-RC4-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="CAMELLIA128-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="CAMELLIA256-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="DES-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="DES-CBC3-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="DHE-DSS-AES128-GCM-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="DHE-DSS-AES128-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="DHE-DSS-AES128-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="DHE-DSS-AES256-GCM-SHA384"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="DHE-DSS-AES256-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="DHE-DSS-AES256-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="DHE-DSS-CAMELLIA128-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="DHE-DSS-CAMELLIA256-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="DHE-DSS-SEED-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="DHE-RSA-AES128-GCM-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="DHE-RSA-AES128-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="DHE-RSA-AES128-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="DHE-RSA-AES256-GCM-SHA384"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="DHE-RSA-AES256-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="DHE-RSA-AES256-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="DHE-RSA-CAMELLIA128-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="DHE-RSA-CAMELLIA256-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="DHE-RSA-SEED-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDH-ECDSA-AES128-GCM-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDH-ECDSA-AES128-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDH-ECDSA-AES128-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDH-ECDSA-AES256-GCM-SHA384"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDH-ECDSA-AES256-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDH-ECDSA-AES256-SHA384"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDH-ECDSA-DES-CBC3-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDH-ECDSA-NULL-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDH-ECDSA-RC4-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDH-RSA-AES128-GCM-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDH-RSA-AES128-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDH-RSA-AES128-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDH-RSA-AES256-GCM-SHA384"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDH-RSA-AES256-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDH-RSA-AES256-SHA384"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDH-RSA-DES-CBC3-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDH-RSA-NULL-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDH-RSA-RC4-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDHE-ECDSA-AES128-GCM-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDHE-ECDSA-AES128-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDHE-ECDSA-AES128-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDHE-ECDSA-AES256-GCM-SHA384"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDHE-ECDSA-AES256-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDHE-ECDSA-AES256-SHA384"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDHE-ECDSA-DES-CBC3-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDHE-ECDSA-NULL-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDHE-ECDSA-RC4-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDHE-RSA-DES-CBC3-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="ECDHE-RSA-NULL-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="EDH-DSS-DES-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="EDH-DSS-DES-CBC3-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="EDH-RSA-DES-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="EDH-RSA-DES-CBC3-SHA"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="EXP-ADH-DES-CBC-SHA"/>
+          <cipherSuite anonymous="True" connectionStatus="TLS / Alert handshake failure" name="EXP-ADH-RC4-MD5"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="EXP-DES-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="EXP-EDH-DSS-DES-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="EXP-EDH-RSA-DES-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="EXP-RC2-CBC-MD5"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="EXP-RC4-MD5"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="IDEA-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="NULL-MD5"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="NULL-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="NULL-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="PSK-3DES-EDE-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="PSK-AES128-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="PSK-AES256-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="PSK-RC4-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="RC4-MD5"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / Alert handshake failure" name="SEED-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="SRP-3DES-EDE-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="SRP-AES-128-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="SRP-AES-256-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="SRP-DSS-3DES-EDE-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="SRP-DSS-AES-128-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="SRP-DSS-AES-256-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="SRP-RSA-3DES-EDE-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="SRP-RSA-AES-128-CBC-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="SRP-RSA-AES-256-CBC-SHA"/>
+        </rejectedCipherSuites>
+        <acceptedCipherSuites>
+          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="128" name="AES128-GCM-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="128" name="AES128-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="128" name="AES128-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="256" name="AES256-GCM-SHA384"/>
+          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="256" name="AES256-SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="256" name="AES256-SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="128" name="ECDHE-RSA-AES128-GCM-SHA256">
+            <keyExchange A="0x00ffffffff00000001000000000000000000000000fffffffffffffffffffffffc" B="0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b" Cofactor="1" Field_Type="prime-field" Generator="0x046b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c2964fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5" GeneratorType="uncompressed" GroupSize="256" Order="0x00ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551" Prime="0x00ffffffff00000001000000000000000000000000ffffffffffffffffffffffff" Seed="0xc49d360886e704936a6678e1139d26b7819f7e90" Type="ECDH"/>
+          </cipherSuite>
+          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="128" name="ECDHE-RSA-AES128-SHA">
+            <keyExchange A="0x00ffffffff00000001000000000000000000000000fffffffffffffffffffffffc" B="0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b" Cofactor="1" Field_Type="prime-field" Generator="0x046b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c2964fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5" GeneratorType="uncompressed" GroupSize="256" Order="0x00ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551" Prime="0x00ffffffff00000001000000000000000000000000ffffffffffffffffffffffff" Seed="0xc49d360886e704936a6678e1139d26b7819f7e90" Type="ECDH"/>
+          </cipherSuite>
+          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="128" name="ECDHE-RSA-AES128-SHA256">
+            <keyExchange A="0x00ffffffff00000001000000000000000000000000fffffffffffffffffffffffc" B="0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b" Cofactor="1" Field_Type="prime-field" Generator="0x046b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c2964fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5" GeneratorType="uncompressed" GroupSize="256" Order="0x00ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551" Prime="0x00ffffffff00000001000000000000000000000000ffffffffffffffffffffffff" Seed="0xc49d360886e704936a6678e1139d26b7819f7e90" Type="ECDH"/>
+          </cipherSuite>
+          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="256" name="ECDHE-RSA-AES256-GCM-SHA384">
+            <keyExchange A="0x00ffffffff00000001000000000000000000000000fffffffffffffffffffffffc" B="0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b" Cofactor="1" Field_Type="prime-field" Generator="0x046b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c2964fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5" GeneratorType="uncompressed" GroupSize="256" Order="0x00ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551" Prime="0x00ffffffff00000001000000000000000000000000ffffffffffffffffffffffff" Seed="0xc49d360886e704936a6678e1139d26b7819f7e90" Type="ECDH"/>
+          </cipherSuite>
+          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="256" name="ECDHE-RSA-AES256-SHA">
+            <keyExchange A="0x00ffffffff00000001000000000000000000000000fffffffffffffffffffffffc" B="0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b" Cofactor="1" Field_Type="prime-field" Generator="0x046b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c2964fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5" GeneratorType="uncompressed" GroupSize="256" Order="0x00ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551" Prime="0x00ffffffff00000001000000000000000000000000ffffffffffffffffffffffff" Seed="0xc49d360886e704936a6678e1139d26b7819f7e90" Type="ECDH"/>
+          </cipherSuite>
+          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="256" name="ECDHE-RSA-AES256-SHA384">
+            <keyExchange A="0x00ffffffff00000001000000000000000000000000fffffffffffffffffffffffc" B="0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b" Cofactor="1" Field_Type="prime-field" Generator="0x046b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c2964fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5" GeneratorType="uncompressed" GroupSize="256" Order="0x00ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551" Prime="0x00ffffffff00000001000000000000000000000000ffffffffffffffffffffffff" Seed="0xc49d360886e704936a6678e1139d26b7819f7e90" Type="ECDH"/>
+          </cipherSuite>
+          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="128" name="ECDHE-RSA-RC4-SHA">
+            <keyExchange A="0x00ffffffff00000001000000000000000000000000fffffffffffffffffffffffc" B="0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b" Cofactor="1" Field_Type="prime-field" Generator="0x046b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c2964fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5" GeneratorType="uncompressed" GroupSize="256" Order="0x00ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551" Prime="0x00ffffffff00000001000000000000000000000000ffffffffffffffffffffffff" Seed="0xc49d360886e704936a6678e1139d26b7819f7e90" Type="ECDH"/>
+          </cipherSuite>
+          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="128" name="RC4-SHA"/>
+        </acceptedCipherSuites>
+        <preferredCipherSuite>
+          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="128" name="ECDHE-RSA-AES128-GCM-SHA256">
+            <keyExchange A="0x00ffffffff00000001000000000000000000000000fffffffffffffffffffffffc" B="0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b" Cofactor="1" Field_Type="prime-field" Generator="0x046b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c2964fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5" GeneratorType="uncompressed" GroupSize="256" Order="0x00ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551" Prime="0x00ffffffff00000001000000000000000000000000ffffffffffffffffffffffff" Seed="0xc49d360886e704936a6678e1139d26b7819f7e90" Type="ECDH"/>
+          </cipherSuite>
+        </preferredCipherSuite>
+      </tlsv1_2>
+    </target>
+    <target host="twitter.com" ip="199.59.150.7" port="443">
       <certinfo argument="basic" title="Certificate Information">
         <certificateChain>
           <certificate position="leaf" sha1Fingerprint="add53f6680fe66e383cbac3e60922e3b4c412bed">
