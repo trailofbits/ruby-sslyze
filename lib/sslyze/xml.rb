@@ -20,7 +20,7 @@ module SSLyze
     end
 
     def version
-      @version ||= @doc.at('/document/@SSLyzeVersion').value
+      @version ||= @doc.at('/document/@SSLyzeVersion').value.split(' ',2).last
     end
 
     def default_timeout
