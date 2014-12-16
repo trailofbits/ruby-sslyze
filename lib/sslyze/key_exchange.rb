@@ -42,7 +42,7 @@ module SSLyze
     end
 
     def type
-      @type ||= @node['Type']
+      @type ||= @node['Type'].downcase.to_sym
     end
 
   end
