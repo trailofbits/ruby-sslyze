@@ -29,8 +29,8 @@ module SSLyze
     # @see http://rubydoc.info/gems/rprogram/0.3.0/RProgram/Program#run-instance_method
     #   For additional exec-options.
     #
-    def self.analysis(options={},exec_options={},&block)
-      find.analysis(options,exec_options,&block)
+    def self.analyze(options={},exec_options={},&block)
+      find.analyze(options,exec_options,&block)
     end
 
     #
