@@ -1,10 +1,9 @@
 require 'spec_helper'
+require 'xml_examples'
 require 'sslyze/xml'
 
 describe SSLyze::XML do
-  let(:path) { File.expand_path('spec/sslyze.xml') }
-
-  subject { described_class.new(Nokogiri::XML(open(path))) }
+  include_examples "XML specs"
 
   describe ".parse" do
     it "should parse the contents of the file" do
