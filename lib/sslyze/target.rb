@@ -60,12 +60,13 @@ module SSLyze
 
     def session_renegotiation
       @session_renegotiation ||= (
-        sessionRenegotiation = @node.at('reneg/sessionRenegotiation')
+        if (sessionRenegotiation = @node.at('reneg/sessionRenegotiation'))
 
-        SessionRenegotiation.new(
-          Boolean[sessionRenegotiation['canBeClientInitiated']],
-          Boolean[sessionRenegotiation['isSecure']]
-        )
+          SessionRenegotiation.new(
+            Boolean[sessionRenegotiation['canBeClientInitiated']],
+            Boolean[sessionRenegotiation['isSecure']]
+          )
+        end
       )
     end
 
