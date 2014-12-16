@@ -120,7 +120,7 @@ module SSLyze
     end
 
     def as_pem
-      @as_pem ||= @node.as('asPEM').value
+      @as_pem ||= @node.at('asPEM').value
     end
 
     def subject_public_key_info
