@@ -5,6 +5,8 @@ require 'sslyze/protocol'
 module SSLyze
   class Target
 
+    include Types
+
     def initialize(node)
       @node = node
     end
