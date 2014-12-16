@@ -29,6 +29,8 @@ module SSLyze
 
     def compression
       unless @compression
+        @compression = {}
+
         @node.search('compression/compressionMethod').map do |compression|
           type      = compression['type'].downcase.to_sym
           supported = Boolean[compression['isSupported']]
