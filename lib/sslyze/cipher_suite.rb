@@ -1,3 +1,4 @@
+require 'sslyze/types'
 require 'sslyze/key_exchange'
 
 module SSLyze
@@ -16,10 +17,7 @@ module SSLyze
     end
 
     def anonymous?
-      case @node['anonymous']
-      when 'True'  then true
-      when 'False' then false
-      end
+      Boolean[@node['anonymous']]
     end
 
     def key_exchange

@@ -1,4 +1,5 @@
 require 'sslyze/target'
+require 'sslyze/types'
 require 'nokogiri'
 
 module SSLyze
@@ -6,6 +7,8 @@ module SSLyze
   # Represents the XML output from sslyze.
   #
   class XML
+
+    include Types
 
     def initialize(doc)
       @doc = doc
@@ -28,11 +31,11 @@ module SSLyze
     end
 
     def https_tunnel
-      @https_tunnel ||= @doc.at('/document/results/@httpsTunnel').value
+      @https_tunnel ||= Boolean[@doc.at('/document/results/@httpsTunnel').value]
     end
 
     def start_tls
-      @start_tls ||= @doc.at('/document/results/@startTLS').value
+      @start_tls ||= Boolean[@doc.at('/document/results/@startTLS').value]
     end
 
     def start_tls

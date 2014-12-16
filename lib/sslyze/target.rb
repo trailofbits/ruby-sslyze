@@ -1,13 +1,9 @@
+require 'sslyze/types'
 require 'sslyze/cert_info'
 require 'sslyze/protocol'
 
 module SSLyze
   class Target
-
-    BOOLEAN = {
-      'True' => true,
-      'False' => false
-    }
 
     def initialize(node)
       @node = node
@@ -33,7 +29,7 @@ module SSLyze
       unless @compression
         @node.search('compression/compressionMethod').map do |compression|
           type      = compression['type'].downcase.to_sym
-          supported = BOOLEAN[compression['isSupported']]
+          supported = Boolean[compression['isSupported']]
 
           @compression[type] = supported
         end

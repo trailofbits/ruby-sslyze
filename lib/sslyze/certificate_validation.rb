@@ -1,3 +1,5 @@
+require 'sslyze/types'
+
 module SSLyze
   class CertificateValidation
 
@@ -9,7 +11,7 @@ module SSLyze
     # @return [Boolean]
     #
     def hostname?
-      @node.at('hostnameValiation/@certificateMatchesServerHostname').value == 'True'
+      Boolean[@node.at('hostnameValiation/@certificateMatchesServerHostname').value]
     end
 
     #
