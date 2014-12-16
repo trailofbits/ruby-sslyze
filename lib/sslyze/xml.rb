@@ -24,7 +24,7 @@ module SSLyze
     end
 
     def default_timeout
-      @default_time ||= @doc.at('/document/results/@defaultTimeout').value
+      @default_time ||= @doc.at('/document/results/@defaultTimeout').value.to_i
     end
 
     def https_tunnel
