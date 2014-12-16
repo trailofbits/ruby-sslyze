@@ -51,7 +51,7 @@ module SSLyze
       end
     end
 
-    alias each_target each
+    alias each each_target
 
     def targets
       each_target.to_a
