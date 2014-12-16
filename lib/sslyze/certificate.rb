@@ -40,7 +40,7 @@ module SSLyze
       end
 
       def organization_name
-        @organization_name ||= @node.at('organizationalName').inner_text
+        @organization_name ||= @node.at('organizationName').inner_text
       end
 
       def business_category
