@@ -134,6 +134,7 @@ module SSLyze
     end
 
     def extensions
+      raise(NotImplementedError,"#{__method__} method is not implemented")
     end
 
     def signature_value
