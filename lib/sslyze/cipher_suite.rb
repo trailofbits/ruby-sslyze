@@ -23,7 +23,7 @@ module SSLyze
     end
 
     def key_exchange
-      @key_exchange ||= if (key_exchange_node = node.at('keyExchange'))
+      @key_exchange ||= if (key_exchange_node = @node.at('keyExchange'))
                           KeyExchange.new(key_exchange_node)
                         end
     end
