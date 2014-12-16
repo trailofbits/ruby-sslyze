@@ -45,7 +45,7 @@ describe SSLyze::Target do
 
   describe "#session_renegotiation" do
     it "should return a SessionRenegotiation object" do
-      expect(subject.session_renegotiation).to be_kind_of(SessionRenegotiation)
+      expect(subject.session_renegotiation).to be_kind_of(described_class::SessionRenegotiation)
     end
 
     it "should parse the canBeClientInitiated attribute" do
