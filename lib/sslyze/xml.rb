@@ -19,7 +19,7 @@ module SSLyze
     end
 
     def self.open(path)
-      new(Nokogiri::XML(open(path)))
+      new(Nokogiri::XML(File.open(path)))
     end
 
     def version
