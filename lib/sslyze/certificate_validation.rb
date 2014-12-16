@@ -3,6 +3,8 @@ require 'sslyze/types'
 module SSLyze
   class CertificateValidation
 
+    include Types
+
     def initialize(node)
       @node = node
     end
