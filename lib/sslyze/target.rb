@@ -46,11 +46,27 @@ module SSLyze
       Boolean[@node.at('heartbleed/heartbleed/@isVulnerable').value]
     end
 
-    def client_initiated_session_renegotiation?
-      sessionRenegotiation = @node.at('reneg/sessionRenegotiation')
+    class SessionRenegotiation < Struct.new(:client_initiated, :secure)
 
-      Boolean[sessionRenegotiation['canBeClientInitiated']] &&
-        !Boolean[sessionRenegotiation['isSecure']]
+      def client_initiated?
+        client_initiated == true
+      end
+
+      def secure?
+        secure == true
+      end
+
+    end
+
+    def session_renegotiation
+      @session_renegotiation ||= (
+        sessionRenegotiation = @node.at('reneg/sessionRenegotiation')
+
+        SessionRenegotiation.new(
+          Boolean[sessionRenegotiation['canBeClientInitiated']],
+          Boolean[sessionRenegotiation['isSecure']]
+        )
+      )
     end
 
     def sslv2

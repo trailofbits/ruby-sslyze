@@ -43,9 +43,17 @@ describe SSLyze::Target do
     end
   end
 
-  describe "#client_initiated_session_renegotiation?" do
-    it "should check canBeClientInitiated and !isSecure" do
-      expect(subject.client_initiated_session_renegotiation?).to be(false)
+  describe "#session_renegotiation" do
+    it "should return a SessionRenegotiation object" do
+      expect(subject.session_renegotiation).to be_kind_of(SessionRenegotiation)
+    end
+
+    it "should parse the canBeClientInitiated attribute" do
+      expect(subject.session_renegotiation.client_initiated).to be(false)
+    end
+
+    it "should parse the isSecure attribute" do
+      expect(subject.session_renegotiation.secure).to be(true)
     end
   end
 
