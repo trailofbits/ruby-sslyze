@@ -17,7 +17,32 @@ A Ruby interface to [sslyze] python utility.
 
 ## Examples
 
+Analyze a domain:
+
     require 'sslyze'
+
+    SSLyze::Program.analyze(targets: 'twitter.com', regular: true, timeout: 5)
+
+Analyze multiple domains:
+
+    SSLyze::Program.analyze(
+      targets: ['twitter.com', 'github.com'],
+      regular: true,
+      timeout: 5
+    )
+
+Output to XML:
+
+    SSLyze::Program.analyze(
+      targets: 'twitter.com',
+      regular: true,
+      timeout: 5,
+      xml_out: 'path/to/xml'
+    )
+
+Parsing sslyze XML output:
+
+    xml = SSLyze::XML.open('path/to/xml')
 
 ## Requirements
 
