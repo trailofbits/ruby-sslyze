@@ -38,7 +38,7 @@ module SSLyze
       @start_tls ||= Boolean[@doc.at('/document/results/@startTLS').value]
     end
 
-    def start_tls
+    def total_scan_time
       @start_tls ||= @doc.at('/document/results/@totalScanTime').value.to_f
     end
 
