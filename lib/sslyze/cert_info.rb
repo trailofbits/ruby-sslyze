@@ -4,6 +4,10 @@ require 'sslyze/certificate_validation'
 module SSLyze
   class CertInfo
 
+    def initialize(node)
+      @node = node
+    end
+
     def chain
       @chain ||= @node.search('certificateChain/certificate').map do |cert|
         Certificate.new(cert)
