@@ -26,7 +26,7 @@ module SSLyze
     end
 
     def generator_type
-      @generator ||= @node['GeneratorType']
+      @generator ||= @node['GeneratorType'].to_sym
     end
 
     def group_size
