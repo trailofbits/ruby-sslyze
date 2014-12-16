@@ -43,7 +43,7 @@ module SSLyze
     end
 
     def heartbleed?
-      @heartbleed ||= BOOLEAN[@node.at('heartbleed/heartbleed/@isVulnerable')]
+      @heartbleed ||= Boolean[@node.at('heartbleed/heartbleed/@isVulnerable')]
     end
 
     def sslv2
