@@ -13,7 +13,7 @@ module SSLyze
     # @return [Boolean]
     #
     def hostname?
-      Boolean[@node.at('hostnameValiation/@certificateMatchesServerHostname').value]
+      Boolean[@node.at('hostnameValidation/@certificateMatchesServerHostname').value]
     end
 
     #
