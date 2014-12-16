@@ -120,7 +120,7 @@ module SSLyze
     end
 
     def as_pem
-      @as_pem ||= @node.at('asPEM').value
+      @as_pem ||= @node.at('asPEM').inner_text
     end
 
     def subject_public_key_info
@@ -130,7 +130,7 @@ module SSLyze
     end
 
     def version
-      @version ||= @node.at('version').value.to_i
+      @version ||= @node.at('version').inner_text.to_i
     end
 
     def extensions
