@@ -60,5 +60,9 @@ module SSLyze
       each_target.to_a
     end
 
+    def target
+      each_target.first
+    end
+
   end
 end

@@ -61,4 +61,10 @@ describe SSLyze::XML do
       expect(subject.targets).to be_an(Array).and(all(be_a(Target)))
     end
   end
+
+  describe "#target" do
+    it "should return the first target" do
+      expect(subject.target.host).to be == subject.targets.first.host
+    end
+  end
 end
