@@ -92,5 +92,9 @@ module SSLyze
       each_preferred_cipher_suite.to_a
     end
 
+    def supported?
+      each_accepted_cipher_suite.any?
+    end
+
   end
 end

@@ -88,4 +88,12 @@ describe SSLyze::Protocol do
       )
     end
   end
+
+  describe "#supported?" do
+    context "when there are preferred cipher suites" do
+      it "should return true" do
+        expect(subject.supported?).to be(true)
+      end
+    end
+  end
 end
