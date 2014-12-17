@@ -1,4 +1,4 @@
-require 'sslyze/certificate'
+require 'sslyze/certificate_chain'
 require 'sslyze/certificate_validation'
 
 module SSLyze
@@ -9,9 +9,7 @@ module SSLyze
     end
 
     def chain
-      @chain ||= @node.search('certificateChain/certificate').map do |cert|
-        Certificate.new(cert)
-      end
+      @chain ||= CertificateChain.new(@node.at('certificateChain'))
     end
 
     def validation

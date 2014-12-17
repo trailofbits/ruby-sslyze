@@ -8,8 +8,8 @@ describe SSLyze::CertInfo do
   subject { described_class.new(xml.at('/document/results/target/certinfo')) }
 
   describe "#chain" do
-    it "should return Certificate objects" do
-      expect(subject.chain).to all(be_a(Certificate))
+    it "should return a CertificateChain object" do
+      expect(subject.chain).to be_a(CertificateChain)
     end
   end
 
