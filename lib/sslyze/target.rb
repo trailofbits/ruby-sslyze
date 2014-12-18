@@ -43,7 +43,9 @@ module SSLyze
     end
 
     def heartbleed?
-      Boolean[@node.at('heartbleed/heartbleed/@isVulnerable').value]
+      if (heartbleed = @node.at('heartbleed/heartbleed'))
+        Boolean[heartbleed['isVulnerable']]
+      end
     end
 
     class SessionRenegotiation < Struct.new(:client_initiated, :secure)
