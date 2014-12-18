@@ -9,7 +9,9 @@ module SSLyze
     end
 
     def chain
-      @chain ||= CertificateChain.new(@node.at('certificateChain'))
+      @chain ||= if (cert_chain = @node.at('certificateChain'))
+                   CertificateChain.new(cert_chain)
+                 end
     end
 
     def validation
