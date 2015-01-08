@@ -73,23 +73,33 @@ module SSLyze
     end
 
     def sslv2
-      @sslv2 ||= Protocol.new(@node.at('sslv2'))
+      @sslv2 ||= if (node = @node.at('sslv2'))
+                   Protocol.new(node)
+                 end
     end
 
     def sslv3
-      @sslv3 ||= Protocol.new(@node.at('sslv3'))
+      @sslv3 ||= if (node = @node.at('sslv3'))
+                   Protocol.new(node)
+                 end
     end
 
     def tlsv1
-      @tlsv1 ||= Protocol.new(@node.at('tlsv1'))
+      @tlsv1 ||= if (node = @node.at('tlsv1'))
+                   Protocol.new(node)
+                 end
     end
 
     def tlsv1_1
-      @tlsv1_1 ||= Protocol.new(@node.at('tlsv1_1'))
+      @tlsv1_1 ||= if (node = @node.at('tlsv1_1'))
+                     Protocol.new(node)
+                   end
     end
 
     def tlsv1_2
-      @tlsv1_2 ||= Protocol.new(@node.at('tlsv1_2'))
+      @tlsv1_2 ||= if (node = @node.at('tlsv1_2'))
+                     Protocol.new(node)
+                   end
     end
 
   end
