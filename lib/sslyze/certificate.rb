@@ -29,6 +29,142 @@ module SSLyze
 
     end
 
+    class Extensions
+
+      class AuthorityInformationAccess
+
+        def initialize(node)
+          @node = node
+        end
+
+        def ca_issuers
+          @ca_issuers ||= @node.search('CAIssuers/URI/listEntry').map do |uri|
+            URI(uri.inner_text)
+          end
+        end
+
+        def ocsp
+          @ocsp ||= @node.search('OCSP/URI/listEntry').map do |uri|
+            URI(uri.inner_text)
+          end
+        end
+
+      end
+
+      class X509v3CRLDistributionPoints
+
+        def initialize(node)
+          @node = node
+        end
+
+        #
+        # @return [Array<String>]
+        #
+        def full_name
+          @full_name ||= @node.search('FullName/listEntry').map do |full_name|
+            full_name.inner_text
+          end
+        end
+
+        #
+        # @return [Array<URI>]
+        #
+        def uri
+          @uri ||= @node.search('URI/listEntry').map do |uri|
+            URI(uri.inner_text)
+          end
+        end
+
+      end
+
+      class X509v3KeyUsage
+
+        def initialize(node)
+          @node = node
+        end
+
+        def key_encipherment
+          @key_encipherment ||= @node.at('KeyEncipherment').inner_text
+        end
+
+        def digital_signature
+          @digital_signature ||= @node.at('DigitalSignature').inner_text
+        end
+
+      end
+
+      class X509v3CertificatePolicies
+
+        def initialize(node)
+          @node = node
+        end
+
+        def policy
+          @policy ||= @node.at('Policy/listEntry').inner_text
+        end
+
+        def explicit_text
+          @explicit_text ||= if (explicit_text = @node.at('ExplicitText/listEntry'))
+                               explicit_text.inner_text
+                             end
+        end
+
+        def cps
+          @cps ||= @node.at('CPS/listEntry').inner_text
+        end
+
+        def user_notice
+          @user_notice ||= if (user_notice = @node.at('userNotice/listEntry'))
+                             user_notice.inner_text
+                           end
+        end
+
+      end
+
+      def initialize(node)
+        @node = node
+      end
+
+      def x509v3_subject_key_identifier
+        @x509v3_subject_key_identifier ||= @node.at('X509v3SubjectKeyIdentifier').inner_text
+      end
+
+      def x509v3_extended_key_usage
+        raise(NotImplementedError,"#{self.class}##{__method__} not implemented")
+      end
+
+      def authority_information_access
+        @authority_information_access ||= AuthorityInformationAccess.new(@node.at('AuthorityInformationAccess'))
+      end
+
+      def x509v3_crl_distribution_points
+        @x509v3_crl_distribution_points ||= X509v3CRLDistributionPoints.new(@node.at('X509v3CRLDistributionPoints'))
+      end
+
+      def x509v3_basic_constraints
+        @x509v3_basic_constraints ||= @node.at('X509v3BasicConstraints').inner_text
+      end
+
+      def x509v3_key_usage
+        @x509v3_key_usage ||= X509v3KeyUsage.new(@node.at('X509v3KeyUsage'))
+      end
+
+      def x509v3_subject_alternative_name
+        @x509v3_subject_alternative_name ||= @node.search('X509v3SubjectAlternativeName/DNS/listEntry').map do |dns|
+          dns.inner_text
+        end
+      end
+
+      def x509v3_authority_key_identifier
+        @x509v3_authority_key_identifier ||= @node.at('X509v3AuthorityKeyIdentifier').inner_text
+      end
+
+      def x509v3_certificate_policies
+        @x509v3_certificate_policies ||= X509v3CertificatePolicies.new(@node.at('X509v3CertificatePolicies'))
+      end
+
+    end
+
     class Subject
 
       def initialize(node)
@@ -134,7 +270,7 @@ module SSLyze
     end
 
     def extensions
-      raise(NotImplementedError,"#{__method__} method is not implemented")
+      @extensions ||= Extensions.new(@node.at('extensions'))
     end
 
     def signature_value

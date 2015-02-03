@@ -73,7 +73,169 @@ XX4C2NesiZcLYbc2n7B9O+63M2k=
   end
 
   describe "#extensions" do
-    pending "implement later"
+    subject { super().extensions }
+
+    it "should return an Extensions object" do
+      expect(subject).to be_kind_of(described_class::Extensions)
+    end
+
+    describe "#x509v3_subject_key_identifier" do
+      subject { super().x509v3_subject_key_identifier }
+
+      it "should parse the X509v3SubjectKeyIdentifier element" do
+        expect(subject).to be == '6A:43:90:7D:3B:98:14:72:52:95:3A:AA:28:0A:43:F8:51:7E:D3:A6'
+      end
+    end
+
+    describe "#x509v3_extended_key_usage" do
+      it "should parse the X509v3ExtendedKeyUsage element"
+    end
+
+    describe "#authority_information_access" do
+      subject { super().authority_information_access }
+
+      it "should return an AuthorityInformationAccess object" do
+        expect(subject).to be_kind_of(described_class::Extensions::AuthorityInformationAccess)
+      end
+
+      describe "#ca_issuers" do
+        subject { super().ca_issuers }
+
+        it "should parse the CAIssuers element" do
+          expect(subject).to be == [
+            URI('http://cacerts.digicert.com/DigiCertSHA2ExtendedValidationServerCA.crt')
+          ]
+        end
+      end
+
+      describe "#ocsp" do
+        subject { super().ocsp }
+
+        it "should parse the OCSP element" do
+          expect(subject).to be == [
+            URI('http://ocsp.digicert.com')
+          ]
+        end
+      end
+    end
+
+    describe "#x509v3_crl_distribution_points" do
+      subject { super().x509v3_crl_distribution_points }
+
+      it "should return a X509v3CRLDistributionPoints object" do
+        expect(subject).to be_kind_of(described_class::Extensions::X509v3CRLDistributionPoints)
+      end
+
+      describe "#full_name" do
+        subject { super().full_name }
+
+        it "should parse the FullName element" do
+          expect(subject).to be == ['', '']
+        end
+      end
+
+      describe "#uri" do
+        subject { super().uri }
+
+        it "should parse the URI element" do
+          expect(subject).to be == [
+            URI('http://crl3.digicert.com/sha2-ev-server-g1.crl'),
+            URI('http://crl4.digicert.com/sha2-ev-server-g1.crl')
+          ]
+        end
+      end
+    end
+
+    describe "#x509v3_basic_constraints" do
+      subject { super().x509v3_basic_constraints }
+
+      it "should parse the X509v3BasicConstraints element" do
+        expect(subject).to be == 'CA:FALSE'
+      end
+    end
+
+    describe "#x509v3_key_usage" do
+      subject { super().x509v3_key_usage }
+
+      it "should return a X509v3KeyUsage object" do
+        expect(subject).to be_kind_of(described_class::Extensions::X509v3KeyUsage)
+      end
+
+      describe "#key_encipherment" do
+        subject { super().key_encipherment }
+
+        it "should parse the KeyEncipherment element" do
+          expect(subject).to be == ''
+        end
+      end
+
+      describe "#digital_signature" do
+        subject { super().digital_signature }
+
+        it "should parse the DigitalSignature element" do
+          expect(subject).to be == ''
+        end
+      end
+    end
+
+    describe "#x509v3_subject_alternative_name" do
+      subject { super().x509v3_subject_alternative_name }
+
+      it "should parse the X509v3SubjectAlternativeName elements" do
+        expect(subject).to be == [
+          'github.com',
+          'www.github.com'
+        ]
+      end
+    end
+
+    describe "#x509v3_authority_key_identifier" do
+      subject { super().x509v3_authority_key_identifier }
+
+      it "should parse the X509v3AuthorityKeyIdentifier element" do
+        expect(subject).to be == 'keyid:3D:D3:50:A5:D6:A0:AD:EE:F3:4A:60:0A:65:D3:21:D4:F8:F8:D6:0F'
+      end
+    end
+
+    describe "#x509v3_certificate_policies" do
+      subject { super().x509v3_certificate_policies }
+
+      it "should return a X509v3CertificatePolicies object" do
+        expect(subject).to be_kind_of(described_class::Extensions::X509v3CertificatePolicies)
+      end
+
+      describe "#policy" do
+        subject { super().policy }
+
+        it "should parse the Policy element" do
+          expect(subject).to be == '2.16.840.1.114412.2.1'
+        end
+      end
+
+      describe "#explicit_text" do
+        subject { super().explicit_text }
+
+        it "should parse the ExplicitText element" do
+          expect(subject).to be_nil
+        end
+      end
+
+      describe "#cps" do
+        subject { super().cps }
+
+        it "should parse the CPS element" do
+          expect(subject).to be == 'https://www.digicert.com/CPS'
+        end
+      end
+
+      describe "#user_notice" do
+        subject { super().user_notice }
+
+        it "should parse the UserNotice element" do
+          expect(subject).to be_nil
+        end
+      end
+    end
   end
 
   describe "#signature_value" do
