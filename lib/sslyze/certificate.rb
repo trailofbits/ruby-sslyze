@@ -29,13 +29,21 @@ module SSLyze
 
     end
 
+
+
     class Extensions
 
-      class AuthorityInformationAccess
-
+      class Extension
         def initialize(node)
           @node = node
         end
+
+        def present?
+          !@node.nil?
+        end
+      end
+
+      class AuthorityInformationAccess < Extension
 
         def ca_issuers
           @ca_issuers ||= @node.search('CAIssuers/URI/listEntry').map do |uri|
@@ -51,11 +59,7 @@ module SSLyze
 
       end
 
-      class X509v3CRLDistributionPoints
-
-        def initialize(node)
-          @node = node
-        end
+      class X509v3CRLDistributionPoints < Extension
 
         #
         # @return [Array<String>]
@@ -77,11 +81,7 @@ module SSLyze
 
       end
 
-      class X509v3KeyUsage
-
-        def initialize(node)
-          @node = node
-        end
+      class X509v3KeyUsage < Extension
 
         def key_encipherment
           @key_encipherment ||= @node.at('KeyEncipherment').inner_text
@@ -91,13 +91,29 @@ module SSLyze
           @digital_signature ||= @node.at('DigitalSignature').inner_text
         end
 
+        def crl_sign
+          @crl_sign ||= @node.at('CRLSign').inner_text
+        end
+
+        def certificate_sign
+          @certificate_sign ||= @node.at('CertificateSign').inner_text
+        end
+
       end
 
-      class X509v3CertificatePolicies
+      class X509v3ExtendedKeyUsage < Extension
 
-        def initialize(node)
-          @node = node
+        def tls_web_client_authentication
+          @tls_web_client_authentication ||= @node.at('TLSWebClientAuthentication').inner_text
         end
+
+        def tls_web_server_authentication
+          @tls_web_server_authentication ||= @node.at('TLSWebServerAuthentication').inner_text
+        end
+
+      end
+
+      class X509v3CertificatePolicies < Extension
 
         def policy
           @policy ||= @node.at('Policy/listEntry').inner_text
@@ -129,10 +145,6 @@ module SSLyze
         @x509v3_subject_key_identifier ||= @node.at('X509v3SubjectKeyIdentifier').inner_text
       end
 
-      def x509v3_extended_key_usage
-        raise(NotImplementedError,"#{self.class}##{__method__} not implemented")
-      end
-
       def authority_information_access
         @authority_information_access ||= AuthorityInformationAccess.new(@node.at('AuthorityInformationAccess'))
       end
@@ -149,8 +161,13 @@ module SSLyze
         @x509v3_key_usage ||= X509v3KeyUsage.new(@node.at('X509v3KeyUsage'))
       end
 
-      def x509v3_subject_alternative_name
-        @x509v3_subject_alternative_name ||= @node.search('X509v3SubjectAlternativeName/DNS/listEntry').map do |dns|
+      def x509v3_extended_key_usage
+        @x509v3_extended_key_usage ||= X509v3ExtendedKeyUsage.new(@node.at('X509v3ExtendedKeyUsage'))
+      end
+
+      def x509v3_subject_alternative_name(type = "DNS")
+        @x509v3_subject_alternative_name ||= {}
+        @x509v3_subject_alternative_name[type] ||= @node.search("X509v3SubjectAlternativeName/#{type}/listEntry").map do |dns|
           dns.inner_text
         end
       end

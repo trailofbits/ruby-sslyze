@@ -1,5 +1,6 @@
 require 'sslyze/certificate_chain'
 require 'sslyze/certificate_validation'
+require 'sslyze/ocsp_response'
 
 module SSLyze
   class CertInfo
@@ -19,7 +20,7 @@ module SSLyze
     end
 
     def ocsp_stapling
-      @ocsp_stapling ||= @node.at('ocspStapling/@error').value
+      @ocsp_stapling ||= OcspResponse.new(@node.at('ocspResponse'))
     end
 
   end

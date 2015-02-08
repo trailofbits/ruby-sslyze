@@ -88,7 +88,27 @@ XX4C2NesiZcLYbc2n7B9O+63M2k=
     end
 
     describe "#x509v3_extended_key_usage" do
-      it "should parse the X509v3ExtendedKeyUsage element"
+      subject { super().x509v3_extended_key_usage }
+
+      it "should return a X509v3ExtendedKeyUsage object" do
+        expect(subject).to be_kind_of(described_class::Extensions::X509v3ExtendedKeyUsage)
+      end
+
+      describe "#tls_web_client_authentication" do
+        subject { super().tls_web_client_authentication }
+
+        it "should parse the TLSWebClientAuthentication element" do
+          expect(subject).to be == ''
+        end
+      end
+
+      describe "#tls_web_server_authentication" do
+        subject { super().tls_web_server_authentication }
+
+        it "should parse the TLSWebServerAuthentication element" do
+          expect(subject).to be == ''
+        end
+      end
     end
 
     describe "#authority_information_access" do
