@@ -1,7 +1,7 @@
 require 'sslyze/types'
 
 module SSLyze
-  class OcspResponse
+  class OCSPResponse
 
     include Types
 

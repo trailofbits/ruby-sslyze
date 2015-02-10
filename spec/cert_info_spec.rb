@@ -20,8 +20,8 @@ describe SSLyze::CertInfo do
   end
 
   describe "#ocsp_stapling" do
-    it "should return a OcspResponse object" do
-      expect(subject.ocsp_stapling).to be_kind_of(OcspResponse)
+    it "should return a OCSPResponse object" do
+      expect(subject.ocsp_stapling).to be_kind_of(OCSPResponse)
     end
   end
 end

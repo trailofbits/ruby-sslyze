@@ -20,7 +20,7 @@ module SSLyze
     end
 
     def ocsp_stapling
-      @ocsp_stapling ||= OcspResponse.new(@node.at('ocspResponse'))
+      @ocsp_stapling ||= OCSPResponse.new(@node.at('ocspResponse'))
     end
 
   end
