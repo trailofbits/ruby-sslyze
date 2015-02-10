@@ -20,8 +20,8 @@ describe SSLyze::CertInfo do
   end
 
   describe "#ocsp_stapling" do
-    it "should parse the error attribute in ocspStapling" do
-      expect(subject.ocsp_stapling).to be == 'Server did not send back an OCSP response'
+    it "should return a OcspResponse object" do
+      expect(subject.ocsp_stapling).to be_kind_of(OcspResponse)
     end
   end
 end
