@@ -154,7 +154,9 @@ module SSLyze
       end
 
       def x509v3_basic_constraints
-        @x509v3_basic_constraints ||= @node.at('X509v3BasicConstraints').inner_text
+        @x509v3_basic_constraints ||= if (constraints = @node.at('X509v3BasicConstraints'))
+                                        constraints.inner_text
+                                      end
       end
 
       def x509v3_key_usage
