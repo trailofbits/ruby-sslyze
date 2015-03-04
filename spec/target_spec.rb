@@ -87,4 +87,90 @@ describe SSLyze::Target do
     end
   end
 
+  describe "#each_ssl_protocol" do
+    context "when a block is given" do
+      it "should yield sslv2 and sslv3" do
+        expect { |b|
+          subject.each_ssl_protocol(&b)
+        }.to yield_successive_args(subject.sslv2, subject.sslv3)
+      end
+    end
+
+    context "when no block is given" do
+      it "should return an Enumerator" do
+        expect(subject.each_ssl_protocol).to be_kind_of(Enumerator)
+      end
+    end
+  end
+
+  describe "#ssl_protocols" do
+    it "should return sslv2 and sslv3" do
+      expect(subject.ssl_protocols).to be == [subject.sslv2, subject.sslv3]
+    end
+  end
+
+  describe "#each_tls_protocol" do
+    context "when a block is given" do
+      it "should yield tlsv1, tlsv1_1 and tlsv1_2" do
+        expect { |b|
+          subject.each_tls_protocol(&b)
+        }.to yield_successive_args(
+          subject.tlsv1,
+          subject.tlsv1_1,
+          subject.tlsv1_2
+        )
+      end
+    end
+
+    context "when no block is given" do
+      it "should return an Enumerator" do
+        expect(subject.each_tls_protocol).to be_kind_of(Enumerator)
+      end
+    end
+  end
+
+  describe "#tls_protocols" do
+    it "should return tlsv1, tlsv1_1 and tlsv1_2" do
+      expect(subject.tls_protocols).to be == [
+        subject.tlsv1,
+        subject.tlsv1_1,
+        subject.tlsv1_2
+      ]
+    end
+  end
+
+  describe "#each_protocol" do
+    context "when a block is given" do
+      it "should yield sslv2, sslv3, tlsv1, tlsv1_1 and tlsv1_2" do
+        expect { |b|
+          subject.each_protocol(&b)
+        }.to yield_successive_args(
+          subject.sslv2,
+          subject.sslv3,
+          subject.tlsv1,
+          subject.tlsv1_1,
+          subject.tlsv1_2
+        )
+      end
+    end
+
+    context "when no block is given" do
+      it "should return an Enumerator" do
+        expect(subject.each_protocol).to be_kind_of(Enumerator)
+      end
+    end
+  end
+
+  describe "#protocols" do
+    it "should return sslv2, sslv3, tlsv1, tlsv1_1 and tlsv1_2" do
+      expect(subject.protocols).to be == [
+        subject.sslv2,
+        subject.sslv3,
+        subject.tlsv1,
+        subject.tlsv1_1,
+        subject.tlsv1_2
+      ]
+    end
+  end
+
 end

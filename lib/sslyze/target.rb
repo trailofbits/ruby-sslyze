@@ -102,5 +102,96 @@ module SSLyze
                    end
     end
 
+    #
+    # Iterates over every SSL protocol.
+    #
+    # @yield [protocol]
+    #   The given block will be passed each SSL protocol.
+    #
+    # @yieldparam [Protocol] protocol
+    #   A SSL protocol.
+    #
+    # @return [Enumerator]
+    #   If a no block was given, an Enumerator will be returned.
+    #
+    # @see {#sslv2}, {#sslv3}
+    #
+    def each_ssl_protocol
+      return enum_for(__method__) unless block_given?
+
+      yield sslv2 if sslv2
+      yield sslv3 if sslv3
+    end
+
+    #
+    # All supported SSL protocols.
+    #
+    # @return [Array<Protocol>]
+    #
+    def ssl_protocols
+      each_ssl_protocol.to_a
+    end
+
+    #
+    # Iterates over every TLS protocol.
+    #
+    # @yield [protocol]
+    #   The given block will be passed each TLS protocol.
+    #
+    # @yieldparam [Protocol] protocol
+    #   A TLS protocol.
+    #
+    # @return [Enumerator]
+    #   If a no block was given, an Enumerator will be returned.
+    #
+    # @see {#tlsv1}, {#tlsv1_1}, {#tlsv1_2}
+    #
+    def each_tls_protocol
+      return enum_for(__method__) unless block_given?
+
+      yield tlsv1 if tlsv1
+      yield tlsv1_1 if tlsv1_1
+      yield tlsv1_2 if tlsv1_2
+    end
+
+    #
+    # All supported TLS protocols.
+    #
+    # @return [Array<Protocol>]
+    #
+    def tls_protocols
+      each_tls_protocol.to_a
+    end
+
+    #
+    # Iterates over every SSL/TLS protocol.
+    #
+    # @yield [protocol]
+    #   The given block will be passed each SSL/TLS protocol.
+    #
+    # @yieldparam [Protocol] protocol
+    #   A SSL/TLS protocol.
+    #
+    # @return [Enumerator]
+    #   If a no block was given, an Enumerator will be returned.
+    #
+    # @see {#sslv2}, {#sslv3}, {#tlsv1}, {#tlsv1_1}, {#tlsv1_2}
+    #
+    def each_protocol(&block)
+      return enum_for(__method__) unless block
+
+      each_ssl_protocol(&block)
+      each_tls_protocol(&block)
+    end
+
+    #
+    # All supported SSL/TLS protocols.
+    #
+    # @return [Array<Protocol>]
+    #
+    def protocols
+      each_protocol.to_a
+    end
+
   end
 end
