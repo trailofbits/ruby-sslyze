@@ -29,8 +29,6 @@ module SSLyze
 
     end
 
-
-
     class Extensions
 
       class Extension
