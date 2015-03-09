@@ -18,7 +18,7 @@ module SSLyze
     end
 
     def leaf
-      @leaf ||= if (certificate = @node.at('certificate[position="leaf"]'))
+      @leaf ||= if (certificate = @node.at('certificate[@position="leaf"]'))
                   Certificate.new(certificate)
                 end
     end
@@ -26,7 +26,7 @@ module SSLyze
     def intermediate
       return enum_for(__method__) unless block_given?
 
-      @node.search('certificate[position="intermediate"]').each do |certificate|
+      @node.search('certificate[@position="intermediate"]').each do |certificate|
         yield Certificate.new(certificate)
       end
     end
