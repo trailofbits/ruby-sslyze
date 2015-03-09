@@ -10,8 +10,8 @@ module SSLyze
         end
 
         def ca?
-          if   @node.inner_text.include?('CA:TRUE') then true
-          else @node.inner_text.include?('CA:FALSE') then false
+          if    @node.inner_text.include?('CA:TRUE')  then true
+          elsif @node.inner_text.include?('CA:FALSE') then false
           end
         end
 
