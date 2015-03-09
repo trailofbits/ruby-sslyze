@@ -12,7 +12,7 @@ module SSLyze
         end
 
         def path_length
-          @path_length ||= if (match = @node.inner_text.match(/pathLen:(\d+)/))
+          @path_length ||= if (match = @node.inner_text.match(/pathlen:(\d+)/))
                              match[1].to_i
                            end
         end
