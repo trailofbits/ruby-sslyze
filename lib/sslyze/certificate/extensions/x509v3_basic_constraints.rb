@@ -10,9 +10,9 @@ module SSLyze
         end
 
         def ca?
-          @ca ||= if (match = @node.inner_text.match(/CA:(\w+)/))
-                    match[1] == 'TRUE'
-                  end
+          if   @node.inner_text.include?('CA:TRUE') then true
+          else @node.inner_text.include?('CA:FALSE') then false
+          end
         end
 
         def path_length
