@@ -31,5 +31,11 @@ module SSLyze
       end
     end
 
+    def root
+      if (certificate = @node.at('certificate[@position="intermediate"]:last-child'))
+        Certificate.new(certificate)
+      end
+    end
+
   end
 end

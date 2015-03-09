@@ -46,4 +46,10 @@ describe SSLyze::CertificateChain do
     end
   end
 
+  describe "#root" do
+    it "should find the last intermediate certificate" do
+      expect(subject.root.sha1_fingerprint).to be == subject.intermediate.to_a.last.sha1_fingerprint
+    end
+  end
+
 end
