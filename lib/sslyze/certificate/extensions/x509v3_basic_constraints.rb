@@ -5,6 +5,10 @@ module SSLyze
     class Extensions
       class X509v3BasicConstraints < Extension
 
+        def critical?
+          @node.inner_text.include?('critical')
+        end
+
         def ca?
           @ca ||= if (match = @node.inner_text.match(/CA:(\w+)/))
                     match[1] == 'TRUE'
