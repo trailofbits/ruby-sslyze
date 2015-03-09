@@ -170,7 +170,25 @@ XX4C2NesiZcLYbc2n7B9O+63M2k=
       subject { super().x509v3_basic_constraints }
 
       it "should parse the X509v3BasicConstraints element" do
-        expect(subject).to be == 'CA:FALSE'
+        expect(subject).to be_kind_of(described_class::Extensions::X509v3BasicConstraints)
+      end
+
+      describe "#ca?" do
+        subject { super().ca? }
+
+        it "should parse the 'CA:' constraint" do
+          expect(subject).to be false
+        end
+      end
+
+      describe "#path_length" do
+        subject { super().path_length }
+
+        pending "need data" do
+          it "should parse the 'pathLen:' constraint" do
+            expect(subject).to be == 0
+          end
+        end
       end
     end
 

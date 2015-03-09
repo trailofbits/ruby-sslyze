@@ -2,6 +2,7 @@ require 'sslyze/certificate/extensions/authority_information_access'
 require 'sslyze/certificate/extensions/x509v3_crl_distribution_points'
 require 'sslyze/certificate/extensions/x509v3_key_usage'
 require 'sslyze/certificate/extensions/x509v3_extended_key_usage'
+require 'sslyze/certificate/extensions/x509v3_basic_constraints'
 require 'sslyze/certificate/extensions/x509v3_certificate_policies'
 
 module SSLyze
@@ -26,7 +27,7 @@ module SSLyze
 
       def x509v3_basic_constraints
         @x509v3_basic_constraints ||= if (constraints = @node.at('X509v3BasicConstraints'))
-                                        constraints.inner_text
+                                        X509v3BasicConstraints.new(constraints)
                                       end
       end
 
