@@ -193,5 +193,15 @@ module SSLyze
       each_protocol.to_a
     end
 
+    #
+    # Convert the target to a String.
+    #
+    # @return [String]
+    #   The host and port.
+    #
+    def to_s
+      "#{host}:#{port}"
+    end
+
   end
 end
