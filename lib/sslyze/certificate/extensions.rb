@@ -2,6 +2,7 @@ require 'sslyze/certificate/extensions/authority_information_access'
 require 'sslyze/certificate/extensions/x509v3_crl_distribution_points'
 require 'sslyze/certificate/extensions/x509v3_key_usage'
 require 'sslyze/certificate/extensions/x509v3_extended_key_usage'
+require 'sslyze/certificate/extensions/x509v3_subject_alternative_name'
 require 'sslyze/certificate/extensions/x509v3_basic_constraints'
 require 'sslyze/certificate/extensions/x509v3_certificate_policies'
 
@@ -49,11 +50,10 @@ module SSLyze
                                        end
       end
 
-      def x509v3_subject_alternative_name(type = "DNS")
-        @x509v3_subject_alternative_name ||= {}
-        @x509v3_subject_alternative_name[type] ||= @node.search("X509v3SubjectAlternativeName/#{type}/listEntry").map do |dns|
-          dns.inner_text
-        end
+      def x509v3_subject_alternative_name
+        @x509v3_subject_alternative_name ||= if (node = @node.search('X509v3SubjectAlternativeName'))
+                                               X509v3SubjectAlternativeName.new(node)
+                                             end
       end
 
       def x509v3_authority_key_identifier

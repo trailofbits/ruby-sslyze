@@ -220,10 +220,18 @@ XX4C2NesiZcLYbc2n7B9O+63M2k=
       subject { super().x509v3_subject_alternative_name }
 
       it "should parse the X509v3SubjectAlternativeName elements" do
-        expect(subject).to be == [
-          'github.com',
-          'www.github.com'
-        ]
+        expect(subject).to be_kind_of(described_class::Extensions::X509v3SubjectAlternativeName)
+      end
+
+      describe "#dns" do
+        subject { super().dns }
+
+        it "should parse the DNS/listEntry elements" do
+          expect(subject).to be == [
+            'github.com',
+            'www.github.com'
+          ]
+        end
       end
     end
 
