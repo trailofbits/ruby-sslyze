@@ -14,15 +14,21 @@ module SSLyze
       end
 
       def x509v3_subject_key_identifier
-        @x509v3_subject_key_identifier ||= @node.at('X509v3SubjectKeyIdentifier').inner_text
+        @x509v3_subject_key_identifier ||= if (node = @node.at('X509v3SubjectKeyIdentifier'))
+                                             node.inner_text
+                                           end
       end
 
       def authority_information_access
-        @authority_information_access ||= AuthorityInformationAccess.new(@node.at('AuthorityInformationAccess'))
+        @authority_information_access ||= if (node = @node.at('AuthorityInformationAccess'))
+                                            AuthorityInformationAccess.new(node)
+                                          end
       end
 
       def x509v3_crl_distribution_points
-        @x509v3_crl_distribution_points ||= X509v3CRLDistributionPoints.new(@node.at('X509v3CRLDistributionPoints'))
+        @x509v3_crl_distribution_points ||= if (node = @node.at('X509v3CRLDistributionPoints'))
+                                              X509v3CRLDistributionPoints.new(node)
+                                            end
       end
 
       def x509v3_basic_constraints
@@ -32,11 +38,15 @@ module SSLyze
       end
 
       def x509v3_key_usage
-        @x509v3_key_usage ||= X509v3KeyUsage.new(@node.at('X509v3KeyUsage'))
+        @x509v3_key_usage ||= if (node = @node.at('X509v3KeyUsage'))
+                                X509v3KeyUsage.new(node)
+                              end
       end
 
       def x509v3_extended_key_usage
-        @x509v3_extended_key_usage ||= X509v3ExtendedKeyUsage.new(@node.at('X509v3ExtendedKeyUsage'))
+        @x509v3_extended_key_usage ||= if (node = @node.at('X509v3ExtendedKeyUsage'))
+                                         X509v3ExtendedKeyUsage.new(node)
+                                       end
       end
 
       def x509v3_subject_alternative_name(type = "DNS")
@@ -47,11 +57,15 @@ module SSLyze
       end
 
       def x509v3_authority_key_identifier
-        @x509v3_authority_key_identifier ||= @node.at('X509v3AuthorityKeyIdentifier').inner_text
+        @x509v3_authority_key_identifier ||= if (node = @node.at('X509v3AuthorityKeyIdentifier'))
+                                               node.inner_text
+                                             end
       end
 
       def x509v3_certificate_policies
-        @x509v3_certificate_policies ||= X509v3CertificatePolicies.new(@node.at('X509v3CertificatePolicies'))
+        @x509v3_certificate_policies ||= if (node = @node.at('X509v3CertificatePolicies'))
+                                           X509v3CertificatePolicies.new(node)
+                                         end
       end
 
     end
