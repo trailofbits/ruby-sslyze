@@ -30,19 +30,25 @@ describe SSLyze::CertificateChain do
     end
   end
 
-  describe "#intermediate" do
+  describe "#each_intermediate" do
     context "when given a block" do
       it "should return Certificates with position intermediate" do
         expect { |b|
-          subject.intermediate(&b)
+          subject.each_intermediate(&b)
         }.to yield_successive_args(Certificate)
       end
     end
 
     context "when not given a block" do
       it "should return an Enumerator" do
-        expect(subject.intermediate).to be_kind_of(Enumerator)
+        expect(subject.each_intermediate).to be_kind_of(Enumerator)
       end
+    end
+  end
+
+  describe "#intermediate" do
+    it "should return all intermediate certificates" do
+      expect(subject.intermediate).to all(be_kind_of(Certificate))
     end
   end
 

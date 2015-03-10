@@ -55,12 +55,23 @@ module SSLyze
     #
     # @return [Enumerator]
     #
-    def intermediate
+    def each_intermediate
       return enum_for(__method__) unless block_given?
 
       @node.search('certificate[@position="intermediate"]').each do |certificate|
         yield Certificate.new(certificate)
       end
+    end
+
+    #
+    # The intermediate certificates.
+    #
+    # @return [Array<Certificate>]
+    #
+    # @see #each_intermediate
+    #
+    def intermediate
+      each_intermediate.to_a
     end
 
     #
