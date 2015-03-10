@@ -254,7 +254,7 @@ XX4C2NesiZcLYbc2n7B9O+63M2k=
         subject { super().policy }
 
         it "should parse the Policy element" do
-          expect(subject).to be == '2.16.840.1.114412.2.1'
+          expect(subject).to be == ['2.16.840.1.114412.2.1']
         end
       end
 
@@ -262,7 +262,7 @@ XX4C2NesiZcLYbc2n7B9O+63M2k=
         subject { super().explicit_text }
 
         it "should parse the ExplicitText element" do
-          expect(subject).to be_nil
+          expect(subject).to be == []
         end
       end
 
@@ -270,7 +270,7 @@ XX4C2NesiZcLYbc2n7B9O+63M2k=
         subject { super().cps }
 
         it "should parse the CPS element" do
-          expect(subject).to be == 'https://www.digicert.com/CPS'
+          expect(subject).to be == ['https://www.digicert.com/CPS']
         end
       end
 
@@ -278,7 +278,7 @@ XX4C2NesiZcLYbc2n7B9O+63M2k=
         subject { super().user_notice }
 
         it "should parse the UserNotice element" do
-          expect(subject).to be_nil
+          expect(subject).to be == []
         end
       end
     end

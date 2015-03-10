@@ -11,30 +11,28 @@ module SSLyze
         #
         # The certificate policy.
         #
-        # @return [String]
+        # @return [Array<String>]
         #
         def policy
-          @policy ||= @node.at('Policy/listEntry').inner_text
+          @policy ||= @node.search('Policy/listEntry').map(&:inner_text)
         end
 
         #
         # The explicit text.
         #
-        # @return [String, nil]
+        # @return [Array<String>]
         #
         def explicit_text
-          @explicit_text ||= if (explicit_text = @node.at('ExplicitText/listEntry'))
-                               explicit_text.inner_text
-                             end
+          @explicit_text ||= @node.search('ExplicitText/listEntry').map(&:inner_text)
         end
 
         #
         # The CPS.
         #
-        # @return [String]
+        # @return [Array<String>]
         #
         def cps
-          @cps ||= @node.at('CPS/listEntry').inner_text
+          @cps ||= @node.search('CPS/listEntry').map(&:inner_text)
         end
 
         #
@@ -43,9 +41,7 @@ module SSLyze
         # @return [String, nil]
         #
         def user_notice
-          @user_notice ||= if (user_notice = @node.at('userNotice/listEntry'))
-                             user_notice.inner_text
-                           end
+          @user_notice ||= @node.search('userNotice/listEntry').map(&:inner_text)
         end
 
       end
