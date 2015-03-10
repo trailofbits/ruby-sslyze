@@ -1,6 +1,9 @@
 require 'rprogram/task'
 
 module SSLyze
+  #
+  # Represents options for {Program}.
+  #
   class Task < RProgram::Task
 
     # Options:

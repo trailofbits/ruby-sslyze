@@ -3,6 +3,9 @@ require 'sslyze/task'
 require 'rprogram/program'
 
 module SSLyze
+  #
+  # Represents the `sslyze.py` command line utility.
+  #
   class Program < RProgram::Program
 
     name_program 'sslyze.py'

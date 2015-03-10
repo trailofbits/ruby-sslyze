@@ -3,6 +3,9 @@ require 'sslyze/certificate/extensions/x509v3_subject_alternative_name'
 module SSLyze
   class Certificate
     class Extensions
+      #
+      # Represents the `<X509v3SubjectAlternativeName>` XML element.
+      #
       class X509v3SubjectAlternativeName < Extension
 
         #

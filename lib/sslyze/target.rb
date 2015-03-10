@@ -3,30 +3,65 @@ require 'sslyze/cert_info'
 require 'sslyze/protocol'
 
 module SSLyze
+  #
+  # Represents the `<target>` XML element.
+  #
   class Target
 
     include Types
 
+    #
+    # Initializes the target.
+    #
+    # @param [Nokogiri::XML::Node] node
+    #   The `<target>` XML element.
+    #
     def initialize(node)
       @node = node
     end
 
+    #
+    # The host name of the target.
+    #
+    # @return [String]
+    #
     def host
       @host ||= @node['host']
     end
 
+    #
+    # The IP address of the target.
+    #
+    # @return [String]
+    #
     def ip
       @ip ||= @node['ip']
     end
 
+    #
+    # The port number that was scanned.
+    #
+    # @return [Integer]
+    #
     def port
       @port ||= @node['port'].to_i
     end
 
+    #
+    # Certificate information.
+    #
+    # @return [CertInfo]
+    #
     def cert_info
       @cert_info ||= CertInfo.new(@node.at('certinfo'))
     end
 
+    #
+    # Which compression algorithms are supported.
+    #
+    # @return [Hash{Symbol => Boolean}]
+    #   The algorithm name and support status.
+    #
     def compression
       unless @compression
         @compression = {}
@@ -42,12 +77,20 @@ module SSLyze
       return @compression
     end
 
+    #
+    # Specifies whether the service was vulnerable to Heartbleed.
+    #
+    # @return [Boolean, nil]
+    #
     def heartbleed?
       if (heartbleed = @node.at('heartbleed/heartbleed'))
         Boolean[heartbleed['isVulnerable']]
       end
     end
 
+    #
+    # Represents the `<sessionRenegotiation>` XML element.
+    #
     class SessionRenegotiation < Struct.new(:client_initiated, :secure)
 
       def client_initiated?
@@ -60,6 +103,11 @@ module SSLyze
 
     end
 
+    #
+    # Specifies whether the service supports Session Renegotiation.
+    #
+    # @return [SessionRenegotiation, nil]
+    # 
     def session_renegotiation
       @session_renegotiation ||= (
         if (sessionRenegotiation = @node.at('reneg/sessionRenegotiation'))
@@ -72,30 +120,55 @@ module SSLyze
       )
     end
 
+    #
+    # SSLv2 protocol information.
+    #
+    # @return [Protocol, nil]
+    #
     def sslv2
       @sslv2 ||= if (node = @node.at('sslv2'))
                    Protocol.new(node)
                  end
     end
 
+    #
+    # SSLv3 protocol information.
+    #
+    # @return [Protocol, nil]
+    #
     def sslv3
       @sslv3 ||= if (node = @node.at('sslv3'))
                    Protocol.new(node)
                  end
     end
 
+    #
+    # TLSv1 protocol information.
+    #
+    # @return [Protocol, nil]
+    #
     def tlsv1
       @tlsv1 ||= if (node = @node.at('tlsv1'))
                    Protocol.new(node)
                  end
     end
 
+    #
+    # TLSv1.1 protocol information.
+    #
+    # @return [Protocol, nil]
+    #
     def tlsv1_1
       @tlsv1_1 ||= if (node = @node.at('tlsv1_1'))
                      Protocol.new(node)
                    end
     end
 
+    #
+    # TLSv1.2 protocol information.
+    #
+    # @return [Protocol, nil]
+    #
     def tlsv1_2
       @tlsv1_2 ||= if (node = @node.at('tlsv1_2'))
                      Protocol.new(node)

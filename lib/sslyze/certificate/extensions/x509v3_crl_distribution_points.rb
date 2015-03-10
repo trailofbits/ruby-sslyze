@@ -3,6 +3,9 @@ require 'sslyze/certificate/extensions/extension'
 module SSLyze
   class Certificate
     class Extensions
+      #
+      # Represents the `<X509v3CRLDistributionPoints>` XML element.
+      #
       class X509v3CRLDistributionPoints < Extension
 
         #
