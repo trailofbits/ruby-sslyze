@@ -50,10 +50,12 @@ module SSLyze
     #
     # Certificate information.
     #
-    # @return [CertInfo]
+    # @return [CertInfo, nil]
     #
     def cert_info
-      @cert_info ||= CertInfo.new(@node.at('certinfo'))
+      @cert_info ||= if (certinfo = @node.at('certinfo'))
+                       CertInfo.new(certinfo)
+                     end
     end
 
     #
