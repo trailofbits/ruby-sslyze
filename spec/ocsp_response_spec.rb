@@ -19,9 +19,9 @@ describe SSLyze::OCSPResponse do
     end
   end
 
-  describe "#id" do
-    it "should query responseID" do
-      expect(subject.id).to be == '96132D3D0A15B058B44F5D628DEFA7EAC6255093'
+  describe "#responder_id" do
+    it "should query responderID" do
+      expect(subject.responder_id).to be == '96132D3D0A15B058B44F5D628DEFA7EAC6255093'
     end
   end
 

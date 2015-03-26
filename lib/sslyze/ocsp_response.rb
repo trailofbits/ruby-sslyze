@@ -39,12 +39,12 @@ module SSLyze
     end
 
     #
-    # The response ID.
+    # The responder ID.
     #
     # @return [String]
     #
-    def id
-      @id ||= @node.at('responseID').inner_text
+    def responder_id
+      @id ||= @node.at('responderID').inner_text
     end
 
     #
