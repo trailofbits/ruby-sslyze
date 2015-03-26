@@ -24,7 +24,7 @@ module SSLyze
     # @return [Boolean]
     #
     def trusted?
-      !@node.nil? && Boolean[@node.at('@isTrustedByMozillaCAStore').value]
+      Boolean[@node.at('@isTrustedByMozillaCAStore').value]
     end
 
     def path

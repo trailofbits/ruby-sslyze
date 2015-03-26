@@ -41,10 +41,12 @@ module SSLyze
     #
     # OCSP response stapling information.
     #
-    # @return [OCSPResponse]
+    # @return [OCSPResponse, nil]
     #
     def ocsp_stapling
-      @ocsp_stapling ||= OCSPResponse.new(@node.at('ocspResponse'))
+      @ocsp_stapling ||= if (ocsp_response = @node.at('ocspResponse'))
+                           OCSPResponse.new(ocsp_response)
+                         end
     end
 
   end
