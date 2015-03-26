@@ -9,7 +9,7 @@ describe SSLyze::OCSPResponse do
 
   describe "#trusted?" do
     it "should query ocspResponse/@isTrustedByMozillaCAStore" do
-      expect(subject.trusted?).to be false
+      expect(subject.trusted?).to be true
     end
   end
 end

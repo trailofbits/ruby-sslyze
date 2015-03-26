@@ -15,7 +15,7 @@ describe SSLyze::Target do
 
   describe "#ip" do
     it "must parse the ip attribute" do
-      expect(subject.ip).to be == '192.30.252.131'
+      expect(subject.ip).to be == '192.30.252.128'
     end
   end
 
