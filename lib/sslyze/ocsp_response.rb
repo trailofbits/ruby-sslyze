@@ -66,6 +66,15 @@ module SSLyze
     end
 
     #
+    # Determines whether the OCSP response was a success.
+    #
+    # @return [Boolean]
+    #
+    def successful?
+      status == :successful
+    end
+
+    #
     # When the response was produced.
     #
     # @return [Time]
