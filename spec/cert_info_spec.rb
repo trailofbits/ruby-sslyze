@@ -19,11 +19,11 @@ describe SSLyze::CertInfo do
     end
   end
 
-  describe "#ocsp_stapling" do
+  describe "#ocsp_response" do
     subject { described_class.new(xml.at('/document/results/target/certinfo[ocspResponse]')) }
 
     it "should return a OCSPResponse object" do
-      expect(subject.ocsp_stapling).to be_kind_of(OCSPResponse)
+      expect(subject.ocsp_response).to be_kind_of(OCSPResponse)
     end
   end
 end

@@ -43,11 +43,13 @@ module SSLyze
     #
     # @return [OCSPResponse, nil]
     #
-    def ocsp_stapling
-      @ocsp_stapling ||= if (ocsp_response = @node.at('ocspResponse'))
+    def ocsp_response
+      @ocsp_response ||= if (ocsp_response = @node.at('ocspResponse'))
                            OCSPResponse.new(ocsp_response)
                          end
     end
+
+    alias ocsp_stapling ocsp_response
 
   end
 end
