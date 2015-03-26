@@ -29,10 +29,6 @@ module SSLyze
       Boolean[@node['isTrustedByMozillaCAStore']]
     end
 
-    def path
-      @path ||= @node.at('ocspResponse')
-    end
-
     #
     # The response type.
     #
