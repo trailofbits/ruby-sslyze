@@ -1,3 +1,5 @@
+require 'sslyze/certificate/domain_name'
+
 module SSLyze
   class Certificate
     #
@@ -54,10 +56,12 @@ module SSLyze
       #
       # Common name.
       #
-      # @return [String]
+      # @return [DomainName]
       #
       def common_name
-        @common_name ||= @node.at('commonName').inner_text
+        @common_name ||= if (common_name = @node.at('commonName'))
+                           DomainName.new(common_name.inner_text)
+                         end
       end
 
       #

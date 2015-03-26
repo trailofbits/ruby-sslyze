@@ -1,4 +1,5 @@
 require 'sslyze/certificate/extensions/x509v3_subject_alternative_name'
+require 'sslyze/certificate/domain_name'
 
 module SSLyze
   class Certificate
@@ -29,10 +30,12 @@ module SSLyze
         #
         # The alternative DNS names.
         #
-        # @return [Array<String>]
+        # @return [Array<DomainName>]
         #
         def dns
-          @dns ||= @node.search('DNS/listEntry').map(&:inner_text)
+          @dns ||= @node.search('DNS/listEntry').map do |entry|
+            DomainName.new(entry.inner_text)
+          end
         end
 
         #

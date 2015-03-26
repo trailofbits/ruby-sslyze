@@ -228,8 +228,8 @@ XX4C2NesiZcLYbc2n7B9O+63M2k=
 
         it "should parse the DNS/listEntry elements" do
           expect(subject).to be == [
-            'github.com',
-            'www.github.com'
+            described_class::DomainName.new('github.com'),
+            described_class::DomainName.new('www.github.com')
           ]
         end
       end

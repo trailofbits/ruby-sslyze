@@ -31,7 +31,7 @@ describe SSLyze::Certificate::Subject do
 
   describe "#common_name" do
     it "should parse the commonName element" do
-      expect(subject.common_name).to be == 'github.com'
+      expect(subject.common_name.name).to be == 'github.com'
     end
   end
 
