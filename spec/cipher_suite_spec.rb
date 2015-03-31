@@ -13,6 +13,12 @@ describe SSLyze::CipherSuite do
     end
   end
 
+  describe "#rfc_name" do
+    it "should map the openssl name back to the RFC name" do
+      expect(subject.rfc_name).to be == 'TLS_RSA_WITH_AES_128_GCM_SHA256'
+    end
+  end
+
   describe "#connection_status" do
     it "should parse the connectionStatus attribute" do
       expect(subject.connection_status).to be == 'HTTP 200 OK'
