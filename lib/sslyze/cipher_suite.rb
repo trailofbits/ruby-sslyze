@@ -202,6 +202,8 @@ module SSLyze
       @name ||= @node['name']
     end
 
+    alias openssl_name name
+
     #
     # Maps the OpenSSL cipher name to it's RFC name.
     #
