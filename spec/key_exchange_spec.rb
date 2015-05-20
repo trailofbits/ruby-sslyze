@@ -66,4 +66,32 @@ describe SSLyze::KeyExchange do
       expect(subject.type).to be == :ECDH
     end
   end
+
+  describe "#dh?" do
+    context "when #type is :DH" do
+      before { expect(subject).to receive(:type).and_return(:DH) }
+
+      it { expect(subject.dh?).to be(true) }
+    end
+
+    context "when #type is :ECDHE " do
+      before { expect(subject).to receive(:type).and_return(:ECDHE) }
+
+      it { expect(subject.dh?).to be(false) }
+    end
+  end
+
+  describe "#ecdhe?" do
+    context "when #type is :DH" do
+      before { expect(subject).to receive(:type).and_return(:DH) }
+
+      it { expect(subject.ecdhe?).to be(false) }
+    end
+
+    context "when #type is :ECDHE " do
+      before { expect(subject).to receive(:type).and_return(:ECDHE) }
+
+      it { expect(subject.ecdhe?).to be(true) }
+    end
+  end
 end

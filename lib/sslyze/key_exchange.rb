@@ -84,5 +84,23 @@ module SSLyze
       @type ||= @node['Type'].to_sym
     end
 
+    #
+    # Determines if DH key exchange was used.
+    #
+    # @return [Boolean]
+    #
+    def dh?
+      type == :DH
+    end
+
+    #
+    # Determines if ECDHE key exchange was used.
+    #
+    # @return [Boolean]
+    #
+    def ecdhe?
+      type == :ECDHE
+    end
+
   end
 end
