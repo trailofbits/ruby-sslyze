@@ -63,7 +63,7 @@ describe SSLyze::KeyExchange do
 
   describe "#type" do
     it "should parse the Type attribute" do
-      expect(subject.type).to be == :ecdh
+      expect(subject.type).to be == :ECDH
     end
   end
 end

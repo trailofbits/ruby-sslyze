@@ -78,10 +78,10 @@ module SSLyze
     end
 
     #
-    # @return [Symbol]
+    # @return [:DH, :ECDHE]
     #
     def type
-      @type ||= @node['Type'].downcase.to_sym
+      @type ||= @node['Type'].to_sym
     end
 
   end
