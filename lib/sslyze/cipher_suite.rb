@@ -235,5 +235,7 @@ module SSLyze
                         end
     end
 
+    alias to_s name
+
   end
 end
