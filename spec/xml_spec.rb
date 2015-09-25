@@ -54,7 +54,7 @@ describe SSLyze::XML do
     it "should iterate over each target element under results" do
       expect { |b|
         subject.each_target(&b)
-      }.to yield_successive_args(Target, Target, Target)
+      }.to yield_successive_args(Target, Target)
     end
   end
 
