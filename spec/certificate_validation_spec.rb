@@ -19,7 +19,8 @@ describe SSLyze::CertificateValidation do
         'Mozilla NSS' => true,
         'Microsoft' => true,
         'Apple' => true,
-        'Java 6' => true
+        'Java 6' => true,
+        'Google' => true
       }
     end
   end
