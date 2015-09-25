@@ -21,7 +21,7 @@ describe SSLyze::OCSPResponse do
 
   describe "#responder_id" do
     it "should query responderID" do
-      expect(subject.responder_id).to be == '96132D3D0A15B058B44F5D628DEFA7EAC6255093'
+      expect(subject.responder_id).to be == '0E7DB19F96176475CE3E5D98725AF4ACADA03FAF'
     end
   end
 
@@ -53,7 +53,7 @@ describe SSLyze::OCSPResponse do
 
   describe "#produced_at" do
     it "should query producedAt and return a Time object" do
-      expect(subject.produced_at).to be == Time.parse('Mar 25 09:56:08 2015 GMT')
+      expect(subject.produced_at).to be == Time.parse('Sep 24 22:58:23 2015 GMT')
     end
   end
 end
