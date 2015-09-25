@@ -44,7 +44,7 @@ module SSLyze
     # @return [OCSPResponse, nil]
     #
     def ocsp_response
-      @ocsp_response ||= if (ocsp_response = @node.at('ocspResponse'))
+      @ocsp_response ||= if (ocsp_response = @node.at('ocspStapling/ocspResponse'))
                            OCSPResponse.new(ocsp_response)
                          end
     end
