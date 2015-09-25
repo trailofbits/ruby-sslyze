@@ -17,7 +17,7 @@ describe SSLyze::XML do
 
   describe "#version" do
     it "must parse the SSLyzeVersion attribute" do
-      expect(subject.version).to be == "v0.10"
+      expect(subject.version).to be == "0.12.0"
     end
   end
 
