@@ -85,7 +85,7 @@ module SSLyze
     # @return [Boolean, nil]
     #
     def heartbleed?
-      if (heartbleed = @node.at('heartbleed/heartbleed'))
+      if (heartbleed = @node.at('heartbleed/openSslHeartbleed'))
         Boolean[heartbleed['isVulnerable']]
       end
     end
