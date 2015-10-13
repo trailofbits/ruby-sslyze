@@ -11,7 +11,6 @@ module SSLyze
 
     # Mapping of OpenSSL cipher names to RFC cipher names
     RFC_NAMES = {
-      "NULL-MD5" => "TLS_NULL_WITH_NULL_NULL",
       "NULL-MD5" => "TLS_RSA_WITH_NULL_MD5",
       "NULL-SHA" => "TLS_RSA_WITH_NULL_SHA",
       "EXP-RC4-MD5" => "TLS_RSA_EXPORT_WITH_RC4_40_MD5",
