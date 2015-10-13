@@ -4,7 +4,7 @@ require 'time'
 
 module SSLyze
   #
-  # Represents the `<ocspStapling>` XML element.
+  # Represents the `<ocspResponse>` XML element.
   #
   class OCSPResponse
 
@@ -14,7 +14,7 @@ module SSLyze
     # Initializes the OCSP response.
     #
     # @param [Nokogiri::XML::Node] node
-    #   The `<ocspStapling>` XML element.
+    #   The `<ocspResponse>` XML element.
     #
     def initialize(node)
       @node = node

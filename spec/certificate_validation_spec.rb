@@ -16,10 +16,11 @@ describe SSLyze::CertificateValidation do
   describe "#path" do
     it "should parse the pathValidation elements into a Hash" do
       expect(subject.path).to be == {
-        'Mozilla NSS - 08/2014' => true,
-        'Microsoft - 08/2014' => true,
-        'Apple - OS X 10.9.4' => true,
-        'Java 6 - Update 65' => true
+        'Mozilla NSS' => true,
+        'Microsoft' => true,
+        'Apple' => true,
+        'Java 6' => true,
+        'Google' => true
       }
     end
   end

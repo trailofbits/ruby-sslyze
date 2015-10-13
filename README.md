@@ -48,6 +48,7 @@ Parsing sslyze XML output:
 
 * [rprogram] ~> 0.3
 * [nokogiri] ~> 1.0
+* [sslyze] >= 0.12
 
 ## Install
 

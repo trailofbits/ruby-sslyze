@@ -85,7 +85,7 @@ module SSLyze
     # @return [Boolean, nil]
     #
     def heartbleed?
-      if (heartbleed = @node.at('heartbleed/heartbleed'))
+      if (heartbleed = @node.at('heartbleed/openSslHeartbleed'))
         Boolean[heartbleed['isVulnerable']]
       end
     end
@@ -276,6 +276,19 @@ module SSLyze
     #
     def to_s
       "#{host}:#{port}"
+    end
+
+    #
+    # Compares the other target to this target.
+    #
+    # @param [Target] other
+    #   The other target.
+    #
+    # @return [Boolean]
+    #   Whether the other target has the same host and port.
+    #
+    def ==(other)
+      other.kind_of?(self.class) && other.host == host && other.port == port
     end
 
   end
