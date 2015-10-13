@@ -15,6 +15,10 @@ A Ruby interface to [sslyze] python utility.
 
 ## Features
 
+* Provides a Ruby interface to `sslyze.py`.
+* Provides a Parser for consuming the sslyze XML output.
+* [sslyze] >= 0.12
+
 ## Examples
 
 Analyze a domain:
