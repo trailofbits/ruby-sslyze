@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <document SSLyzeVersion="0.12.0" SSLyzeWeb="https://github.com/nabla-c0d3/sslyze" title="SSLyze Scan Results">
-  <invalidTargets/>
+  <invalidTargets>
+    <invalidTarget error="Could not connect (timeout)">10.10.10.1:443</invalidTarget>
+    <invalidTarget error="Could not connect (timeout)">10.10.10.2:443</invalidTarget>
+  </invalidTargets>
   <results defaultTimeout="5" httpsTunnel="None" startTLS="None" totalScanTime="9.99340701103">
     <target host="github.com" ip="192.30.252.130" port="443">
       <certinfo argument="basic" title="Certificate Information">

@@ -47,14 +47,18 @@ describe SSLyze::XML do
   end
 
   describe "#invalid_targets" do
-    pending "need data"
+    it "should return an Array of Strings" do
+      val = subject.invalid_targets
+      expect(val).to be_an(Array).and(all(be_a(InvalidTarget)))
+      expect(val.size).to be == 2
+    end
   end
 
-  describe "#each_target" do
-    it "should iterate over each target element under results" do
+  describe "#each_invalid_target" do
+    it "should iterate over each invalid target element under results" do
       expect { |b|
-        subject.each_target(&b)
-      }.to yield_successive_args(Target, Target, Target)
+        subject.each_invalid_target(&b)
+      }.to yield_successive_args(InvalidTarget, InvalidTarget)
     end
   end
 
