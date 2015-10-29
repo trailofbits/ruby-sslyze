@@ -1,4 +1,5 @@
 require 'sslyze/target'
+require 'sslyze/invalid_target'
 require 'sslyze/types'
 require 'nokogiri'
 
@@ -90,12 +91,28 @@ module SSLyze
     end
 
     #
-    # The invalid targets.
+    # @return [Array<InvalidTarget>]
     #
-    # @raise [NotImplementedError]
+    # @see #each_invalid_target
     #
     def invalid_targets
-      raise(NotImplementedError,"#{self.class}##{__method__} not implemented")
+      each_invalid_target.to_a
+    end
+
+    # Enumerates over each invalid target.
+    #
+    # @yield [invalidtarget]
+    #
+    # @yieldparam [InvalidTarget] invalid_target
+    #
+    # @return [Enumerator]
+
+    def each_invalid_target
+      return enum_for(__method__) unless block_given?
+
+      @doc.search('invalidTargets/invalidTarget').each do |inval|
+        yield InvalidTarget.new(inval)
+      end
     end
 
     #

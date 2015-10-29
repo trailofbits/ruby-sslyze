@@ -8,7 +8,9 @@ describe SSLyze::Certificate::Subject do
   subject { described_class.new(xml.at('/document/results/target/certinfo/certificateChain/certificate/subject')) }
 
   describe "#organizational_unit_name" do
-    pending "need data"
+    it "should parse the organizationUnitName element" do
+      expect(subject.organizational_unit_name).to be == 'Information Security'
+    end
   end
 
   describe "#organization_name" do
