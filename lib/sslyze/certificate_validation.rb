@@ -40,5 +40,17 @@ module SSLyze
       }]
     end
 
+    #
+    # Determines whether the certificate was validated by all the certificate
+    # stores.
+    #
+    # @return [Boolean]
+    #
+    # @since 0.2.0
+    #
+    def path?
+      path.all? { |cert_store,trusted| trusted }
+    end
+
   end
 end
