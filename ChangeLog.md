@@ -1,3 +1,8 @@
+### 0.1.1 / 2015-12-08
+
+* `certificateValidation` may be omitted from `certinfo` if an OpenSSL
+  exception occurred. Allow {SSLyze::CertInfo#validation} may return `nil`.
+
 ### 0.1.0 / 2015-10-13
 
 * Initial release:
