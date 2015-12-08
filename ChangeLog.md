@@ -1,3 +1,9 @@
+### 0.2.0 / 2015-12-08
+
+* Added {SSLyze::XML#each_invalid_target}.
+* Added {SSLyze::XML#invalid_targets}.
+* Added {SSLyze::CertificateValidation#path?}.
+
 ### 0.1.0 / 2015-10-13
 
 * Initial release:
