@@ -32,10 +32,12 @@ module SSLyze
     #
     # Certificate validation information.
     #
-    # @return [CertificateValidation]
+    # @return [CertificateValidation, nil]
     #
     def validation
-      @validation ||= CertificateValidation.new(@node.at('certificateValidation'))
+      @validation ||= if (node = @node.at('certificateValidation'))
+                        CertificateValidation.new(node)
+                      end
     end
 
     #
