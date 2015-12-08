@@ -95,6 +95,8 @@ module SSLyze
     #
     # @see #each_invalid_target
     #
+    # @since 0.2.0
+    #
     def invalid_targets
       each_invalid_target.to_a
     end
@@ -106,7 +108,9 @@ module SSLyze
     # @yieldparam [InvalidTarget] invalid_target
     #
     # @return [Enumerator]
-
+    #
+    # @since 0.2.0
+    #
     def each_invalid_target
       return enum_for(__method__) unless block_given?
 
