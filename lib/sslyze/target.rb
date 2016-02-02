@@ -133,6 +133,8 @@ module SSLyze
                  end
     end
 
+    alias ssl_v2 sslv2
+
     #
     # SSLv3 protocol information.
     #
@@ -155,6 +157,8 @@ module SSLyze
                  end
     end
 
+    alias tls_v1 tlsv1
+
     #
     # TLSv1.1 protocol information.
     #
@@ -166,6 +170,8 @@ module SSLyze
                    end
     end
 
+    alias tls_v1_1 tlsv1_1
+
     #
     # TLSv1.2 protocol information.
     #
@@ -176,6 +182,8 @@ module SSLyze
                      Protocol.new(node)
                    end
     end
+
+    alias tls_v1_2 tlsv1_2
 
     #
     # Iterates over every SSL protocol.
