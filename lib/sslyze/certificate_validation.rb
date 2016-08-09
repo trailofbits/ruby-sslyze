@@ -28,6 +28,20 @@ module SSLyze
     end
 
     #
+    # Retrieves the validation results for each trust store.
+    #
+    # @return [Hash{String => String}]
+    #   The certificate store name and validation result.
+    #
+    # @since 0.2.0
+    #
+    def results
+      @path ||= Hash[@node.search('pathValidation').map { |path|
+        [path['usingTrustStore'], path['validationResult']]
+      }]
+    end
+
+    #
     # Specifies whether the certificate path was validated against various
     # certificate stores.
     #
@@ -35,8 +49,8 @@ module SSLyze
     #   The certificate store name and validation result.
     #
     def path
-      @path ||= Hash[@node.search('pathValidation').map { |path|
-        [path['usingTrustStore'], path['validationResult'] == 'ok']
+      @path ||= Hash[results.map { |trust_store,result|
+        [trust_store, result == 'ok']
       }]
     end
 
