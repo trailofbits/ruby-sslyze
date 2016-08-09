@@ -3,6 +3,7 @@ sudo: false
 rvm:
 - 2.0
 - 2.1
+- 2.2
 - ruby-head
 - jruby
 - rbx-2
