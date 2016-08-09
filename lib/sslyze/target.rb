@@ -146,6 +146,8 @@ module SSLyze
                  end
     end
 
+    alias ssl_v3 sslv3
+
     #
     # TLSv1 protocol information.
     #
