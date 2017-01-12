@@ -42,7 +42,7 @@ module SSLyze
     # @return [XML]
     #
     def self.open(path)
-      new(Nokogiri::XML(File.open(path)))
+      new(File.open(path) { |file| Nokogiri::XML(file) })
     end
 
     #
