@@ -1,3 +1,9 @@
+### 0.2.1 / 2017-01-13
+
+* Fix file descriptor leak in {SSLyze::XML.open} by using
+  `File.open(path) { |file| ... }` instead of `File.new(path)`, which keeps the
+  file descriptor open until GC collects the `File` instance.
+
 ### 0.2.0 / 2016-08-16
 
 * Requires sslyze 0.12.x.
