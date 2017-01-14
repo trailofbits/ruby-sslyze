@@ -199,7 +199,8 @@ module SSLyze
     # @return [Enumerator]
     #   If a no block was given, an Enumerator will be returned.
     #
-    # @see {#sslv2}, {#sslv3}
+    # @see #sslv2
+    # @see #sslv3
     #
     def each_ssl_protocol
       return enum_for(__method__) unless block_given?
@@ -229,7 +230,9 @@ module SSLyze
     # @return [Enumerator]
     #   If a no block was given, an Enumerator will be returned.
     #
-    # @see {#tlsv1}, {#tlsv1_1}, {#tlsv1_2}
+    # @see #tlsv1
+    # @see #tlsv1_1
+    # @see #tlsv1_2
     #
     def each_tls_protocol
       return enum_for(__method__) unless block_given?
@@ -260,7 +263,11 @@ module SSLyze
     # @return [Enumerator]
     #   If a no block was given, an Enumerator will be returned.
     #
-    # @see {#sslv2}, {#sslv3}, {#tlsv1}, {#tlsv1_1}, {#tlsv1_2}
+    # @see #sslv2
+    # @see #sslv3
+    # @see #tlsv1
+    # @see #tlsv1_1
+    # @see #tlsv1_2
     #
     def each_protocol(&block)
       return enum_for(__method__) unless block
