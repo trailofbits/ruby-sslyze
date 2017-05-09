@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <document SSLyzeVersion="1.1.0" SSLyzeWeb="https://github.com/nabla-c0d3/sslyze" title="SSLyze Scan Results">
-  <results networkMaxRetries="3" networkTimeout="5" totalScanTime="10.5812211037">
+  <results networkMaxRetries="3" networkTimeout="5" totalScanTime="9.61563611031">
     <target host="github.com" ip="192.30.255.112" port="443" tlsWrappedProtocol="https">
       <certinfo title="Certificate Basic Information">
         <receivedCertificateChain containsAnchorCertificate="False" isChainOrderValid="True"/>
@@ -684,30 +684,30 @@ oVWNWlZopCJwqjyBcdmdqEU79OX2olHdx3ti6G8MdOu42vi/hw15UJGQmxg7kVkn
           </cipherSuite>
         </preferredCipherSuite>
         <acceptedCipherSuites>
+          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="256" name="TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384">
+            <keyExchange A="0x00ffffffff00000001000000000000000000000000fffffffffffffffffffffffc" B="0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b" Cofactor="1" Field_Type="prime-field" Generator="0x046b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c2964fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5" GeneratorType="uncompressed" GroupSize="256" Order="0x00ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551" Prime="0x00ffffffff00000001000000000000000000000000ffffffffffffffffffffffff" Seed="0xc49d360886e704936a6678e1139d26b7819f7e90" Type="ECDH"/>
+          </cipherSuite>
           <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="256" name="TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384">
             <keyExchange A="0x00ffffffff00000001000000000000000000000000fffffffffffffffffffffffc" B="0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b" Cofactor="1" Field_Type="prime-field" Generator="0x046b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c2964fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5" GeneratorType="uncompressed" GroupSize="256" Order="0x00ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551" Prime="0x00ffffffff00000001000000000000000000000000ffffffffffffffffffffffff" Seed="0xc49d360886e704936a6678e1139d26b7819f7e90" Type="ECDH"/>
           </cipherSuite>
           <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="256" name="TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA">
             <keyExchange A="0x00ffffffff00000001000000000000000000000000fffffffffffffffffffffffc" B="0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b" Cofactor="1" Field_Type="prime-field" Generator="0x046b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c2964fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5" GeneratorType="uncompressed" GroupSize="256" Order="0x00ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551" Prime="0x00ffffffff00000001000000000000000000000000ffffffffffffffffffffffff" Seed="0xc49d360886e704936a6678e1139d26b7819f7e90" Type="ECDH"/>
           </cipherSuite>
-          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="256" name="TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384">
-            <keyExchange A="0x00ffffffff00000001000000000000000000000000fffffffffffffffffffffffc" B="0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b" Cofactor="1" Field_Type="prime-field" Generator="0x046b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c2964fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5" GeneratorType="uncompressed" GroupSize="256" Order="0x00ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551" Prime="0x00ffffffff00000001000000000000000000000000ffffffffffffffffffffffff" Seed="0xc49d360886e704936a6678e1139d26b7819f7e90" Type="ECDH"/>
-          </cipherSuite>
           <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="256" name="TLS_RSA_WITH_AES_256_CBC_SHA"/>
-          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="256" name="TLS_RSA_WITH_AES_256_CBC_SHA256"/>
           <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="256" name="TLS_RSA_WITH_AES_256_GCM_SHA384"/>
-          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="128" name="TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256">
-            <keyExchange A="0x00ffffffff00000001000000000000000000000000fffffffffffffffffffffffc" B="0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b" Cofactor="1" Field_Type="prime-field" Generator="0x046b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c2964fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5" GeneratorType="uncompressed" GroupSize="256" Order="0x00ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551" Prime="0x00ffffffff00000001000000000000000000000000ffffffffffffffffffffffff" Seed="0xc49d360886e704936a6678e1139d26b7819f7e90" Type="ECDH"/>
-          </cipherSuite>
+          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="256" name="TLS_RSA_WITH_AES_256_CBC_SHA256"/>
           <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="128" name="TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256">
             <keyExchange A="0x00ffffffff00000001000000000000000000000000fffffffffffffffffffffffc" B="0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b" Cofactor="1" Field_Type="prime-field" Generator="0x046b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c2964fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5" GeneratorType="uncompressed" GroupSize="256" Order="0x00ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551" Prime="0x00ffffffff00000001000000000000000000000000ffffffffffffffffffffffff" Seed="0xc49d360886e704936a6678e1139d26b7819f7e90" Type="ECDH"/>
           </cipherSuite>
+          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="128" name="TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256">
+            <keyExchange A="0x00ffffffff00000001000000000000000000000000fffffffffffffffffffffffc" B="0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b" Cofactor="1" Field_Type="prime-field" Generator="0x046b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c2964fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5" GeneratorType="uncompressed" GroupSize="256" Order="0x00ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551" Prime="0x00ffffffff00000001000000000000000000000000ffffffffffffffffffffffff" Seed="0xc49d360886e704936a6678e1139d26b7819f7e90" Type="ECDH"/>
+          </cipherSuite>
+          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="128" name="TLS_RSA_WITH_AES_128_CBC_SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="128" name="TLS_RSA_WITH_AES_128_CBC_SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="128" name="TLS_RSA_WITH_AES_128_GCM_SHA256"/>
           <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="128" name="TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA">
             <keyExchange A="0x00ffffffff00000001000000000000000000000000fffffffffffffffffffffffc" B="0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b" Cofactor="1" Field_Type="prime-field" Generator="0x046b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c2964fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5" GeneratorType="uncompressed" GroupSize="256" Order="0x00ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551" Prime="0x00ffffffff00000001000000000000000000000000ffffffffffffffffffffffff" Seed="0xc49d360886e704936a6678e1139d26b7819f7e90" Type="ECDH"/>
           </cipherSuite>
-          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="128" name="TLS_RSA_WITH_AES_128_GCM_SHA256"/>
-          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="128" name="TLS_RSA_WITH_AES_128_CBC_SHA256"/>
-          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="128" name="TLS_RSA_WITH_AES_128_CBC_SHA"/>
         </acceptedCipherSuites>
         <rejectedCipherSuites>
           <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="TLS_SRP_SHA_WITH_AES_256_CBC_SHA"/>
@@ -872,7 +872,7 @@ oVWNWlZopCJwqjyBcdmdqEU79OX2olHdx3ti6G8MdOu42vi/hw15UJGQmxg7kVkn
         <errors/>
       </tlsv1_2>
     </target>
-    <target host="yahoo.com" ip="2001:4998:58:c02::a9" port="443" tlsWrappedProtocol="https">
+    <target host="yahoo.com" ip="2001:4998:44:204::a7" port="443" tlsWrappedProtocol="https">
       <certinfo title="Certificate Basic Information">
         <receivedCertificateChain containsAnchorCertificate="False" isChainOrderValid="True"/>
         <certificateValidation>
@@ -1605,30 +1605,30 @@ tOxFNfeKW/9mz1Cvxm1XjRl4t7mi0VfqH5pLr7rJjhJ+xr3/
           </cipherSuite>
         </preferredCipherSuite>
         <acceptedCipherSuites>
-          <cipherSuite anonymous="False" connectionStatus="HTTP 301 Redirect - https://www.yahoo.com/" keySize="256" name="TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384">
+          <cipherSuite anonymous="False" connectionStatus="HTTP 301 Redirect - https://www.yahoo.com/" keySize="256" name="TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384">
             <keyExchange A="0x00ffffffff00000001000000000000000000000000fffffffffffffffffffffffc" B="0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b" Cofactor="1" Field_Type="prime-field" Generator="0x046b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c2964fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5" GeneratorType="uncompressed" GroupSize="256" Order="0x00ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551" Prime="0x00ffffffff00000001000000000000000000000000ffffffffffffffffffffffff" Seed="0xc49d360886e704936a6678e1139d26b7819f7e90" Type="ECDH"/>
           </cipherSuite>
           <cipherSuite anonymous="False" connectionStatus="HTTP 301 Redirect - https://www.yahoo.com/" keySize="256" name="TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA">
             <keyExchange A="0x00ffffffff00000001000000000000000000000000fffffffffffffffffffffffc" B="0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b" Cofactor="1" Field_Type="prime-field" Generator="0x046b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c2964fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5" GeneratorType="uncompressed" GroupSize="256" Order="0x00ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551" Prime="0x00ffffffff00000001000000000000000000000000ffffffffffffffffffffffff" Seed="0xc49d360886e704936a6678e1139d26b7819f7e90" Type="ECDH"/>
           </cipherSuite>
-          <cipherSuite anonymous="False" connectionStatus="HTTP 301 Redirect - https://www.yahoo.com/" keySize="256" name="TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384">
+          <cipherSuite anonymous="False" connectionStatus="HTTP 301 Redirect - https://www.yahoo.com/" keySize="256" name="TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384">
             <keyExchange A="0x00ffffffff00000001000000000000000000000000fffffffffffffffffffffffc" B="0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b" Cofactor="1" Field_Type="prime-field" Generator="0x046b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c2964fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5" GeneratorType="uncompressed" GroupSize="256" Order="0x00ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551" Prime="0x00ffffffff00000001000000000000000000000000ffffffffffffffffffffffff" Seed="0xc49d360886e704936a6678e1139d26b7819f7e90" Type="ECDH"/>
           </cipherSuite>
-          <cipherSuite anonymous="False" connectionStatus="HTTP 301 Redirect - https://www.yahoo.com/" keySize="256" name="TLS_RSA_WITH_AES_256_CBC_SHA256"/>
-          <cipherSuite anonymous="False" connectionStatus="HTTP 301 Redirect - https://www.yahoo.com/" keySize="256" name="TLS_RSA_WITH_AES_256_CBC_SHA"/>
           <cipherSuite anonymous="False" connectionStatus="HTTP 301 Redirect - https://www.yahoo.com/" keySize="256" name="TLS_RSA_WITH_AES_256_GCM_SHA384"/>
-          <cipherSuite anonymous="False" connectionStatus="HTTP 301 Redirect - https://www.yahoo.com/" keySize="128" name="TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256">
+          <cipherSuite anonymous="False" connectionStatus="HTTP 301 Redirect - https://www.yahoo.com/" keySize="256" name="TLS_RSA_WITH_AES_256_CBC_SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="HTTP 301 Redirect - https://www.yahoo.com/" keySize="256" name="TLS_RSA_WITH_AES_256_CBC_SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="HTTP 301 Redirect - https://www.yahoo.com/" keySize="128" name="TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256">
             <keyExchange A="0x00ffffffff00000001000000000000000000000000fffffffffffffffffffffffc" B="0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b" Cofactor="1" Field_Type="prime-field" Generator="0x046b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c2964fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5" GeneratorType="uncompressed" GroupSize="256" Order="0x00ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551" Prime="0x00ffffffff00000001000000000000000000000000ffffffffffffffffffffffff" Seed="0xc49d360886e704936a6678e1139d26b7819f7e90" Type="ECDH"/>
           </cipherSuite>
-          <cipherSuite anonymous="False" connectionStatus="HTTP 301 Redirect - https://www.yahoo.com/" keySize="128" name="TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256">
+          <cipherSuite anonymous="False" connectionStatus="HTTP 301 Redirect - https://www.yahoo.com/" keySize="128" name="TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256">
             <keyExchange A="0x00ffffffff00000001000000000000000000000000fffffffffffffffffffffffc" B="0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b" Cofactor="1" Field_Type="prime-field" Generator="0x046b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c2964fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5" GeneratorType="uncompressed" GroupSize="256" Order="0x00ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551" Prime="0x00ffffffff00000001000000000000000000000000ffffffffffffffffffffffff" Seed="0xc49d360886e704936a6678e1139d26b7819f7e90" Type="ECDH"/>
           </cipherSuite>
           <cipherSuite anonymous="False" connectionStatus="HTTP 301 Redirect - https://www.yahoo.com/" keySize="128" name="TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA">
             <keyExchange A="0x00ffffffff00000001000000000000000000000000fffffffffffffffffffffffc" B="0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b" Cofactor="1" Field_Type="prime-field" Generator="0x046b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c2964fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5" GeneratorType="uncompressed" GroupSize="256" Order="0x00ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551" Prime="0x00ffffffff00000001000000000000000000000000ffffffffffffffffffffffff" Seed="0xc49d360886e704936a6678e1139d26b7819f7e90" Type="ECDH"/>
           </cipherSuite>
-          <cipherSuite anonymous="False" connectionStatus="HTTP 301 Redirect - https://www.yahoo.com/" keySize="128" name="TLS_RSA_WITH_AES_128_GCM_SHA256"/>
           <cipherSuite anonymous="False" connectionStatus="HTTP 301 Redirect - https://www.yahoo.com/" keySize="128" name="TLS_RSA_WITH_AES_128_CBC_SHA256"/>
           <cipherSuite anonymous="False" connectionStatus="HTTP 301 Redirect - https://www.yahoo.com/" keySize="128" name="TLS_RSA_WITH_AES_128_CBC_SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="HTTP 301 Redirect - https://www.yahoo.com/" keySize="128" name="TLS_RSA_WITH_AES_128_GCM_SHA256"/>
           <cipherSuite anonymous="False" connectionStatus="HTTP 301 Redirect - https://www.yahoo.com/" keySize="112" name="TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA">
             <keyExchange A="0x00ffffffff00000001000000000000000000000000fffffffffffffffffffffffc" B="0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b" Cofactor="1" Field_Type="prime-field" Generator="0x046b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c2964fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5" GeneratorType="uncompressed" GroupSize="256" Order="0x00ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551" Prime="0x00ffffffff00000001000000000000000000000000ffffffffffffffffffffffff" Seed="0xc49d360886e704936a6678e1139d26b7819f7e90" Type="ECDH"/>
           </cipherSuite>
@@ -1795,7 +1795,7 @@ tOxFNfeKW/9mz1Cvxm1XjRl4t7mi0VfqH5pLr7rJjhJ+xr3/
         <errors/>
       </tlsv1_2>
     </target>
-    <target host="twitter.com" ip="104.244.42.129" port="443" tlsWrappedProtocol="https">
+    <target host="twitter.com" ip="104.244.42.65" port="443" tlsWrappedProtocol="https">
       <certinfo title="Certificate Basic Information">
         <receivedCertificateChain containsAnchorCertificate="False" isChainOrderValid="True"/>
         <certificateValidation>
@@ -2113,10 +2113,10 @@ oVWNWlZopCJwqjyBcdmdqEU79OX2olHdx3ti6G8MdOu42vi/hw15UJGQmxg7kVkn
             <keyExchange A="0x00ffffffff00000001000000000000000000000000fffffffffffffffffffffffc" B="0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b" Cofactor="1" Field_Type="prime-field" Generator="0x046b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c2964fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5" GeneratorType="uncompressed" GroupSize="256" Order="0x00ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551" Prime="0x00ffffffff00000001000000000000000000000000ffffffffffffffffffffffff" Seed="0xc49d360886e704936a6678e1139d26b7819f7e90" Type="ECDH"/>
           </cipherSuite>
           <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="128" name="TLS_RSA_WITH_AES_128_CBC_SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="112" name="TLS_RSA_WITH_3DES_EDE_CBC_SHA"/>
           <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="112" name="TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA">
             <keyExchange A="0x00ffffffff00000001000000000000000000000000fffffffffffffffffffffffc" B="0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b" Cofactor="1" Field_Type="prime-field" Generator="0x046b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c2964fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5" GeneratorType="uncompressed" GroupSize="256" Order="0x00ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551" Prime="0x00ffffffff00000001000000000000000000000000ffffffffffffffffffffffff" Seed="0xc49d360886e704936a6678e1139d26b7819f7e90" Type="ECDH"/>
           </cipherSuite>
-          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="112" name="TLS_RSA_WITH_3DES_EDE_CBC_SHA"/>
         </acceptedCipherSuites>
         <rejectedCipherSuites>
           <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="TLS_SRP_SHA_WITH_AES_256_CBC_SHA"/>
@@ -2297,10 +2297,10 @@ oVWNWlZopCJwqjyBcdmdqEU79OX2olHdx3ti6G8MdOu42vi/hw15UJGQmxg7kVkn
             <keyExchange A="0x00ffffffff00000001000000000000000000000000fffffffffffffffffffffffc" B="0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b" Cofactor="1" Field_Type="prime-field" Generator="0x046b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c2964fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5" GeneratorType="uncompressed" GroupSize="256" Order="0x00ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551" Prime="0x00ffffffff00000001000000000000000000000000ffffffffffffffffffffffff" Seed="0xc49d360886e704936a6678e1139d26b7819f7e90" Type="ECDH"/>
           </cipherSuite>
           <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="256" name="TLS_RSA_WITH_AES_256_CBC_SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="128" name="TLS_RSA_WITH_AES_128_CBC_SHA"/>
           <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="128" name="TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA">
             <keyExchange A="0x00ffffffff00000001000000000000000000000000fffffffffffffffffffffffc" B="0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b" Cofactor="1" Field_Type="prime-field" Generator="0x046b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c2964fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5" GeneratorType="uncompressed" GroupSize="256" Order="0x00ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551" Prime="0x00ffffffff00000001000000000000000000000000ffffffffffffffffffffffff" Seed="0xc49d360886e704936a6678e1139d26b7819f7e90" Type="ECDH"/>
           </cipherSuite>
-          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="128" name="TLS_RSA_WITH_AES_128_CBC_SHA"/>
           <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="112" name="TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA">
             <keyExchange A="0x00ffffffff00000001000000000000000000000000fffffffffffffffffffffffc" B="0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b" Cofactor="1" Field_Type="prime-field" Generator="0x046b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c2964fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5" GeneratorType="uncompressed" GroupSize="256" Order="0x00ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551" Prime="0x00ffffffff00000001000000000000000000000000ffffffffffffffffffffffff" Seed="0xc49d360886e704936a6678e1139d26b7819f7e90" Type="ECDH"/>
           </cipherSuite>
@@ -2481,34 +2481,34 @@ oVWNWlZopCJwqjyBcdmdqEU79OX2olHdx3ti6G8MdOu42vi/hw15UJGQmxg7kVkn
           </cipherSuite>
         </preferredCipherSuite>
         <acceptedCipherSuites>
+          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="256" name="TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384">
+            <keyExchange A="0x00ffffffff00000001000000000000000000000000fffffffffffffffffffffffc" B="0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b" Cofactor="1" Field_Type="prime-field" Generator="0x046b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c2964fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5" GeneratorType="uncompressed" GroupSize="256" Order="0x00ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551" Prime="0x00ffffffff00000001000000000000000000000000ffffffffffffffffffffffff" Seed="0xc49d360886e704936a6678e1139d26b7819f7e90" Type="ECDH"/>
+          </cipherSuite>
           <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="256" name="TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384">
             <keyExchange A="0x00ffffffff00000001000000000000000000000000fffffffffffffffffffffffc" B="0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b" Cofactor="1" Field_Type="prime-field" Generator="0x046b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c2964fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5" GeneratorType="uncompressed" GroupSize="256" Order="0x00ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551" Prime="0x00ffffffff00000001000000000000000000000000ffffffffffffffffffffffff" Seed="0xc49d360886e704936a6678e1139d26b7819f7e90" Type="ECDH"/>
           </cipherSuite>
           <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="256" name="TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA">
             <keyExchange A="0x00ffffffff00000001000000000000000000000000fffffffffffffffffffffffc" B="0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b" Cofactor="1" Field_Type="prime-field" Generator="0x046b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c2964fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5" GeneratorType="uncompressed" GroupSize="256" Order="0x00ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551" Prime="0x00ffffffff00000001000000000000000000000000ffffffffffffffffffffffff" Seed="0xc49d360886e704936a6678e1139d26b7819f7e90" Type="ECDH"/>
           </cipherSuite>
-          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="256" name="TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384">
-            <keyExchange A="0x00ffffffff00000001000000000000000000000000fffffffffffffffffffffffc" B="0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b" Cofactor="1" Field_Type="prime-field" Generator="0x046b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c2964fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5" GeneratorType="uncompressed" GroupSize="256" Order="0x00ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551" Prime="0x00ffffffff00000001000000000000000000000000ffffffffffffffffffffffff" Seed="0xc49d360886e704936a6678e1139d26b7819f7e90" Type="ECDH"/>
-          </cipherSuite>
-          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="256" name="TLS_RSA_WITH_AES_256_CBC_SHA256"/>
           <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="256" name="TLS_RSA_WITH_AES_256_CBC_SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="256" name="TLS_RSA_WITH_AES_256_CBC_SHA256"/>
           <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="256" name="TLS_RSA_WITH_AES_256_GCM_SHA384"/>
           <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="128" name="TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA">
-            <keyExchange A="0x00ffffffff00000001000000000000000000000000fffffffffffffffffffffffc" B="0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b" Cofactor="1" Field_Type="prime-field" Generator="0x046b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c2964fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5" GeneratorType="uncompressed" GroupSize="256" Order="0x00ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551" Prime="0x00ffffffff00000001000000000000000000000000ffffffffffffffffffffffff" Seed="0xc49d360886e704936a6678e1139d26b7819f7e90" Type="ECDH"/>
-          </cipherSuite>
-          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="128" name="TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256">
             <keyExchange A="0x00ffffffff00000001000000000000000000000000fffffffffffffffffffffffc" B="0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b" Cofactor="1" Field_Type="prime-field" Generator="0x046b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c2964fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5" GeneratorType="uncompressed" GroupSize="256" Order="0x00ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551" Prime="0x00ffffffff00000001000000000000000000000000ffffffffffffffffffffffff" Seed="0xc49d360886e704936a6678e1139d26b7819f7e90" Type="ECDH"/>
           </cipherSuite>
           <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="128" name="TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256">
             <keyExchange A="0x00ffffffff00000001000000000000000000000000fffffffffffffffffffffffc" B="0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b" Cofactor="1" Field_Type="prime-field" Generator="0x046b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c2964fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5" GeneratorType="uncompressed" GroupSize="256" Order="0x00ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551" Prime="0x00ffffffff00000001000000000000000000000000ffffffffffffffffffffffff" Seed="0xc49d360886e704936a6678e1139d26b7819f7e90" Type="ECDH"/>
           </cipherSuite>
+          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="128" name="TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256">
+            <keyExchange A="0x00ffffffff00000001000000000000000000000000fffffffffffffffffffffffc" B="0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b" Cofactor="1" Field_Type="prime-field" Generator="0x046b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c2964fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5" GeneratorType="uncompressed" GroupSize="256" Order="0x00ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551" Prime="0x00ffffffff00000001000000000000000000000000ffffffffffffffffffffffff" Seed="0xc49d360886e704936a6678e1139d26b7819f7e90" Type="ECDH"/>
+          </cipherSuite>
+          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="128" name="TLS_RSA_WITH_AES_128_CBC_SHA"/>
           <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="128" name="TLS_RSA_WITH_AES_128_CBC_SHA256"/>
           <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="128" name="TLS_RSA_WITH_AES_128_GCM_SHA256"/>
-          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="128" name="TLS_RSA_WITH_AES_128_CBC_SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="112" name="TLS_RSA_WITH_3DES_EDE_CBC_SHA"/>
           <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="112" name="TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA">
             <keyExchange A="0x00ffffffff00000001000000000000000000000000fffffffffffffffffffffffc" B="0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b" Cofactor="1" Field_Type="prime-field" Generator="0x046b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c2964fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5" GeneratorType="uncompressed" GroupSize="256" Order="0x00ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551" Prime="0x00ffffffff00000001000000000000000000000000ffffffffffffffffffffffff" Seed="0xc49d360886e704936a6678e1139d26b7819f7e90" Type="ECDH"/>
           </cipherSuite>
-          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="112" name="TLS_RSA_WITH_3DES_EDE_CBC_SHA"/>
         </acceptedCipherSuites>
         <rejectedCipherSuites>
           <cipherSuite anonymous="False" connectionStatus="TLS / No ciphers available" name="TLS_SRP_SHA_WITH_AES_256_CBC_SHA"/>
@@ -2672,5 +2672,7 @@ oVWNWlZopCJwqjyBcdmdqEU79OX2olHdx3ti6G8MdOu42vi/hw15UJGQmxg7kVkn
       </tlsv1_2>
     </target>
   </results>
-  <invalidTargets/>
+  <invalidTargets>
+    <invalidTarget error="Could not resolve foo">foo</invalidTarget>
+  </invalidTargets>
 </document>
