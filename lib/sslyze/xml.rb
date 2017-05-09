@@ -1,6 +1,7 @@
-require 'sslyze/target'
-require 'sslyze/invalid_target'
-require 'sslyze/types'
+require 'sslyze/xml/target'
+require 'sslyze/xml/invalid_target'
+require 'sslyze/xml/types'
+
 require 'nokogiri'
 
 module SSLyze
