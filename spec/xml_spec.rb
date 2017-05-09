@@ -21,9 +21,9 @@ describe SSLyze::XML do
     end
   end
 
-  describe "#default_timeout" do
-    it "must parse the defaultTimeout attribute" do
-      expect(subject.default_timeout).to be == 5
+  describe "#network_timeout" do
+    it "must parse the networkTimeout attribute" do
+      expect(subject.network_timeout).to be == 5
     end
   end
 

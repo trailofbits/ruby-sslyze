@@ -59,8 +59,10 @@ module SSLyze
     #
     # @return [Integer]
     #
-    def default_timeout
-      @default_time ||= @doc.at('/document/results/@defaultTimeout').value.to_i
+    # @since 1.0.0
+    #
+    def network_timeout
+      @default_time ||= @doc.at('/document/results/@networkTimeout').value.to_i
     end
 
     #
