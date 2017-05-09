@@ -68,15 +68,6 @@ module SSLyze
     end
 
     #
-    # Specifies whether STARTTLS was enabled.
-    #
-    # @return [Boolean]
-    #
-    def start_tls
-      @start_tls ||= Boolean[@doc.at('/document/results/@startTLS').value]
-    end
-
-    #
     # Duration of the scan.
     #
     # @return [Float]
