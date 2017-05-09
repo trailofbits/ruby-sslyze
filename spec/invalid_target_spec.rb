@@ -9,13 +9,13 @@ describe SSLyze::InvalidTarget do
 
   describe "#host" do
     it "must parse the host attribute" do
-      expect(subject.host).to be == '10.10.10.1:443'
+      expect(subject.host).to be == 'foo'
     end
   end
 
   describe "#error" do
     it "must parse the ip attribute" do
-      expect(subject.error).to be == 'Could not connect (timeout)'
+      expect(subject.error).to be == 'Could not resolve foo'
     end
   end
 end
