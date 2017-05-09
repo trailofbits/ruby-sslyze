@@ -17,7 +17,7 @@ A Ruby interface to [sslyze] python utility.
 
 * Provides a Ruby interface to `sslyze.py`.
 * Provides a Parser for consuming the sslyze XML output.
-* [sslyze] 0.12.x
+* Supports [sslyze] 1.x.
 
 ## Examples
 
@@ -52,7 +52,7 @@ Parsing sslyze XML output:
 
 * [rprogram] ~> 0.3
 * [nokogiri] ~> 1.0
-* [sslyze] 0.12.x
+* [sslyze] 1.x
 
 ## Install
 
