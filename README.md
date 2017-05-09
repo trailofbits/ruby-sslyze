@@ -56,6 +56,7 @@ Parsing sslyze XML output:
 
 ## Install
 
+    $ pip install sslyze
     $ gem install ruby-sslyze
 
 ## Copyright
