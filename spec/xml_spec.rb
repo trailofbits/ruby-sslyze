@@ -35,10 +35,11 @@ describe SSLyze::XML do
   end
 
   describe "#invalid_targets" do
+    subject { super().invalid_targets }
+
     it "should return an Array of Strings" do
-      val = subject.invalid_targets
-      expect(val).to be_an(Array).and(all(be_a(InvalidTarget)))
-      expect(val.size).to be == 2
+      expect(subject).to be_an(Array).and(all(be_a(InvalidTarget)))
+      expect(subject.size).to be == 2
     end
   end
 

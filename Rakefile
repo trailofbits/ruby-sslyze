@@ -19,5 +19,5 @@ YARD::Rake::YardocTask.new
 task :doc => :yard
 
 file 'spec/sslyze.xml' do
-  sh 'sslyze --xml_out spec/sslyze.xml --regular --timeout 5 twitter.com github.com:443 yahoo.com:443 foo'
+  sh 'sslyze --xml_out spec/sslyze.xml --regular --timeout 5 twitter.com github.com:443 yahoo.com:443 foo bar'
 end
