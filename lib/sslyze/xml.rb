@@ -51,7 +51,7 @@ module SSLyze
     # @return [String]
     #
     def version
-      @version ||= @doc.at('/document/@SSLyzeVersion').value.split(' ',2).last
+      @version ||= @doc.at('/document/@SSLyzeVersion').value
     end
 
     #
