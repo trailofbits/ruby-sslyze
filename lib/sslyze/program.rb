@@ -4,24 +4,24 @@ require 'rprogram/program'
 
 module SSLyze
   #
-  # Represents the `sslyze.py` command line utility.
+  # Represents the `sslyze` command line utility.
   #
   class Program < RProgram::Program
 
-    name_program 'sslyze.py'
+    name_program 'sslyze'
 
     #
-    # Finds the `sslyze.py` script and runs it.
+    # Finds the `sslyze` script and runs it.
     #
     # @param [Hash{Symbol => Object}] options
-    #   Additional options for `sslyze.py`.
+    #   Additional options for `sslyze`.
     #
     # @param [Hash{Symbol => Object}] exec_options
     #   Additional exec-options.
     #
     # @yield [task]
     #   If a block is given, it will be passed a task object
-    #   used to specify options for `sslyze.py`.
+    #   used to specify options for `sslyze`.
     #
     # @yieldparam [Task] task
     #   The sslyze task object.
@@ -37,17 +37,17 @@ module SSLyze
     end
 
     #
-    # Runs `sslyze.py`.
+    # Runs `sslyze`.
     #
     # @param [Hash{Symbol => Object}] options
-    #   Additional options for `sslyze.py`.
+    #   Additional options for `sslyze`.
     #
     # @param [Hash{Symbol => Object}] exec_options
     #   Additional exec-options.
     #
     # @yield [task]
     #   If a block is given, it will be passed a task object
-    #   used to specify options for `sslyze.py`.
+    #   used to specify options for `sslyze`.
     #
     # @yieldparam [Task] task
     #   The sslyze task object.
