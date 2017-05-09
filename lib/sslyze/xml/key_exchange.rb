@@ -54,7 +54,7 @@ module SSLyze
       # @return [Symbol]
       #
       def generator_type
-        @generator ||= @node['GeneratorType'].to_sym
+        @generator_type ||= @node['GeneratorType'].to_sym
       end
 
       #
