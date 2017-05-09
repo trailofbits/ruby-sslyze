@@ -16,28 +16,30 @@ module SSLyze
       end
 
       #
-      # @return [String]
+      # @return [String, nil]
       #
       def a
         @a ||= @node['A']
       end
 
       #
-      # @return [String]
+      # @return [String, nil]
       #
       def b
         @b ||= @node['B']
       end
 
       #
-      # @return [Integer]
+      # @return [Integer, nil]
       #
       def cofactor
-        @cofactor ||= @node['Cofactor'].to_i
+        @cofactor ||= if (value = @node['Cofactor'])
+                        value.to_i
+                      end
       end
 
       #
-      # @return [String]
+      # @return [String, nil]
       #
       def field_type
         @field_type ||= @node['Field_Type']
@@ -51,10 +53,12 @@ module SSLyze
       end
 
       #
-      # @return [Symbol]
+      # @return [Symbol, nil]
       #
       def generator_type
-        @generator_type ||= @node['GeneratorType'].to_sym
+        @generator_type ||= if (value = @node['GeneratorType'])
+                              value.to_sym
+                            end
       end
 
       #
@@ -65,7 +69,7 @@ module SSLyze
       end
 
       #
-      # @return [String]
+      # @return [String, nil]
       #
       # @since 1.0.0
       #
@@ -74,21 +78,21 @@ module SSLyze
       end
 
       #
-      # @return [String]
+      # @return [String, nil]
       #
       def prime
         @prime ||= @node['Prime']
       end
 
       #
-      # @return [String]
+      # @return [String, nil]
       #
       def seed
         @seed ||= @node['Seed']
       end
 
       #
-      # @return [:DH, :ECDHE]
+      # @return [Symbol]
       #
       def type
         @type ||= @node['Type'].to_sym
