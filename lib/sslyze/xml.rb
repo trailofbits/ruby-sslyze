@@ -7,6 +7,8 @@ module SSLyze
   #
   # Represents the XML output from sslyze.
   #
+  # @see https://github.com/nabla-c0d3/sslyze/blob/master/xml_out.xsd
+  #
   class XML
 
     include Types
