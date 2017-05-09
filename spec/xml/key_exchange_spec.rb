@@ -49,6 +49,12 @@ describe SSLyze::XML::KeyExchange do
     end
   end
 
+  describe "#order" do
+    it "should parse the Order attribute" do
+      expect(subject.order).to be == '0x00ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551'
+    end
+  end
+
   describe "#prime" do
     it "should parse the Prime attribute" do
       expect(subject.prime).to be == '0x00ffffffff00000001000000000000000000000000ffffffffffffffffffffffff'

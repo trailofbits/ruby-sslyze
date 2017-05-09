@@ -67,6 +67,15 @@ module SSLyze
       #
       # @return [String]
       #
+      # @since 1.0.0
+      #
+      def order
+        @order ||= @node['Order']
+      end
+
+      #
+      # @return [String]
+      #
       def prime
         @prime ||= @node['Prime']
       end
