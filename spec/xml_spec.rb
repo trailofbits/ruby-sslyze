@@ -27,12 +27,6 @@ describe SSLyze::XML do
     end
   end
 
-  describe "#https_tunnel" do
-    it "must parse the httpsTunnel attribute" do
-      expect(subject.https_tunnel).to be nil
-    end
-  end
-
   describe "#start_tls" do
     it "must parse the startTLS attribute" do
       expect(subject.start_tls).to be nil

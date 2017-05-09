@@ -68,15 +68,6 @@ module SSLyze
     end
 
     #
-    # Whether an HTTPS tunnel was used.
-    #
-    # @return [Boolean]
-    #
-    def https_tunnel
-      @https_tunnel ||= Boolean[@doc.at('/document/results/@httpsTunnel').value]
-    end
-
-    #
     # Specifies whether STARTTLS was enabled.
     #
     # @return [Boolean]
