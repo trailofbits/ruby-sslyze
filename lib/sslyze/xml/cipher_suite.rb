@@ -46,10 +46,15 @@ module SSLyze
       #
       # The connection status when the cipher suite was used.
       #
+      # @return [String]
+      #
       def connection_status
         @connection_status ||= @node['connectionStatus']
       end
 
+      #
+      # @return [Boolean]
+      #
       def anonymous?
         Boolean[@node['anonymous']]
       end
