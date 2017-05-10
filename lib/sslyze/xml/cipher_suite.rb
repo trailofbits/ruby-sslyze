@@ -55,6 +55,19 @@ module SSLyze
       end
 
       #
+      # The key size required by the cipher suite.
+      #
+      # @return [Integer, nil]
+      #
+      # @since 1.0.0
+      #
+      def key_size
+        @key_size ||= if (value = @node['keySize'])
+                        value.to_i
+                      end
+      end
+
+      #
       # Key exchange information.
       #
       # @return [KeyExchange, nil]

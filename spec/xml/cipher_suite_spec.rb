@@ -37,6 +37,12 @@ describe SSLyze::XML::CipherSuite do
     end
   end
 
+  describe "#key_size" do
+    it "should return the keySize attribute" do
+      expect(subject.key_size).to be 128
+    end
+  end
+
   describe "#key_exchange" do
     context "when the keyExchange child is present" do
       subject do
