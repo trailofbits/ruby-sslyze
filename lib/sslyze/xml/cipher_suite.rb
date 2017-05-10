@@ -30,15 +30,17 @@ module SSLyze
         @name ||= @node['name']
       end
 
-      alias openssl_name name
+      alias rfc_name name
 
       #
-      # Maps the OpenSSL cipher name to it's RFC name.
+      # Maps the RFC cipher name to it's OpenSSL name.
       #
       # @return [String, nil]
       #
-      def rfc_name
-        CipherSuites::RFC_NAMES[name]
+      # @since 1.0.0
+      #
+      def openssl_name
+        CipherSuites::OPENSSL_NAMES[rfc_name]
       end
 
       #

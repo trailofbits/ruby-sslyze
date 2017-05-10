@@ -5,17 +5,23 @@ require 'sslyze/xml/cipher_suite'
 describe SSLyze::XML::CipherSuite do
   include_examples "XML specs"
 
-  subject { described_class.new(xml.at('/document/results/target/tlsv1_2/acceptedCipherSuites/cipherSuite')) }
+  subject { described_class.new(xml.at('/document/results/target/tlsv1_2/preferredCipherSuite/cipherSuite')) }
 
   describe "#name" do
     it "should parse the name attribute" do
-      expect(subject.name).to be == 'AES128-GCM-SHA256'
+      expect(subject.name).to be == 'TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256'
     end
   end
 
   describe "#rfc_name" do
-    it "should map the openssl name back to the RFC name" do
-      expect(subject.rfc_name).to be == 'TLS_RSA_WITH_AES_128_GCM_SHA256'
+    it "should return the RFC cipher suite name" do
+      expect(subject.rfc_name).to be == 'TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256'
+    end
+  end
+
+  describe "#openssl_name" do
+    it "should map the RFC name back to the OpenSSL name" do
+      expect(subject.openssl_name).to be == 'ECDHE-RSA-AES128-GCM-SHA256'
     end
   end
 
@@ -33,7 +39,9 @@ describe SSLyze::XML::CipherSuite do
 
   describe "#key_exchange" do
     context "when the keyExchange child is present" do
-      subject { described_class.new(xml.at('/document/results/target/tlsv1_2/acceptedCipherSuites/cipherSuite[keyExchange]')) }
+      subject do
+        described_class.new(xml.at('/document/results/target/tlsv1_2/acceptedCipherSuites/cipherSuite[keyExchange]'))
+      end
 
       it "should return a KeyExchange object" do
         expect(subject.key_exchange).to be_kind_of(XML::KeyExchange)
@@ -41,9 +49,11 @@ describe SSLyze::XML::CipherSuite do
     end
 
     context "when the keyExchange object is missing" do
-      it "should return nil" do
-        expect(subject.key_exchange).to be nil
+      subject do
+        described_class.new(xml.at('/document/results/target/tlsv1_2/acceptedCipherSuites/cipherSuite[not(./keyExchange)]'))
       end
+
+      it { expect(subject.key_exchange).to be nil }
     end
   end
 
