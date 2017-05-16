@@ -1,4 +1,5 @@
 require 'sslyze/xml/cipher_suite'
+require 'sslyze/xml/types'
 
 module SSLyze
   class XML
@@ -7,6 +8,8 @@ module SSLyze
     # XML elements.
     #
     class Protocol
+
+      include Types
 
       # SSL protocol name.
       #
@@ -25,6 +28,21 @@ module SSLyze
       end
 
       #
+      # Determines whether the protocol is supported.
+      #
+      # @return [Boolean]
+      #   Specifies whether any cipher suite was accepted.
+      #
+      # @since 1.0.0
+      #
+      def is_protocol_supported?
+        Boolean[@node['isProtocolSupported']]
+      end
+
+      alias is_supported? is_protocol_supported?
+      alias supported? is_protocol_supported?
+
+      #
       # Descriptive title.
       #
       # @return [String]
@@ -34,12 +52,14 @@ module SSLyze
       end
 
       #
-      # @raise [NotImplemnetedError]
+      # The exception message.
       #
-      # @todo figure out what `<errors />` contains.
+      # @return [String, nil]
       #
-      def each_error
-        raise(NotImplementedError,"#{__method__} not implemented")
+      # @since 1.0.0
+      #
+      def exception
+        @exception ||= @node['exception']
       end
 
       #
@@ -121,13 +141,33 @@ module SSLyze
       end
 
       #
-      # Determines whether the protocol is supported.
+      # Enumerates over every errored cipher suite.
       #
-      # @return [Boolean]
-      #   Specifies whether any cipher suite was accepted.
+      # @yield [cipher_suite]
       #
-      def supported?
-        each_accepted_cipher_suite.any?
+      # @yieldparam [CipherSuite] cipher_suite
+      #
+      # @return [Enumerator]
+      #
+      # @since 1.0.0
+      #
+      def each_error
+        return enum_for(__method__) unless block_given?
+
+        @node.search('errors/cipherSuite').each do |cipher_suite|
+          yield CipherSuite.new(cipher_suite)
+        end
+      end
+
+      #
+      # The errored cipher suites.
+      #
+      # @eturn [Array<CipherSuite>]
+      #
+      # @since 1.0.0
+      #
+      def errors
+        each_error.to_a
       end
 
     end
