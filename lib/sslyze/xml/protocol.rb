@@ -1,5 +1,6 @@
-require 'sslyze/xml/cipher_suite'
+require 'sslyze/xml/plugin'
 require 'sslyze/xml/types'
+require 'sslyze/xml/protocol/cipher_suite'
 
 module SSLyze
   class XML
@@ -7,7 +8,7 @@ module SSLyze
     # Represents the `<sslv2>`, `<sslv3>`, `<tls1>`, `<tls1_1>`, `<tlsv1_2>`
     # XML elements.
     #
-    class Protocol
+    class Protocol < Plugin
 
       include Types
 
@@ -41,26 +42,6 @@ module SSLyze
 
       alias is_supported? is_protocol_supported?
       alias supported? is_protocol_supported?
-
-      #
-      # Descriptive title.
-      #
-      # @return [String]
-      #
-      def title
-        @title ||= @node['title']
-      end
-
-      #
-      # The exception message.
-      #
-      # @return [String, nil]
-      #
-      # @since 1.0.0
-      #
-      def exception
-        @exception ||= @node['exception']
-      end
 
       #
       # Enumerates over every rejected cipher suite.
@@ -115,29 +96,16 @@ module SSLyze
       end
 
       #
-      # Enumerates over every preferred cipher suite.
+      # The preferred cipher suite.
       #
-      # @yield [cipher_suite]
+      # @return [CipherSuite, nil]
       #
-      # @yieldparam [CipherSuite] cipher_suite
+      # @since 1.0.0
       #
-      # @return [Enumerator]
-      #
-      def each_preferred_cipher_suite
-        return enum_for(__method__) unless block_given?
-
-        @node.search('preferredCipherSuites/cipherSuite').each do |cipher_suite|
-          yield CipherSuite.new(cipher_suite)
-        end
-      end
-
-      #
-      # The preferred cipher suites.
-      #
-      # @return [Array<CipherSuite>]
-      #
-      def preferred_cipher_suites
-        each_preferred_cipher_suite.to_a
+      def preferred_cipher_suite
+        @preferred_cipher_suite ||= if (element = @node.at('preferredCipherSuites/cipherSuite'))
+                                      CipherSuite.new(element)
+                                    end
       end
 
       #
