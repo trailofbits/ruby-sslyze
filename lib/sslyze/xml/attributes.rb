@@ -1,0 +1,5 @@
+require 'sslyze/xml/attributes/title'
+require 'sslyze/xml/attributes/is_supported'
+require 'sslyze/xml/attributes/is_vulnerable'
+require 'sslyze/xml/attributes/exception'
+require 'sslyze/xml/attributes/error'

@@ -1,3 +1,6 @@
+require 'sslyze/xml/attributes/title'
+require 'sslyze/xml/attributes/exception'
+
 module SSLyze
   class XML
     #
@@ -7,45 +10,11 @@ module SSLyze
     #
     class Plugin
 
+      include Attributes::Title
+      include Attributes::Exception
+
       def initialize(node)
         @node = node
-      end
-
-      #
-      # The plugin's title.
-      #
-      # @return [String, nil]
-      #
-      def title
-        @title ||= @node['title']
-      end
-
-      #
-      # Any exception raised by the plugin.
-      #
-      # @return [String, nil]
-      #
-      def exception
-        @exception ||= @node['exception']
-      end
-
-      #
-      # Determines if an exception was raised.
-      #
-      # @return [Boolean]
-      #
-      def exception?
-        !exception.nil?
-      end
-
-      #
-      # Converts the plugin to a String.
-      #
-      # @return [String]
-      #   The plugin title or an empty String.
-      #
-      def to_s
-        title || ''
       end
 
     end
