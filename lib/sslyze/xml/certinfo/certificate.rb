@@ -36,6 +36,8 @@ module SSLyze
         #
         # @return [OpenSSL::X509::Certificate]
         #
+        # @see http://www.rubydoc.info/stdlib/openssl/OpenSSL/X509/Certificate
+        #
         # @since 1.0.0
         #
         def x509
