@@ -1,4 +1,4 @@
-require 'sslyze/xml/certinfo/certificate'
+require 'sslyze/xml/plugin'
 
 module SSLyze
   class XML
@@ -74,3 +74,4 @@ module SSLyze
       end
     end
   end
+end

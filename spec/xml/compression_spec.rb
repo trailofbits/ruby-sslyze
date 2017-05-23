@@ -7,7 +7,9 @@ describe SSLyze::XML::Compression do
   include_examples "XML specs"
   include_examples "Plugin element"
 
-  subject { described_class.new(xml.at('/document/results/target/compression')) }
+  let(:xpath) { '/document/results/target/compression' }
+
+  subject { described_class.new(xml.at(xpath)) }
 
   describe "#compression_method" do
     it do

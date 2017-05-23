@@ -1,5 +1,4 @@
 require 'sslyze/xml/plugin'
-require 'sslyze/xml/is_vulnerable'
 
 module SSLyze
   class XML

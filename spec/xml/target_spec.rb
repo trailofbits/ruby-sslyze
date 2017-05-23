@@ -5,17 +5,25 @@ require 'sslyze/xml/target'
 describe SSLyze::XML::Target do
   include_examples "XML specs"
 
-  subject { described_class.new(xml.at('/document/results/target')) }
+  let(:xpath) { '/document/results/target' }
+
+  subject { described_class.new(xml.at(xpath)) }
 
   describe "#host" do
     it "must parse the host attribute" do
-      expect(subject.host).to be == 'github.com'
+      expect(subject.host).to be == 'www.yahoo.com'
     end
   end
 
   describe "#ip" do
     it "must parse the ip attribute" do
-      expect(subject.ip).to be == '192.30.255.112'
+      expect(subject.ip).to be == '2001:4998:c:e33::54'
+    end
+  end
+
+  describe "#ipaddr" do
+    it "must parse the ip attribute" do
+      expect(subject.ipaddr).to be == IPAddr.new('2001:4998:c:e33::54')
     end
   end
 
@@ -25,35 +33,63 @@ describe SSLyze::XML::Target do
     end
   end
 
-  describe "#cert_info" do
-    it "must return a CertInfo object" do
-      expect(subject.cert_info).to be_kind_of(XML::CertInfo)
+  describe "#certinfo" do
+    it do
+      expect(subject.certinfo).to be_kind_of(SSLyze::XML::Certinfo)
     end
   end
 
   describe "#compression" do
-    it "must parse the compressionMethod elements into a Hash" do
-      expect(subject.compression).to be == {deflate: false}
+    context "when the 'compression' XML element is present" do
+      subject do
+        described_class.new(xml.at("#{xpath}[compression]"))
+      end
+
+      it do
+        expect(subject.compression).to be_kind_of(SSLyze::XML::Compression)
+      end
+    end
+
+    context "when the 'compression' XML element is missing" do
+      subject do
+        described_class.new(xml.at("#{xpath}[not(compression)]"))
+      end
+
+      it do
+        pending "need an example where 'compression' is missing"
+
+        expect(subject.compression).to be nil
+      end
     end
   end
 
-  describe "#heartbleed?" do
-    it "must query isVulnerable attribute within heartbleed" do
-      expect(subject.heartbleed?).to be == false
+  describe "#heartbleed" do
+    context "when the 'heartbleed' XML element is present" do
+      subject do
+        described_class.new(xml.at("#{xpath}[heartbleed]"))
+      end
+
+      it do
+        expect(subject.heartbleed).to be_kind_of(SSLyze::XML::Heartbleed)
+      end
+    end
+
+    context "when the 'heartbleed' XML element is missing" do
+      subject do
+        described_class.new(xml.at("#{xpath}[not(heartbleed)]"))
+      end
+
+      it do
+        pending "need an example without the 'heartbleed' XML element"
+
+        expect(subject.heartbleed).to be nil
+      end
     end
   end
 
-  describe "#session_renegotiation" do
-    it "should return a SessionRenegotiation object" do
-      expect(subject.session_renegotiation).to be_kind_of(described_class::SessionRenegotiation)
-    end
-
-    it "should parse the canBeClientInitiated attribute" do
-      expect(subject.session_renegotiation.client_initiated).to be(false)
-    end
-
-    it "should parse the isSecure attribute" do
-      expect(subject.session_renegotiation.secure).to be(true)
+  describe "#reneg" do
+    it "should return a Reneg object" do
+      expect(subject.reneg).to be_kind_of(SSLyze::XML::Reneg)
     end
   end
 
@@ -172,5 +208,4 @@ describe SSLyze::XML::Target do
       ]
     end
   end
-
 end

@@ -1,6 +1,7 @@
 require 'sslyze/xml/target'
 require 'sslyze/xml/invalid_target'
 require 'sslyze/xml/types'
+require 'sslyze/xml/attributes/title'
 
 require 'nokogiri'
 
@@ -13,6 +14,7 @@ module SSLyze
   class XML
 
     include Types
+    include Attributes::Title
 
     #
     # Initializes the XML.

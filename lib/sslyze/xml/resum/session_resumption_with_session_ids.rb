@@ -1,5 +1,6 @@
 require 'sslyze/xml/plugin'
 require 'sslyze/xml/types'
+require 'sslyze/xml/attributes/is_supported'
 
 module SSLyze
   class XML
@@ -12,6 +13,7 @@ module SSLyze
       class SessionResumptionWithSessionIDs
 
         include Types
+        include Attributes::IsSupported
 
         def initialize(node)
           @node = node
@@ -25,17 +27,6 @@ module SSLyze
         def failed_attempts
           @failed_attempts ||= @node['failedAttempts'].to_i
         end
-
-        #
-        # Determines if Session Resumption with Session IDs is supported.
-        #
-        # @return [Boolean]
-        #
-        def is_supported?
-          Boolean[@node['isSupported']]
-        end
-
-        alias supported? is_supported?
 
         #
         # Number of successful attempts.

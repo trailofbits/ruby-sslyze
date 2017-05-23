@@ -1,6 +1,8 @@
+require 'sslyze/xml/plugin'
+
 module SSLyze
   class XML
-    class Protocol
+    class Protocol < Plugin
       class CipherSuite
         #
         # Key exchange information.

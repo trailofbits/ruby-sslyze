@@ -5,7 +5,9 @@ require 'sslyze/xml/invalid_target'
 describe SSLyze::XML::InvalidTarget do
   include_examples "XML specs"
 
-  subject { described_class.new(xml.at('/document/invalidTargets/invalidTarget')) }
+  let(:xpath) { '/document/invalidTargets/invalidTarget' }
+
+  subject { described_class.new(xml.at(xpath)) }
 
   describe "#host" do
     it "must parse the host attribute" do

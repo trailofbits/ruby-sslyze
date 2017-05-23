@@ -7,12 +7,14 @@ describe SSLyze::XML::HTTPHeaders do
   include_examples "XML specs"
   include_examples "Plugin element"
 
-  subject { described_class.new(xml.at('/document/results/target/http_headers')) }
+  let(:xpath) { '/document/results/target/http_headers' }
+
+  subject { described_class.new(xml.at(xpath)) }
 
   describe "#http_strict_transport_security" do
     context "when the '<httpStrictTransportSecurity/>' XML element is present" do
       subject do
-        described_class.new(xml.at('/document/results/target/http_headers[httpStrictTransportSecurity]'))
+        described_class.new(xml.at("#{xpath}[httpStrictTransportSecurity]"))
       end
 
       it do
@@ -22,14 +24,14 @@ describe SSLyze::XML::HTTPHeaders do
     end
 
     context "when the '<httpStrictTransportSecurity/>' XML element is omitted" do
-      pending "need an example with no '<httpStrictTransportSecurity/>'" do
-        subject do
-          described_class.new(xml.at('/document/results/target/http_headers[not(./httpStrictTransportSecurity)]'))
-        end
+      subject do
+        described_class.new(xml.at("#{xpath}[not(./httpStrictTransportSecurity)]"))
+      end
 
-        it do
-          expect(subject.http_strict_transport_security).to be nil
-        end
+      it do
+        pending "need an example with no '<httpStrictTransportSecurity/>'"
+
+        expect(subject.http_strict_transport_security).to be nil
       end
     end
   end
@@ -37,7 +39,7 @@ describe SSLyze::XML::HTTPHeaders do
   describe "#http_strict_transport_security?" do
     context "when the '<httpStrictTransportSecurity/>' XML element is present" do
       subject do
-        described_class.new(xml.at('/document/results/target/http_headers[httpStrictTransportSecurity]'))
+        described_class.new(xml.at("#{xpath}[httpStrictTransportSecurity]"))
       end
 
       it do
@@ -46,14 +48,14 @@ describe SSLyze::XML::HTTPHeaders do
     end
 
     context "when the '<httpStrictTransportSecurity/>' XML element is omitted" do
-      pending "need an example with no '<httpStrictTransportSecurity/>'" do
-        subject do
-          described_class.new(xml.at('/document/results/target/http_headers[not(./httpStrictTransportSecurity)]'))
-        end
+      subject do
+        described_class.new(xml.at("#{xpath}[not(./httpStrictTransportSecurity)]"))
+      end
 
-        it do
-          expect(subject.http_strict_transport_security?).to be false
-        end
+      it do
+        pending "need an example with no '<httpStrictTransportSecurity/>'"
+
+        expect(subject.http_strict_transport_security?).to be false
       end
     end
   end
@@ -61,7 +63,7 @@ describe SSLyze::XML::HTTPHeaders do
   describe "#http_public_key_pinning" do
     context "when the '<httpPublicKeyPinning/>' XML element is present" do
       subject do
-        described_class.new(xml.at('/document/results/target/http_headers[httpPublicKeyPinning]'))
+        described_class.new(xml.at("#{xpath}[httpPublicKeyPinning]"))
       end
 
       it do
@@ -71,14 +73,14 @@ describe SSLyze::XML::HTTPHeaders do
     end
 
     context "when the '<httpPublicKeyPinning/>' XML element is omitted" do
-      pending "need an example with no '<httpPublicKeyPinning/>'" do
-        subject do
-          described_class.new(xml.at('/document/results/target/http_headers[not(./httpPublicKeyPinning)]'))
-        end
+      subject do
+        described_class.new(xml.at("#{xpath}[not(./httpPublicKeyPinning)]"))
+      end
 
-        it do
-          expect(subject.http_public_key_pinning).to be nil
-        end
+      it do
+        pending "need an example with no '<httpPublicKeyPinning/>'"
+
+        expect(subject.http_public_key_pinning).to be nil
       end
     end
   end
@@ -86,7 +88,7 @@ describe SSLyze::XML::HTTPHeaders do
   describe "#http_public_key_pinning?" do
     context "when the '<httpPublicKeyPinning/>' XML element is present" do
       subject do
-        described_class.new(xml.at('/document/results/target/http_headers[httpPublicKeyPinning]'))
+        described_class.new(xml.at("#{xpath}[httpPublicKeyPinning]"))
       end
 
       it do
@@ -95,14 +97,14 @@ describe SSLyze::XML::HTTPHeaders do
     end
 
     context "when the '<httpPublicKeyPinning/>' XML element is omitted" do
-      pending "need an example with no '<httpPublicKeyPinning/>'" do
-        subject do
-          described_class.new(xml.at('/document/results/target/http_headers[not(./httpPublicKeyPinning)]'))
-        end
+      subject do
+        described_class.new(xml.at("#{xpath}[not(./httpPublicKeyPinning)]"))
+      end
 
-        it do
-          expect(subject.http_public_key_pinning?).to be false
-        end
+      it do
+        pending "need an example with no '<httpPublicKeyPinning/>'"
+
+        expect(subject.http_public_key_pinning?).to be false
       end
     end
   end

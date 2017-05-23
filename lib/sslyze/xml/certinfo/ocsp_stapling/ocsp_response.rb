@@ -23,34 +23,30 @@ module SSLyze
           #
           # The responder's ID.
           #
-          # @return [String, nil]
+          # @return [String]
           #
           # @note Parses the `responderID` attribute.
           #
           def responder_id
-            @responder_id ||= @node['responderID']
+            @responder_id ||= @node.at('responderID').inner_text
           end
 
           alias id responder_id
 
           #
-          # @return [Time, nil]
+          # @return [Time]
           #
           def produced_at
-            @produced_at ||= if (value = @node['producedAt'])
-                               Time.parse(value)
-                             end
+            @produced_at ||= Time.parse(@node.at('producedAt').inner_text)
           end
 
           alias to_time produced_at
 
           #
-          # @return [Symbol, nil]
+          # @return [Symbol]
           #
           def response_status
-            @response_status ||= if (value = @node['responseStatus'])
-                                   value.to_sym
-                                 end
+            @response_status ||= @node.at('responseStatus').inner_text.to_sym
           end
 
           alias status response_status
@@ -73,6 +69,8 @@ module SSLyze
           def is_trusted_by_mozilla_ca_store?
             Boolean[@node['isTrustedByMozillaCAStore']]
           end
+
+          alias trusted? is_trusted_by_mozilla_ca_store?
 
         end
       end

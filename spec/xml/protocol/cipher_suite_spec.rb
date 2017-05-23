@@ -1,8 +1,8 @@
 require 'spec_helper'
 require 'xml_examples'
-require 'sslyze/xml/cipher_suite'
+require 'sslyze/xml/protocol/cipher_suite'
 
-describe SSLyze::XML::CipherSuite do
+describe SSLyze::XML::Protocol::CipherSuite do
   include_examples "XML specs"
 
   subject { described_class.new(xml.at('/document/results/target/tlsv1_2/preferredCipherSuite/cipherSuite')) }
@@ -49,8 +49,8 @@ describe SSLyze::XML::CipherSuite do
         described_class.new(xml.at('/document/results/target/tlsv1_2/acceptedCipherSuites/cipherSuite[keyExchange]'))
       end
 
-      it "should return a KeyExchange object" do
-        expect(subject.key_exchange).to be_kind_of(XML::KeyExchange)
+      it do
+        expect(subject.key_exchange).to be_kind_of(described_class::KeyExchange)
       end
     end
 

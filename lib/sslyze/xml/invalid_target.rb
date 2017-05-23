@@ -1,9 +1,13 @@
+require 'sslyze/xml/attributes/error'
+
 module SSLyze
   class XML
     #
     # Represents the `<invalidTarget>` XML element.
     #
     class InvalidTarget
+
+      include Attributes::Error
 
       #
       # Initializes the invalid target.
@@ -21,16 +25,7 @@ module SSLyze
       # @return [String]
       #
       def host
-        @host ||= @node.text
-      end
-
-      #
-      # The error from the scan.
-      #
-      # @return [String]
-      #
-      def error
-        @ip ||= @node['error']
+        @host ||= @node.inner_text
       end
 
     end

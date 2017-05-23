@@ -1,5 +1,7 @@
 require 'sslyze/xml/plugin'
 require 'sslyze/xml/types'
+require 'sslyze/xml/attributes/is_supported'
+require 'sslyze/xml/attributes/exception'
 
 module SSLyze
   class XML
@@ -12,6 +14,8 @@ module SSLyze
       class HTTPPublicKeyPinning
 
         include Types
+        include Attributes::IsSupported
+        include Attributes::Exception
 
         def initialize(node)
           @node = node
@@ -51,15 +55,6 @@ module SSLyze
         end
 
         #
-        # @return [Boolean]
-        #
-        def is_supported?
-          Boolean[@node['isSupported']]
-        end
-
-        alias supported? is_supported?
-
-        #
         # @return [Integer, nil]
         #
         def max_age
@@ -97,13 +92,6 @@ module SSLyze
         #
         def is_backup_pin_configured?
           Boolean[@node['isBackupPinConfigured']]
-        end
-
-        #
-        # @return [String, nil]
-        #
-        def exception
-          @exception ||= @node['exception']
         end
 
       end

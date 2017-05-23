@@ -1,5 +1,6 @@
 require 'sslyze/xml/plugin'
-require 'sslyze/xml/is_supported'
+require 'sslyze/xml/attributes/is_supported'
+require 'sslyze/xml/certinfo/ocsp_stapling/ocsp_response'
 
 module SSLyze
   class XML
@@ -11,7 +12,7 @@ module SSLyze
       #
       class OCSPStapling
 
-        include IsSupported
+        include Attributes::IsSupported
 
         def initialize(node)
           @node = node
@@ -25,7 +26,7 @@ module SSLyze
         # @note Parses the `<ocspResponse />` XML element.
         #
         def ocsp_response
-          @ocsp_response ||= if (element = @node['ocspResponse'])
+          @ocsp_response ||= if (element = @node.at('ocspResponse'))
                                OCSPResponse.new(element)
                              end
         end

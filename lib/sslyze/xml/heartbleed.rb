@@ -33,6 +33,8 @@ module SSLyze
         !openssl_heartbleed.nil?
       end
 
+      alias openssl? openssl_heartbleed?
+
       #
       # Determines if the target is vulnerable to OpenSSL Heartbleed.
       #

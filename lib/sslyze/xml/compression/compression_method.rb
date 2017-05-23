@@ -1,5 +1,5 @@
 require 'sslyze/xml/plugin'
-require 'sslyze/xml/types'
+require 'sslyze/xml/attributes/is_supported'
 
 module SSLyze
   class XML
@@ -11,19 +11,10 @@ module SSLyze
       #
       class CompressionMethod
 
-        include Types
+        include Attributes::IsSupported
 
         def initialize(node)
           @node = node
-        end
-
-        #
-        # Specifies whether Compression is supported.
-        #
-        # @return [Boolean]
-        #
-        def is_supported?
-          Boolean[@node['isSupported']]
         end
 
         #
@@ -34,8 +25,6 @@ module SSLyze
         def type
           @type ||= @node['type'].to_sym
         end
-
-        alias supported? is_supported?
 
       end
     end

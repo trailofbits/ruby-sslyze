@@ -7,12 +7,14 @@ describe SSLyze::XML::Heartbleed do
   include_examples "XML specs"
   include_examples "Plugin element"
 
-  subject { described_class.new(xml.at('/document/results/target/heartbleed')) }
+  let(:xpath) { '/document/results/target/heartbleed' }
+
+  subject { described_class.new(xml.at(xpath)) }
 
   describe "#openssl_heartbleed" do
     context "when the '<openSslHeartbleed/>' XML element is present" do
       subject do
-        described_class.new(xml.at('/document/results/target/heartbleed[openSslHeartbleed]'))
+        described_class.new(xml.at("#{xpath}[openSslHeartbleed]"))
       end
 
       it do
@@ -22,7 +24,7 @@ describe SSLyze::XML::Heartbleed do
 
     context "when the '<openSslHeartbleed/>' XML element is missing" do
       subject do
-        described_class.new(xml.at('/document/results/target/heartbleed[not(./openSslHeartbleed)]'))
+        described_class.new(xml.at("#{xpath}[not(./openSslHeartbleed)]"))
       end
 
       it { expect(subject.openssl_heartbleed).to be nil }

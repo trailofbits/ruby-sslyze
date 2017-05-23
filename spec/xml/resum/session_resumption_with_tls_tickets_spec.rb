@@ -5,24 +5,28 @@ require 'sslyze/xml/resum/session_resumption_with_tls_tickets'
 describe SSLyze::XML::Resum::SessionResumptionWithTLSTickets do
   include_examples "XML specs"
 
+  let(:xpath) { '/document/results/target/resum/sessionResumptionWithTLSTickets' }
+
   subject do
-    described_class.new(xml.at('/document/results/target/resum/sessionResumptionWithTLSTickets'))
+    described_class.new(xml.at(xpath))
   end
 
   describe "#error" do
     context "when there is an 'error' attribute" do
-      pending "need an example with an 'error' attribute" do
-        subject do
-          described_class.new(xml.at('/document/results/target/resum/sessionResumptionWithTLSTickets[@error]'))
-        end
+      subject do
+        described_class.new(xml.at("#{xpath}[@error]"))
+      end
 
-        it "should return the 'error' attribute"
+      it "should return the 'error' attribute" do
+        pending "need an example with an 'error' attribute"
+
+        expect(subject.error).to_not be_nil
       end
     end
 
     context "when there is no 'error' attribute" do
       subject do
-        described_class.new(xml.at('/document/results/target/resum/sessionResumptionWithTLSTickets[not(@error)]'))
+        described_class.new(xml.at("#{xpath}[not(@error)]"))
       end
 
       it { expect(subject.error).to be nil }
@@ -31,18 +35,20 @@ describe SSLyze::XML::Resum::SessionResumptionWithTLSTickets do
 
   describe "#error?" do
     context "when there is an 'error' attribute" do
-      pending "need an example with an 'error' attribute" do
-        subject do
-          described_class.new(xml.at('/document/results/target/resum/sessionResumptionWithTLSTickets[@error]'))
-        end
+      subject do
+        described_class.new(xml.at("#{xpath}[@error]"))
+      end
 
-        it "should return the 'error' attribute"
+      it "should return the 'error' attribute" do
+        pending "need an example with an 'error' attribute"
+
+        expect(subject.error?).to be true
       end
     end
 
     context "when there is no 'error' attribute" do
       subject do
-        described_class.new(xml.at('/document/results/target/resum/sessionResumptionWithTLSTickets[not(@error)]'))
+        described_class.new(xml.at("#{xpath}[not(@error)]"))
       end
 
       it { expect(subject.error?).to be false }
@@ -52,7 +58,7 @@ describe SSLyze::XML::Resum::SessionResumptionWithTLSTickets do
   describe "#is_supported?" do
     context "when there is an 'isSupported' attribute" do
       subject do
-        described_class.new(xml.at('/document/results/target/resum/sessionResumptionWithTLSTickets[@isSupported]'))
+        described_class.new(xml.at("#{xpath}[@isSupported]"))
       end
 
       it "should return the 'isSupported' attribute" do
@@ -61,12 +67,14 @@ describe SSLyze::XML::Resum::SessionResumptionWithTLSTickets do
     end
 
     context "when there is no 'isSupported' attribute" do
-      pending "need an example with no 'isSupported' attribute" do
-        subject do
-          described_class.new(xml.at('/document/results/target/resum/sessionResumptionWithTLSTickets[not(@isSupported)]'))
-        end
+      subject do
+        described_class.new(xml.at("#{xpath}[not(@isSupported)]"))
+      end
 
-        it { expect(subject.is_supported?).to be false }
+      it do
+        pending "need an example with no 'isSupported' attribute"
+
+        expect(subject.is_supported?).to be false
       end
     end
   end
@@ -74,7 +82,7 @@ describe SSLyze::XML::Resum::SessionResumptionWithTLSTickets do
   describe "#reason" do
     context "when there is a 'reason' attribute" do
       subject do
-        described_class.new(xml.at('/document/results/target/resum/sessionResumptionWithTLSTickets[@reason]'))
+        described_class.new(xml.at("#{xpath}[@reason]"))
       end
 
       it " should return the 'reason' attribute" do
@@ -84,7 +92,7 @@ describe SSLyze::XML::Resum::SessionResumptionWithTLSTickets do
 
     context "when there is no 'reason' attribute" do
       subject do
-        described_class.new(xml.at('/document/results/target/resum/sessionResumptionWithTLSTickets[not(@reason)]'))
+        described_class.new(xml.at("#{xpath}[not(@reason)]"))
       end
 
       it { expect(subject.reason).to be nil }
@@ -94,7 +102,7 @@ describe SSLyze::XML::Resum::SessionResumptionWithTLSTickets do
   describe "#to_s" do
     context "when there is a 'reason' attribute" do
       subject do
-        described_class.new(xml.at('/document/results/target/resum/sessionResumptionWithTLSTickets[@reason]'))
+        described_class.new(xml.at("#{xpath}[@reason]"))
       end
 
       it "should return the reason" do
@@ -104,7 +112,7 @@ describe SSLyze::XML::Resum::SessionResumptionWithTLSTickets do
 
     context "when there is no 'reason' attribute" do
       subject do
-        described_class.new(xml.at('/document/results/target/resum/sessionResumptionWithTLSTickets[not(@reason)]'))
+        described_class.new(xml.at("#{xpath}[not(@reason)]"))
       end
 
       it { expect(subject.to_s).to be == '' }

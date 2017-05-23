@@ -25,6 +25,13 @@ module SSLyze
 
         alias hostname hostname_validation
 
+        #
+        # @yield [path_validation]
+        #
+        # @yieldparam [PathValidation] path_validation
+        #
+        # @return [Enumerator]
+        #
         def each_path_validation
           return enum_for(__method__) unless block_given?
 
@@ -33,6 +40,9 @@ module SSLyze
           end
         end
 
+        #
+        # @return [Array<PathValidation>]
+        #
         def path_validations
           each_path_validation.to_a
         end

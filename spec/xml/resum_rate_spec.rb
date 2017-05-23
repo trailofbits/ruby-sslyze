@@ -7,12 +7,14 @@ describe SSLyze::XML::ResumRate do
   include_examples "XML specs"
   include_examples "Plugin element"
 
-  subject { described_class.new(xml.at('/document/results/target/resum_rate')) }
+  let(:xpath) { '/document/results/target/resum_rate' }
+
+  subject { described_class.new(xml.at(xpath)) }
 
   describe "#session_resumption_with_session_ids" do
     context "when the <sessionResumptionWithSessionIDs/> XML element is present" do
       subject do
-        described_class.new(xml.at('/document/results/target/resum[sessionResumptionWithSessionIDs]'))
+        described_class.new(xml.at("#{xpath}[sessionResumptionWithSessionIDs]"))
       end
 
       it do
@@ -29,7 +31,7 @@ describe SSLyze::XML::ResumRate do
   describe "#session_resumption_with_session_ids?" do
     context "when the <sessionResumptionWithSessionIDs/> XML element is present" do
       subject do
-        described_class.new(xml.at('/document/results/target/resum[sessionResumptionWithSessionIDs]'))
+        described_class.new(xml.at("#{xpath}[sessionResumptionWithSessionIDs]"))
       end
 
       it { expect(subject.session_resumption_with_session_ids?).to be true }

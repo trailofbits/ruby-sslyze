@@ -1,10 +1,11 @@
-require 'sslyze/cipher_suites'
+require 'sslyze/xml/plugin'
 require 'sslyze/xml/types'
 require 'sslyze/xml/protocol/cipher_suite/key_exchange'
+require 'sslyze/cipher_suites'
 
 module SSLyze
   class XML
-    class Protocol
+    class Protocol < Plugin
       #
       # Represents the `<cipherSuite>` XML element.
       #

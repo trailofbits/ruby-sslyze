@@ -1,3 +1,6 @@
+require 'sslyze/xml/plugin'
+require 'sslyze/xml/certinfo/has_certificates'
+
 module SSLyze
   class XML
     class Certinfo < Plugin
@@ -11,6 +14,18 @@ module SSLyze
           class VerifiedCertificateChain
 
             include Types
+            include HasCertificates
+
+            def initialize(node)
+              @node = node
+            end
+
+            #
+            # @return [Boolean]
+            #
+            def has_sha1_signed_certificate?
+              Boolean[@node['hasSha1SignedCertificate']]
+            end
 
           end
         end

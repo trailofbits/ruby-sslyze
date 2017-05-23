@@ -103,7 +103,7 @@ module SSLyze
       # @since 1.0.0
       #
       def preferred_cipher_suite
-        @preferred_cipher_suite ||= if (element = @node.at('preferredCipherSuites/cipherSuite'))
+        @preferred_cipher_suite ||= if (element = @node.at('preferredCipherSuite/cipherSuite'))
                                       CipherSuite.new(element)
                                     end
       end

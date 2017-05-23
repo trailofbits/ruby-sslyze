@@ -1,5 +1,7 @@
 require 'sslyze/xml/plugin'
 require 'sslyze/xml/types'
+require 'sslyze/xml/attributes/is_supported'
+require 'sslyze/xml/attributes/exception'
 
 module SSLyze
   class XML
@@ -12,6 +14,8 @@ module SSLyze
       class HTTPStrictTransportSecurity
 
         include Types
+        include Attributes::IsSupported
+        include Attributes::Exception
 
         def initialize(node)
           @node = node
@@ -23,15 +27,6 @@ module SSLyze
         def include_sub_domains?
           Boolean[@node['includeSubDomains']]
         end
-
-        #
-        # @return [Boolean]
-        #
-        def is_supported?
-          Boolean[@node['isSupported']]
-        end
-
-        alias supported? is_supported?
 
         #
         # @return [Integer, nil]
@@ -47,13 +42,6 @@ module SSLyze
         #
         def preload?
           Boolean[@node['preload']]
-        end
-
-        #
-        # @return [String, nil]
-        #
-        def exception
-          @exception ||= @node['exception']
         end
 
       end

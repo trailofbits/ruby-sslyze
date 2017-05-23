@@ -1,5 +1,5 @@
 require 'sslyze/xml/plugin'
-require 'sslyze/xml/types'
+require 'sslyze/xml/attributes/is_vulnerable'
 
 module SSLyze
   class XML
@@ -11,7 +11,7 @@ module SSLyze
       #
       class OpenSSLHeartbleed
 
-        include Types
+        include Attributes::IsVulnerable
 
         #
         # Initializes the element.
@@ -19,17 +19,6 @@ module SSLyze
         def initialize(node)
           @node = node
         end
-
-        #
-        # Determines if the target is vulnerable to OpenSSL HeartBleed.
-        #
-        # @return [Boolean]
-        #
-        def is_vulnerable?
-          Boolean[@node['isVulnerable']]
-        end
-
-        alias vulnerable? is_vulnerable?
 
       end
     end

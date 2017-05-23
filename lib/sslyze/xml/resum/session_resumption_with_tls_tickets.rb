@@ -1,5 +1,7 @@
 require 'sslyze/xml/plugin'
 require 'sslyze/xml/types'
+require 'sslyze/xml/attributes/is_supported'
+require 'sslyze/xml/attributes/error'
 
 module SSLyze
   class XML
@@ -12,6 +14,8 @@ module SSLyze
       class SessionResumptionWithTLSTickets
 
         include Types
+        include Attributes::IsSupported
+        include Attributes::Error
 
         def initialize(node)
           @node = node
@@ -34,17 +38,6 @@ module SSLyze
         def error?
           !error.nil?
         end
-
-        #
-        # Returns the `isSupported` attribute.
-        #
-        # @return [Boolean]
-        #
-        def is_supported?
-          Boolean[@node['isSupported']]
-        end
-
-        alias supported? is_supported?
 
         #
         # Returns the descriptive reason.

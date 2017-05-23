@@ -1,11 +1,11 @@
 require 'spec_helper'
 require 'xml_examples'
-require 'sslyze/xml/key_exchange'
+require 'sslyze/xml/protocol/cipher_suite/key_exchange'
 
-describe SSLyze::XML::KeyExchange do
+describe SSLyze::XML::Protocol::CipherSuite::KeyExchange do
   include_examples "XML specs"
 
-  subject { described_class.new(xml.at('/document/results/target/tlsv1_2/acceptedCipherSuites/cipherSuite/keyExchange')) }
+  subject { described_class.new(xml.at('/document/results/target/tlsv1_2/preferredCipherSuite/cipherSuite/keyExchange')) }
 
   describe "#a" do
     it "should parse the A attribute" do

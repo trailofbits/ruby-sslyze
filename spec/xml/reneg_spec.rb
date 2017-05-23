@@ -7,12 +7,14 @@ describe SSLyze::XML::Reneg do
   include_examples "XML specs"
   include_examples "Plugin element"
 
-  subject { described_class.new(xml.at('/document/results/target/reneg')) }
+  let(:xpath) { '/document/results/target/reneg' }
+
+  subject { described_class.new(xml.at(xpath)) }
 
   describe "#session_renegotiation" do
     context "when the '<sessionRenegotiation/>' element is present" do
       subject do
-        described_class.new(xml.at('/document/results/target/reneg[sessionRenegotiation]'))
+        described_class.new(xml.at("#{xpath}[sessionRenegotiation]"))
       end
 
       it do
@@ -21,12 +23,14 @@ describe SSLyze::XML::Reneg do
     end
 
     context "when the '<sessionRenegotiation/>' element is omitted" do
-      pending "need an example where '<sessionRenegotiation/>' is omitted" do
-        subject do
-          described_class.new(xml.at('/document/results/target/reneg[not(./sessionRenegotiation)]'))
-        end
+      subject do
+        described_class.new(xml.at("#{xpath}[not(./sessionRenegotiation)]"))
+      end
 
-        it { expect(subject.session_renegotiation).to be nil }
+      it do
+        pending "need an example where '<sessionRenegotiation/>' is omitted"
+
+        expect(subject.session_renegotiation).to be nil
       end
     end
   end
@@ -34,7 +38,7 @@ describe SSLyze::XML::Reneg do
   describe "#session_renegotiation?" do
     context "when the '<sessionRenegotiation/>' element is present" do
       subject do
-        described_class.new(xml.at('/document/results/target/reneg[sessionRenegotiation]'))
+        described_class.new(xml.at("#{xpath}[sessionRenegotiation]"))
       end
 
       it do
@@ -43,12 +47,14 @@ describe SSLyze::XML::Reneg do
     end
 
     context "when the '<sessionRenegotiation/>' is omitted" do
-      pending "need an example where '<sessionRenegotiation/>' is omitted" do
-        subject do
-          described_class.new(xml.at('/document/results/target/reneg[not(./sessionRenegotiation)]'))
-        end
+      subject do
+        described_class.new(xml.at("#{xpath}[not(./sessionRenegotiation)]"))
+      end
 
-        it { expect(subject.session_renegotiation?).to be false }
+      it do
+        pending "need an example where '<sessionRenegotiation/>' is omitted"
+
+        expect(subject.session_renegotiation?).to be false
       end
     end
   end

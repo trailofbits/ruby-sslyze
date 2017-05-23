@@ -1,6 +1,16 @@
 require 'sslyze/xml/types'
-require 'sslyze/xml/cert_info'
+require 'sslyze/xml/certinfo'
+require 'sslyze/xml/compression'
+require 'sslyze/xml/heartbleed'
+require 'sslyze/xml/http_headers'
+require 'sslyze/xml/reneg'
+require 'sslyze/xml/resum'
+require 'sslyze/xml/resum_rate'
 require 'sslyze/xml/protocol'
+require 'sslyze/xml/fallback'
+require 'sslyze/xml/openssl_ccs'
+
+require 'ipaddr'
 
 module SSLyze
   class XML
@@ -40,6 +50,17 @@ module SSLyze
       end
 
       #
+      # The IP address of the target.
+      # 
+      # @return [IPAddr]
+      #
+      # @since 1.0.0
+      #
+      def ipaddr
+        IPAddr.new(ip)
+      end
+
+      #
       # The port number that was scanned.
       #
       # @return [Integer]
@@ -49,79 +70,91 @@ module SSLyze
       end
 
       #
+      # Which compression algorithms are supported.
+      #
+      # @return [Compression, nil]
+      #
+      def compression
+        @compression ||= if (element = @node.at('compression'))
+                           Compression.new(element)
+                         end
+      end
+
+      #
       # Certificate information.
       #
-      # @return [CertInfo, nil]
+      # @return [Certinfo, nil]
       #
-      def cert_info
-        @cert_info ||= if (certinfo = @node.at('certinfo'))
-                         CertInfo.new(certinfo)
+      # @since 1.0.0
+      #
+      def certinfo
+        @cert_info ||= if (element = @node.at('certinfo'))
+                         Certinfo.new(element)
                        end
       end
 
       #
-      # Which compression algorithms are supported.
+      # @return [Heartbleed, nil]
       #
-      # @return [Hash{Symbol => Boolean}]
-      #   The algorithm name and support status.
+      # @since 1.0.0
       #
-      def compression
-        unless @compression
-          @compression = {}
-
-          @node.search('compression/compressionMethod').map do |compression|
-            type      = compression['type'].downcase.to_sym
-            supported = Boolean[compression['isSupported']]
-
-            @compression[type] = supported
-          end
-        end
-
-        return @compression
+      def heartbleed
+        @heartbleed ||= if (element = @node.at('heartbleed'))
+                          Heartbleed.new(element)
+                        end
       end
 
       #
-      # Specifies whether the service was vulnerable to Heartbleed.
+      # @return [HTTPHeaders, nil]
       #
-      # @return [Boolean, nil]
+      # @since 1.0.0
       #
-      def heartbleed?
-        if (heartbleed = @node.at('heartbleed/openSslHeartbleed'))
-          Boolean[heartbleed['isVulnerable']]
-        end
-      end
-
-      #
-      # Represents the `<sessionRenegotiation>` XML element.
-      #
-      class SessionRenegotiation < Struct.new(:client_initiated, :secure)
-
-        def client_initiated?
-          client_initiated == true
-        end
-
-        def secure?
-          secure == true
-        end
-
+      def http_headers
+        @http_headers ||= if (element = @node.at('http_headers'))
+                            HTTPHeaders.new(element)
+                          end
       end
 
       #
       # Specifies whether the service supports Session Renegotiation.
       #
-      # @return [SessionRenegotiation, nil]
+      # @return [Reneg, nil]
+      #
+      # @since 1.0.0
       # 
-      def session_renegotiation
-        @session_renegotiation ||= (
-          if (sessionRenegotiation = @node.at('reneg/sessionRenegotiation'))
-
-            SessionRenegotiation.new(
-              Boolean[sessionRenegotiation['canBeClientInitiated']],
-              Boolean[sessionRenegotiation['isSecure']]
-            )
-        end
-        )
+      def reneg
+        @reneg ||= if (element = @node.at('reneg'))
+                     Reneg.new(element)
+                   end
       end
+
+      alias session_renegotiation reneg
+
+      #
+      # @return [Resum, nil]
+      #
+      # @since 1.0.0
+      #
+      def resum
+        @resum ||= if (element = @node.at('resum'))
+                     Resum.new(element)
+                   end
+      end
+
+      alias session_resumption resum
+
+      #
+      # @return [Resum, nil]
+      #
+      # @since 1.0.0
+      #
+      def resum_rate
+        @resum ||= if (element = @node.at('resum_rate'))
+                     ResumRate.new(element)
+                   end
+      end
+
+      alias session_resumption resum_rate
 
       #
       # SSLv2 protocol information.
@@ -129,8 +162,8 @@ module SSLyze
       # @return [Protocol, nil]
       #
       def sslv2
-        @sslv2 ||= if (node = @node.at('sslv2'))
-                     Protocol.new(node)
+        @sslv2 ||= if (element = @node.at('sslv2'))
+                     Protocol.new(element)
                    end
       end
 
@@ -142,8 +175,8 @@ module SSLyze
       # @return [Protocol, nil]
       #
       def sslv3
-        @sslv3 ||= if (node = @node.at('sslv3'))
-                     Protocol.new(node)
+        @sslv3 ||= if (element = @node.at('sslv3'))
+                     Protocol.new(element)
                    end
       end
 
@@ -155,8 +188,8 @@ module SSLyze
       # @return [Protocol, nil]
       #
       def tlsv1
-        @tlsv1 ||= if (node = @node.at('tlsv1'))
-                     Protocol.new(node)
+        @tlsv1 ||= if (element = @node.at('tlsv1'))
+                     Protocol.new(element)
                    end
       end
 
@@ -168,8 +201,8 @@ module SSLyze
       # @return [Protocol, nil]
       #
       def tlsv1_1
-        @tlsv1_1 ||= if (node = @node.at('tlsv1_1'))
-                       Protocol.new(node)
+        @tlsv1_1 ||= if (element = @node.at('tlsv1_1'))
+                       Protocol.new(element)
                      end
       end
 
@@ -181,8 +214,8 @@ module SSLyze
       # @return [Protocol, nil]
       #
       def tlsv1_2
-        @tlsv1_2 ||= if (node = @node.at('tlsv1_2'))
-                       Protocol.new(node)
+        @tlsv1_2 ||= if (element = @node.at('tlsv1_2'))
+                       Protocol.new(element)
                      end
       end
 
@@ -284,6 +317,28 @@ module SSLyze
       #
       def protocols
         each_protocol.to_a
+      end
+
+      #
+      # @return [Fallback, nil]
+      #
+      # @since 1.0.0
+      #
+      def fallback
+        @fallback ||= if (element = @node.at('fallback'))
+                        Fallback.new(element)
+                      end
+      end
+
+      #
+      # @return [OpenSSLCCS, nil]
+      #
+      # @since 1.0.0
+      #
+      def openssl_ccs
+        @openssl_ccs ||= if (element = @node.at('openssl_ccs'))
+                           OpenSSLCCS.new(element)
+                         end
       end
 
       #
