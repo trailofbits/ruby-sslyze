@@ -104,4 +104,10 @@ gGpjRh+qBeVGKOShDcxkzEkML7TW+vG+SiAZuq9vxH8=
 }
     end
   end
+
+  describe "#x509" do
+    it do
+      expect(subject.x509).to be_kind_of(OpenSSL::X509::Certificate)
+    end
+  end
 end

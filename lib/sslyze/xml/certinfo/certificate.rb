@@ -1,5 +1,7 @@
 require 'sslyze/xml/plugin'
 
+require 'openssl'
+
 module SSLyze
   class XML
     class Certinfo < Plugin
@@ -28,6 +30,17 @@ module SSLyze
         end
 
         alias to_s as_pem
+
+        #
+        # The parsed X509 certificate.
+        #
+        # @return [OpenSSL::X509::Certificate]
+        #
+        # @since 1.0.0
+        #
+        def x509
+          @x509 ||= OpenSSL::X509::Certificate.new(as_pem)
+        end
 
         #
         # The position of the certificate within the cert chain.
