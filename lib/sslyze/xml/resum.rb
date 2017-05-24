@@ -25,18 +25,6 @@ module SSLyze
       alias with_session_ids session_resumption_with_session_ids
 
       #
-      # Determines if the `<sessionResumptionWithSessionIDs/>` XML element is
-      # present.
-      #
-      # @return [Boolean]
-      #
-      def session_resumption_with_session_ids?
-        !session_resumption_with_session_ids.nil?
-      end
-
-      alias with_session_ids? session_resumption_with_session_ids?
-
-      #
       # Parses the `<sessionResumptionWithTLSTickets/>` XML element.
       #
       # @return [SessionResumptionWithTLSTickets, nil]
@@ -48,18 +36,6 @@ module SSLyze
       end
 
       alias with_tls_tickets session_resumption_with_tls_tickets
-
-      #
-      # Determines if the `<sessionResumptionWithTLSTickets/>` XML element is
-      # present.
-      #
-      # @return [Boolean]
-      #
-      def session_resumption_with_tls_tickets?
-        !session_resumption_with_tls_tickets.nil?
-      end
-
-      alias with_tls_tickets? session_resumption_with_tls_tickets?
 
     end
   end

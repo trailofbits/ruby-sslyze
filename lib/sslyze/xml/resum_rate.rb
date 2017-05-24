@@ -25,18 +25,6 @@ module SSLyze
 
       alias with_session_ids session_resumption_with_session_ids
 
-      #
-      # Determines if the `<sessionResumptionWithSessionIDs/>` XML element is
-      # present.
-      #
-      # @return [Boolean]
-      #
-      def session_resumption_with_session_ids?
-        !session_resumption_with_session_ids.nil?
-      end
-
-      alias with_session_ids? session_resumption_with_session_ids?
-
     end
   end
 end

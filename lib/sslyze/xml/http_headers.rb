@@ -25,15 +25,6 @@ module SSLyze
       alias strict_transport_security http_strict_transport_security
 
       #
-      # @return [Boolean]
-      #
-      def http_strict_transport_security?
-        !http_strict_transport_security.nil?
-      end
-
-      alias strict_transport_security? http_strict_transport_security?
-
-      #
       # Parses the `<httpPublicKeyPinning/>` XML element.
       #
       # @return [HTTPPublicKeyPinning, nil]
@@ -45,15 +36,6 @@ module SSLyze
       end
 
       alias public_key_pinning http_public_key_pinning
-
-      #
-      # @return [Boolean]
-      #
-      def http_public_key_pinning?
-        !http_public_key_pinning.nil?
-      end
-
-      alias public_key_pinning? http_public_key_pinning?
 
     end
   end

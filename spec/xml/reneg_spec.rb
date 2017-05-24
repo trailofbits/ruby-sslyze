@@ -34,28 +34,4 @@ describe SSLyze::XML::Reneg do
       end
     end
   end
-
-  describe "#session_renegotiation?" do
-    context "when the '<sessionRenegotiation/>' element is present" do
-      subject do
-        described_class.new(xml.at("#{xpath}[sessionRenegotiation]"))
-      end
-
-      it do
-        expect(subject.session_renegotiation?).to be true
-      end
-    end
-
-    context "when the '<sessionRenegotiation/>' is omitted" do
-      subject do
-        described_class.new(xml.at("#{xpath}[not(./sessionRenegotiation)]"))
-      end
-
-      it do
-        pending "need an example where '<sessionRenegotiation/>' is omitted"
-
-        expect(subject.session_renegotiation?).to be false
-      end
-    end
-  end
 end

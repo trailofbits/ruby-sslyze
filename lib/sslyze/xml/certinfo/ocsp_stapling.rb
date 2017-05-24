@@ -33,17 +33,6 @@ module SSLyze
 
         alias response ocsp_response
 
-        #
-        # Determines if the {#ocsp_response} is available.
-        #
-        # @return [Boolean]
-        #
-        def ocsp_response?
-          !ocsp_response.nil?
-        end
-
-        alias response? ocsp_response?
-
       end
     end
   end

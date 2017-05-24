@@ -23,17 +23,6 @@ module SSLyze
 
       alias session session_renegotiation
 
-      #
-      # Determines if the `sessionRenegotiation` element is present.
-      #
-      # @return [Boolean]
-      #
-      def session_renegotiation?
-        !session_renegotiation.nil?
-      end
-
-      alias session? session_renegotiation?
-
     end
   end
 end
