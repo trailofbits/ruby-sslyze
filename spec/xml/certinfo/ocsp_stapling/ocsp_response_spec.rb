@@ -47,7 +47,7 @@ describe SSLyze::XML::Certinfo::OCSPStapling::OCSPResponse do
 
   describe "#produced_at" do
     it "should query producedAt and return a Time object" do
-      expect(subject.produced_at).to be == Time.parse('May 22 17:10:00 2017 GMT')
+      expect(subject.produced_at).to be == Time.parse('May 24 11:10:00 2017 GMT')
     end
   end
 end

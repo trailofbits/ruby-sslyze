@@ -11,19 +11,19 @@ describe SSLyze::XML::Target do
 
   describe "#host" do
     it "must parse the host attribute" do
-      expect(subject.host).to be == 'www.yahoo.com'
+      expect(subject.host).to be == 'twitter.com'
     end
   end
 
   describe "#ip" do
     it "must parse the ip attribute" do
-      expect(subject.ip).to be == '2001:4998:c:e33::54'
+      expect(subject.ip).to be == '104.244.42.129'
     end
   end
 
   describe "#ipaddr" do
     it "must parse the ip attribute" do
-      expect(subject.ipaddr).to be == IPAddr.new('2001:4998:c:e33::54')
+      expect(subject.ipaddr).to be == IPAddr.new('104.244.42.129')
     end
   end
 
