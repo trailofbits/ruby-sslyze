@@ -7,7 +7,6 @@
 * [Homepage](https://github.com/trailofbits/ruby-sslyze#readme)
 * [Issues](https://github.com/trailofbits/ruby-sslyze/issues)
 * [Documentation](http://rubydoc.info/gems/ruby-sslyze/frames)
-* [Email](mailto:hal at trailofbits.com)
 
 ## Description
 
