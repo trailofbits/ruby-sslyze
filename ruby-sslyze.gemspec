@@ -9,7 +9,7 @@ Gem::Specification.new do |gem|
   gem.description   = %q{A ruby interface to the sslyze python utility}
   gem.license       = "MIT"
   gem.authors       = ["Hal Brodigan"]
-  gem.email         = "hal@trailofbits.com"
+  gem.email         = "postmodern.mod3@gmail.com"
   gem.homepage      = "https://github.com/trailofbits/ruby-sslyze#readme"
 
   gem.files         = `git ls-files`.split($/)
