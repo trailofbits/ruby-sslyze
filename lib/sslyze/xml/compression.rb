@@ -15,15 +15,16 @@ module SSLyze
       #
       # @return [CompressionMethod]
       #
-      def compression_method
-        @compression_method ||= CompressionMethod.new(@node.at('compressionMethod'))
+      def deflate
+        @compression_method ||= CompressionMethod.new(@node.at('compressionMethod[@type="DEFLATE"]'))
       end
 
-      def is_supported?
-        compression_method.is_supported?
+      #
+      # @see CompressionMethod#is_supported?
+      #
+      def deflate?
+        deflate.is_supported?
       end
-
-      alias supported? is_supported?
 
     end
   end

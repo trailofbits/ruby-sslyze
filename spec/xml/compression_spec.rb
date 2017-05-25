@@ -11,15 +11,13 @@ describe SSLyze::XML::Compression do
 
   subject { described_class.new(xml.at(xpath)) }
 
-  describe "#compression_method" do
+  describe "#deflate" do
     it do
-      expect(subject.compression_method).to be_kind_of(described_class::CompressionMethod)
+      expect(subject.deflate).to be_kind_of(described_class::CompressionMethod)
     end
-  end
 
-  describe "#is_supported?" do
-    it "should call compression_method.is_supported?" do
-      expect(subject.is_supported?).to be == subject.compression_method.is_supported?
+    it "should parse the DEFLATE compressionMethod" do
+      expect(subject.deflate.type).to be :DEFLATE
     end
   end
 end
