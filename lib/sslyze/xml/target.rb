@@ -93,6 +93,8 @@ module SSLyze
                        end
       end
 
+      alias cert_info certinfo
+
       #
       # @return [Heartbleed, nil]
       #
