@@ -1,4 +1,5 @@
 require 'sslyze/xml/plugin'
+require 'sslyze/x509/name'
 
 require 'openssl'
 
@@ -56,14 +57,14 @@ module SSLyze
         end
 
         #
-        # @return [OpenSSL::X509::Name]
+        # @return [X509::Name]
         #
         # @see http://www.rubydoc.info/stdlib/openssl/OpenSSL/X509/Name
         #
         # @group OpenSSL Methods
         #
         def issuer
-          x509.issuer
+          @issuer ||= X509::Name.new(x509.issuer)
         end
 
         #
@@ -116,12 +117,12 @@ module SSLyze
         end
 
         #
-        # @return [OpenSSL::X509::Name]
+        # @return [X509::Name]
         #
         # @group OpenSSL Methods
         #
         def subject
-          x509.subject
+          @subject ||= X509::Name.new(x509.subject)
         end
 
         #

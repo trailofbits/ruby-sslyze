@@ -106,7 +106,7 @@ Y63izHj1KcOdLNg8VVCCEPoEX8IlbLMIY/YTfN5XAFjs
 
   describe "#issuer" do
     it do
-      expect(subject.issuer).to be_a(OpenSSL::X509::Name)
+      expect(subject.issuer).to be_a(SSLyze::X509::Name)
     end
   end
 
@@ -142,7 +142,7 @@ Y63izHj1KcOdLNg8VVCCEPoEX8IlbLMIY/YTfN5XAFjs
 
   describe "#subject" do
     it do
-      expect(subject.subject).to be_a(OpenSSL::X509::Name)
+      expect(subject.subject).to be_a(SSLyze::X509::Name)
     end
   end
 
