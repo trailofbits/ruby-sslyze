@@ -81,10 +81,12 @@ module SSLyze
           #
           # Determines if the {#validation_result} was `:ok`.
           #
-          # @return [Boolean]
+          # @return [Boolean, nil]
           #
           def ok?
-            validation_result == :ok
+            if validation_result
+              validation_result == :ok
+            end
           end
 
           alias valid? ok?
