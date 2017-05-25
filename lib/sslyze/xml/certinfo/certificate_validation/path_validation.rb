@@ -74,6 +74,8 @@ module SSLyze
             @validation_result ||= @node['validationResult'].to_sym
           end
 
+          alias result validation_result
+
           #
           # Determines if the {#validation_result} was `:ok`.
           #
