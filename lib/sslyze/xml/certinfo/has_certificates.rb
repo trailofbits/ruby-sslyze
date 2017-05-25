@@ -9,6 +9,8 @@ module SSLyze
       # @since 1.0.0
       #
       module HasCertificates
+        include Enumerable
+
         #
         # Enumerates over each certificate in the chain.
         #
@@ -30,6 +32,7 @@ module SSLyze
         end
 
         alias each_cert each_certificate
+        alias each each_certificate
 
         #
         # Returns all certificates in the chain.
