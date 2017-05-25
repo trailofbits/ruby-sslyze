@@ -97,4 +97,58 @@ Y63izHj1KcOdLNg8VVCCEPoEX8IlbLMIY/YTfN5XAFjs
       expect(subject.x509).to be_kind_of(OpenSSL::X509::Certificate)
     end
   end
+
+  describe "#extensions" do
+    it do
+      expect(subject.extensions).to be_a(Array).and(all(be_kind_of(OpenSSL::X509::Extension)))
+    end
+  end
+
+  describe "#issuer" do
+    it do
+      expect(subject.issuer).to be_a(OpenSSL::X509::Name)
+    end
+  end
+
+  describe "#not_after" do
+    it do
+      expect(subject.not_after).to be_kind_of(Time)
+    end
+  end
+
+  describe "#not_before" do
+    it do
+      expect(subject.not_before).to be_kind_of(Time)
+    end
+  end
+
+  describe "#public_key" do
+    it do
+      expect(subject.public_key).to be_a(OpenSSL::PKey::RSA)
+    end
+  end
+
+  describe "#serial" do
+    it do
+      expect(subject.serial).to be_a(OpenSSL::BN)
+    end
+  end
+
+  describe "#signature_algorithm" do
+    it do
+      expect(subject.signature_algorithm).to be == 'sha256WithRSAEncryption'
+    end
+  end
+
+  describe "#subject" do
+    it do
+      expect(subject.subject).to be_a(OpenSSL::X509::Name)
+    end
+  end
+
+  describe "#version" do
+    it do
+      expect(subject.version).to be 2
+    end
+  end
 end

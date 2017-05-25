@@ -45,6 +45,113 @@ module SSLyze
         end
 
         #
+        # @return [Array<OpenSSL::X509::Extension>]
+        #
+        # @see http://www.rubydoc.info/stdlib/openssl/OpenSSL/X509/Extension
+        #
+        # @group OpenSSL Methods
+        #
+        def extensions
+          x509.extensions
+        end
+
+        #
+        # @return [OpenSSL::X509::Name]
+        #
+        # @see http://www.rubydoc.info/stdlib/openssl/OpenSSL/X509/Name
+        #
+        # @group OpenSSL Methods
+        #
+        def issuer
+          x509.issuer
+        end
+
+        #
+        # @return [Time]
+        #
+        # @group OpenSSL Methods
+        #
+        def not_after
+          x509.not_after
+        end
+
+        #
+        # @return [Time]
+        #
+        # @group OpenSSL Methods
+        #
+        def not_before
+          x509.not_before
+        end
+
+        #
+        # @return [OpenSSL::PKey::RSA]
+        #
+        # @see http://www.rubydoc.info/stdlib/openssl/OpenSSL/PKey/RSA
+        #
+        # @group OpenSSL Methods
+        #
+        def public_key
+          x509.public_key
+        end
+
+        #
+        # @return [OpenSSL::BN]
+        #
+        # @see http://www.rubydoc.info/stdlib/openssl/OpenSSL/BN
+        #
+        # @group OpenSSL Methods
+        #
+        def serial
+          x509.serial
+        end
+
+        #
+        # @return [String]
+        #
+        # @group OpenSSL Methods
+        #
+        def signature_algorithm
+          x509.signature_algorithm
+        end
+
+        #
+        # @return [OpenSSL::X509::Name]
+        #
+        # @group OpenSSL Methods
+        #
+        def subject
+          x509.subject
+        end
+
+        #
+        # @return [String]
+        #
+        # @group OpenSSL Methods
+        #
+        def to_der
+          x509.to_der
+        end
+
+        #
+        # @return [String]
+        #
+        # @group OpenSSL Methods
+        #
+        def to_text
+          x509.to_text
+        end
+
+        #
+        # @return [Integer]
+        #
+        # @group OpenSSL Methods
+        #
+        def version
+          x509.version
+        end
+
+        #
         # The position of the certificate within the cert chain.
         #
         # @return [Symbol, nil]
