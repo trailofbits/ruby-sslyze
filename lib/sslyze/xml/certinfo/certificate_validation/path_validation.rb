@@ -81,9 +81,11 @@ module SSLyze
           #
           # @return [Boolean]
           #
-          def valid?
+          def ok?
             validation_result == :ok
           end
+
+          alias valid? ok?
 
         end
       end
