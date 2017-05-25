@@ -151,4 +151,24 @@ Y63izHj1KcOdLNg8VVCCEPoEX8IlbLMIY/YTfN5XAFjs
       expect(subject.version).to be 2
     end
   end
+
+  describe "#==" do
+    context "when the #as_pem matches" do
+      let(:other) { described_class.new(xml.at("#{xpath}[1]")) }
+
+      it { expect(subject == other).to be true }
+    end
+
+    context "when the #as_pem do not match" do
+      let(:other) { described_class.new(xml.at("#{xpath}[2]")) }
+
+      it { expect(subject == other).to be false }
+    end
+
+    context "when the classes do not match" do
+      let(:other) { Object.new }
+
+      it { expect(subject == other).to be false }
+    end
+  end
 end

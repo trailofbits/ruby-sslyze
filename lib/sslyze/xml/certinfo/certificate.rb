@@ -194,6 +194,21 @@ module SSLyze
           @supplied_server_name_indication ||= @node['suppliedServerNameIndication']
         end
 
+        #
+        # Compares the other certificiate to this certificate.
+        #
+        # @param [Certificate] other
+        #   The other certificate.
+        #
+        # @return [Boolean]
+        #   Whether the other certificate has the same {#as_pem}.
+        #
+        # @since 1.0.0
+        #
+        def ==(other)
+          other.kind_of?(self.class) && other.as_pem == as_pem
+        end
+
       end
     end
   end
