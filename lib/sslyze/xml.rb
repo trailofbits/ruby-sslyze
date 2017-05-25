@@ -1,15 +1,20 @@
-require 'sslyze/target'
-require 'sslyze/invalid_target'
-require 'sslyze/types'
+require 'sslyze/xml/target'
+require 'sslyze/xml/invalid_target'
+require 'sslyze/xml/types'
+require 'sslyze/xml/attributes/title'
+
 require 'nokogiri'
 
 module SSLyze
   #
   # Represents the XML output from sslyze.
   #
+  # @see https://github.com/nabla-c0d3/sslyze/blob/master/xml_out.xsd
+  #
   class XML
 
     include Types
+    include Attributes::Title
 
     #
     # Initializes the XML.
@@ -51,7 +56,7 @@ module SSLyze
     # @return [String]
     #
     def version
-      @version ||= @doc.at('/document/@SSLyzeVersion').value.split(' ',2).last
+      @version ||= @doc.at('/document/@SSLyzeVersion').value
     end
 
     #
@@ -59,26 +64,10 @@ module SSLyze
     #
     # @return [Integer]
     #
-    def default_timeout
-      @default_time ||= @doc.at('/document/results/@defaultTimeout').value.to_i
-    end
-
+    # @since 1.0.0
     #
-    # Whether an HTTPS tunnel was used.
-    #
-    # @return [Boolean]
-    #
-    def https_tunnel
-      @https_tunnel ||= Boolean[@doc.at('/document/results/@httpsTunnel').value]
-    end
-
-    #
-    # Specifies whether STARTTLS was enabled.
-    #
-    # @return [Boolean]
-    #
-    def start_tls
-      @start_tls ||= Boolean[@doc.at('/document/results/@startTLS').value]
+    def network_timeout
+      @default_time ||= @doc.at('/document/results/@networkTimeout').value.to_i
     end
 
     #
