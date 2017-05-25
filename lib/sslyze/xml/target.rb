@@ -360,7 +360,7 @@ module SSLyze
       #   The other target.
       #
       # @return [Boolean]
-      #   Whether the other target has the same host and port.
+      #   Whether the other target has the same {#host} and {#port}.
       #
       def ==(other)
         other.kind_of?(self.class) && other.host == host && other.port == port
