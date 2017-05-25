@@ -68,10 +68,12 @@ module SSLyze
           #
           # The validation result.
           #
-          # @return [Symbol]
+          # @return [Symbol, nil]
           #
           def validation_result
-            @validation_result ||= @node['validationResult'].to_sym
+            @validation_result ||= if (value = @node['validationResult'])
+                                     value.to_sym
+                                   end
           end
 
           alias result validation_result
