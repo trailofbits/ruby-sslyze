@@ -16,7 +16,7 @@ module SSLyze
       # @return [SessionRenegotiation, nil]
       #
       def session_renegotiation
-        @session_renegotiation ||= if (element = @node.at('sessionRenegotiation'))
+        @session_renegotiation ||= if (element = @node.at_xpath('sessionRenegotiation'))
                                      SessionRenegotiation.new(element)
                                    end
       end

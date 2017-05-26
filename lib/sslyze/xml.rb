@@ -56,7 +56,7 @@ module SSLyze
     # @return [String]
     #
     def version
-      @version ||= @doc.at('/document/@SSLyzeVersion').value
+      @version ||= @doc.at_xpath('/document/@SSLyzeVersion').value
     end
 
     #
@@ -67,7 +67,7 @@ module SSLyze
     # @since 1.0.0
     #
     def network_timeout
-      @default_time ||= @doc.at('/document/results/@networkTimeout').value.to_i
+      @default_time ||= @doc.at_xpath('/document/results/@networkTimeout').value.to_i
     end
 
     #
@@ -76,18 +76,7 @@ module SSLyze
     # @return [Float]
     #
     def total_scan_time
-      @start_tls ||= @doc.at('/document/results/@totalScanTime').value.to_f
-    end
-
-    #
-    # @return [Array<InvalidTarget>]
-    #
-    # @see #each_invalid_target
-    #
-    # @since 0.2.0
-    #
-    def invalid_targets
-      each_invalid_target.to_a
+      @start_tls ||= @doc.at_xpath('/document/results/@totalScanTime').value.to_f
     end
 
     # Enumerates over each invalid target.
@@ -103,9 +92,20 @@ module SSLyze
     def each_invalid_target
       return enum_for(__method__) unless block_given?
 
-      @doc.search('invalidTargets/invalidTarget').each do |inval|
+      @doc.xpath('/document/invalidTargets/invalidTarget').each do |inval|
         yield InvalidTarget.new(inval)
       end
+    end
+
+    #
+    # @return [Array<InvalidTarget>]
+    #
+    # @see #each_invalid_target
+    #
+    # @since 0.2.0
+    #
+    def invalid_targets
+      each_invalid_target.to_a
     end
 
     #
@@ -120,7 +120,7 @@ module SSLyze
     def each_target
       return enum_for(__method__) unless block_given?
 
-      @doc.search('/document/results/target').each do |target|
+      @doc.xpath('/document/results/target').each do |target|
         yield Target.new(target)
       end
     end

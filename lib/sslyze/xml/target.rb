@@ -75,7 +75,7 @@ module SSLyze
       # @return [Compression, nil]
       #
       def compression
-        @compression ||= if (element = @node.at('compression'))
+        @compression ||= if (element = @node.at_xpath('compression'))
                            Compression.new(element)
                          end
       end
@@ -88,7 +88,7 @@ module SSLyze
       # @since 1.0.0
       #
       def certinfo
-        @cert_info ||= if (element = @node.at('certinfo'))
+        @cert_info ||= if (element = @node.at_xpath('certinfo'))
                          Certinfo.new(element)
                        end
       end
@@ -101,7 +101,7 @@ module SSLyze
       # @since 1.0.0
       #
       def heartbleed
-        @heartbleed ||= if (element = @node.at('heartbleed'))
+        @heartbleed ||= if (element = @node.at_xpath('heartbleed'))
                           Heartbleed.new(element)
                         end
       end
@@ -112,7 +112,7 @@ module SSLyze
       # @since 1.0.0
       #
       def http_headers
-        @http_headers ||= if (element = @node.at('http_headers'))
+        @http_headers ||= if (element = @node.at_xpath('http_headers'))
                             HTTPHeaders.new(element)
                           end
       end
@@ -125,7 +125,7 @@ module SSLyze
       # @since 1.0.0
       # 
       def reneg
-        @reneg ||= if (element = @node.at('reneg'))
+        @reneg ||= if (element = @node.at_xpath('reneg'))
                      Reneg.new(element)
                    end
       end
@@ -138,7 +138,7 @@ module SSLyze
       # @since 1.0.0
       #
       def resum
-        @resum ||= if (element = @node.at('resum'))
+        @resum ||= if (element = @node.at_xpath('resum'))
                      Resum.new(element)
                    end
       end
@@ -151,7 +151,7 @@ module SSLyze
       # @since 1.0.0
       #
       def resum_rate
-        @resum ||= if (element = @node.at('resum_rate'))
+        @resum ||= if (element = @node.at_xpath('resum_rate'))
                      ResumRate.new(element)
                    end
       end
@@ -164,7 +164,7 @@ module SSLyze
       # @return [Protocol, nil]
       #
       def sslv2
-        @sslv2 ||= if (element = @node.at('sslv2'))
+        @sslv2 ||= if (element = @node.at_xpath('sslv2'))
                      Protocol.new(element)
                    end
       end
@@ -177,7 +177,7 @@ module SSLyze
       # @return [Protocol, nil]
       #
       def sslv3
-        @sslv3 ||= if (element = @node.at('sslv3'))
+        @sslv3 ||= if (element = @node.at_xpath('sslv3'))
                      Protocol.new(element)
                    end
       end
@@ -190,7 +190,7 @@ module SSLyze
       # @return [Protocol, nil]
       #
       def tlsv1
-        @tlsv1 ||= if (element = @node.at('tlsv1'))
+        @tlsv1 ||= if (element = @node.at_xpath('tlsv1'))
                      Protocol.new(element)
                    end
       end
@@ -203,7 +203,7 @@ module SSLyze
       # @return [Protocol, nil]
       #
       def tlsv1_1
-        @tlsv1_1 ||= if (element = @node.at('tlsv1_1'))
+        @tlsv1_1 ||= if (element = @node.at_xpath('tlsv1_1'))
                        Protocol.new(element)
                      end
       end
@@ -216,7 +216,7 @@ module SSLyze
       # @return [Protocol, nil]
       #
       def tlsv1_2
-        @tlsv1_2 ||= if (element = @node.at('tlsv1_2'))
+        @tlsv1_2 ||= if (element = @node.at_xpath('tlsv1_2'))
                        Protocol.new(element)
                      end
       end
@@ -327,7 +327,7 @@ module SSLyze
       # @since 1.0.0
       #
       def fallback
-        @fallback ||= if (element = @node.at('fallback'))
+        @fallback ||= if (element = @node.at_xpath('fallback'))
                         Fallback.new(element)
                       end
       end
@@ -338,7 +338,7 @@ module SSLyze
       # @since 1.0.0
       #
       def openssl_ccs
-        @openssl_ccs ||= if (element = @node.at('openssl_ccs'))
+        @openssl_ccs ||= if (element = @node.at_xpath('openssl_ccs'))
                            OpenSSLCCS.new(element)
                          end
       end

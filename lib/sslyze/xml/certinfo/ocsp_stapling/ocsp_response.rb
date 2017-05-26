@@ -28,7 +28,7 @@ module SSLyze
           # @note Parses the `responderID` attribute.
           #
           def responder_id
-            @responder_id ||= @node.at('responderID').inner_text
+            @responder_id ||= @node.at_xpath('responderID').inner_text
           end
 
           alias id responder_id
@@ -37,7 +37,7 @@ module SSLyze
           # @return [Time]
           #
           def produced_at
-            @produced_at ||= Time.parse(@node.at('producedAt').inner_text)
+            @produced_at ||= Time.parse(@node.at_xpath('producedAt').inner_text)
           end
 
           alias to_time produced_at
@@ -46,7 +46,7 @@ module SSLyze
           # @return [Symbol]
           #
           def response_status
-            @response_status ||= @node.at('responseStatus').inner_text.to_sym
+            @response_status ||= @node.at_xpath('responseStatus').inner_text.to_sym
           end
 
           alias status response_status

@@ -27,7 +27,7 @@ module SSLyze
         # @return [String]
         #
         def as_pem
-          @as_pem ||= @node.at('asPEM').inner_text
+          @as_pem ||= @node.at_xpath('asPEM').inner_text
         end
 
         alias to_s as_pem

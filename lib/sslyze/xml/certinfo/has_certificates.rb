@@ -26,7 +26,7 @@ module SSLyze
         def each_certificate
           return enum_for(__method__) unless block_given?
 
-          @node.search('certificate').each do |element|
+          @node.xpath('certificate').each do |element|
             yield Certificate.new(element)
           end
         end

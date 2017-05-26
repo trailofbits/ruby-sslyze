@@ -8,7 +8,9 @@ module SSLyze
       # @return [TLSFallbackSCSV]
       #
       def tls_fallback_scsv
-        @tls_fallback_scsv ||= TLSFallbackSCSV.new(@node.at('tlsFallbackScsv'))
+        @tls_fallback_scsv ||= TLSFallbackSCSV.new(
+          @node.at_xpath('tlsFallbackScsv')
+        )
       end
 
       #

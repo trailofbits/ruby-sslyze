@@ -31,7 +31,7 @@ module SSLyze
         def each_pin_sha256
           return enum_for(__method__) unless block_given?
 
-          @node.search('pinSha256').each do |element|
+          @node.xpath('pinSha256').each do |element|
             yield element.inner_text
           end
         end

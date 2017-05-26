@@ -32,7 +32,7 @@ module SSLyze
           # @return [VerifiedCertificateChain, nil]
           #
           def verified_certificate_chain
-            @verified_certificate_chain ||= if (element = @node.at('verifiedCertificateChain'))
+            @verified_certificate_chain ||= if (element = @node.at_xpath('verifiedCertificateChain'))
                                               VerifiedCertificateChain.new(element)
                                             end
           end

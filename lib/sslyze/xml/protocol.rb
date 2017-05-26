@@ -55,7 +55,7 @@ module SSLyze
       def each_rejected_cipher_suite
         return enum_for(__method__) unless block_given?
 
-        @node.search('rejectedCipherSuites/cipherSuite').each do |cipher_suite|
+        @node.xpath('rejectedCipherSuites/cipherSuite').each do |cipher_suite|
           yield CipherSuite.new(cipher_suite)
         end
       end
@@ -81,7 +81,7 @@ module SSLyze
       def each_accepted_cipher_suite
         return enum_for(__method__) unless block_given?
 
-        @node.search('acceptedCipherSuites/cipherSuite').each do |cipher_suite|
+        @node.xpath('acceptedCipherSuites/cipherSuite').each do |cipher_suite|
           yield CipherSuite.new(cipher_suite)
         end
       end
@@ -103,7 +103,7 @@ module SSLyze
       # @since 1.0.0
       #
       def preferred_cipher_suite
-        @preferred_cipher_suite ||= if (element = @node.at('preferredCipherSuite/cipherSuite'))
+        @preferred_cipher_suite ||= if (element = @node.at_xpath('preferredCipherSuite/cipherSuite'))
                                       CipherSuite.new(element)
                                     end
       end
@@ -122,7 +122,7 @@ module SSLyze
       def each_error
         return enum_for(__method__) unless block_given?
 
-        @node.search('errors/cipherSuite').each do |cipher_suite|
+        @node.xpath('errors/cipherSuite').each do |cipher_suite|
           yield CipherSuite.new(cipher_suite)
         end
       end

@@ -26,7 +26,7 @@ module SSLyze
         # @note Parses the `<ocspResponse />` XML element.
         #
         def ocsp_response
-          @ocsp_response ||= if (element = @node.at('ocspResponse'))
+          @ocsp_response ||= if (element = @node.at_xpath('ocspResponse'))
                                OCSPResponse.new(element)
                              end
         end

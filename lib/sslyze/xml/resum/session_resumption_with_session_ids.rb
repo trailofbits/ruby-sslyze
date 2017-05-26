@@ -68,7 +68,7 @@ module SSLyze
         def each_error
           return enum_for(__method__) unless block_given?
 
-          @node.search('error').each do |error|
+          @node.xpath('error').each do |error|
             yield error.inner_text
           end
         end

@@ -20,7 +20,9 @@ module SSLyze
         # @return [HostnameValidation]
         #
         def hostname_validation
-          @hostname_validation ||= HostnameValidation.new(@node.at('hostnameValidation'))
+          @hostname_validation ||= HostnameValidation.new(
+            @node.at_xpath('hostnameValidation')
+          )
         end
 
         alias hostname hostname_validation
@@ -35,7 +37,7 @@ module SSLyze
         def each_path_validation
           return enum_for(__method__) unless block_given?
 
-          @node.search('pathValidation').each do |element|
+          @node.xpath('pathValidation').each do |element|
             yield PathValidation.new(element)
           end
         end

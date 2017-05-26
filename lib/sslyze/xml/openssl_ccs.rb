@@ -13,7 +13,9 @@ module SSLyze
       # @return [OpenSSLCCSInjection]
       #
       def openssl_ccs_injection
-        @openssl_ccs_injection ||= OpenSSLCCSInjection.new(@node.at('openSslCcsInjection'))
+        @openssl_ccs_injection ||= OpenSSLCCSInjection.new(
+          @node.at_xpath('openSslCcsInjection')
+        )
       end
 
       alias injection openssl_ccs_injection

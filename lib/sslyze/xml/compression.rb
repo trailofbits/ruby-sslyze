@@ -16,7 +16,9 @@ module SSLyze
       # @return [CompressionMethod]
       #
       def deflate
-        @compression_method ||= CompressionMethod.new(@node.at('compressionMethod[@type="DEFLATE"]'))
+        @compression_method ||= CompressionMethod.new(
+          @node.at_xpath('compressionMethod[@type="DEFLATE"]')
+        )
       end
 
       #

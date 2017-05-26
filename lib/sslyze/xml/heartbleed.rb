@@ -17,7 +17,7 @@ module SSLyze
       # @return [OpenSSLHeartbleed]
       #
       def openssl_heartbleed
-        @openssl_heartbleed ||= if (element = @node.at('openSslHeartbleed'))
+        @openssl_heartbleed ||= if (element = @node.at_xpath('openSslHeartbleed'))
                                   OpenSSLHeartbleed.new(element)
                                 end
       end

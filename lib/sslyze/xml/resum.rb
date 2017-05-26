@@ -17,7 +17,7 @@ module SSLyze
       # @return [SessionResumptionWithSessionIDs, nil]
       #
       def session_resumption_with_session_ids
-        @session_resumption_with_session_ids ||= if (element = @node.at('sessionResumptionWithSessionIDs'))
+        @session_resumption_with_session_ids ||= if (element = @node.at_xpath('sessionResumptionWithSessionIDs'))
                                                    SessionResumptionWithSessionIDs.new(element)
                                                  end
       end
@@ -30,7 +30,7 @@ module SSLyze
       # @return [SessionResumptionWithTLSTickets, nil]
       #
       def session_resumption_with_tls_tickets
-        @session_resumption_with_tls_tickets ||= if (element = @node.at('sessionResumptionWithTLSTickets'))
+        @session_resumption_with_tls_tickets ||= if (element = @node.at_xpath('sessionResumptionWithTLSTickets'))
                                                    SessionResumptionWithTLSTickets.new(element)
                                                  end
       end

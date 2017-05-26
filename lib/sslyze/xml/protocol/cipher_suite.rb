@@ -80,7 +80,7 @@ module SSLyze
         # @return [KeyExchange, nil]
         #
         def key_exchange
-          @key_exchange ||= if (element = @node.at('keyExchange'))
+          @key_exchange ||= if (element = @node.at_xpath('keyExchange'))
                               KeyExchange.new(element)
                             end
         end

@@ -17,7 +17,7 @@ module SSLyze
       # @return [HTTPStrictTransportSecurity, nil]
       #
       def http_strict_transport_security
-        @http_strict_transport_security ||= if (element = @node.at('httpStrictTransportSecurity'))
+        @http_strict_transport_security ||= if (element = @node.at_xpath('httpStrictTransportSecurity'))
                                               HTTPStrictTransportSecurity.new(element)
                                             end
       end
@@ -30,7 +30,7 @@ module SSLyze
       # @return [HTTPPublicKeyPinning, nil]
       #
       def http_public_key_pinning
-        @http_public_key_pinning ||= if (element = @node.at('httpPublicKeyPinning'))
+        @http_public_key_pinning ||= if (element = @node.at_xpath('httpPublicKeyPinning'))
                                        HTTPPublicKeyPinning.new(element)
                                      end
       end

@@ -16,7 +16,9 @@ module SSLyze
       # @return [ReceivedCertificateChain]
       #
       def received_certificate_chain
-        @received_certificate_chain ||= ReceivedCertificateChain.new(@node.at('receivedCertificateChain'))
+        @received_certificate_chain ||= ReceivedCertificateChain.new(
+          @node.at_xpath('receivedCertificateChain')
+        )
       end
 
       alias certificate_chain received_certificate_chain
@@ -26,7 +28,9 @@ module SSLyze
       # @return [CertificateValidation]
       #
       def certificate_validation
-        @certificate_validation ||= CertificateValidation.new(@node.at('certificateValidation'))
+        @certificate_validation ||= CertificateValidation.new(
+          @node.at_xpath('certificateValidation')
+        )
       end
 
       alias validation certificate_validation
@@ -35,7 +39,7 @@ module SSLyze
       # @return [OCSPStapling]
       #
       def ocsp_stapling
-        @ocsp_stapling ||= OCSPStapling.new(@node.at('ocspStapling'))
+        @ocsp_stapling ||= OCSPStapling.new(@node.at_xpath('ocspStapling'))
       end
 
     end
