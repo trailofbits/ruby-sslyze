@@ -51,7 +51,7 @@ module SSLyze
         # @return [Certificate, nil]
         #
         def leaf
-          if (element = @node.at('certificate[1]'))
+          if (element = @node.at_xpath('certificate[1]'))
             Certificate.new(element)
           end
         end
@@ -71,7 +71,7 @@ module SSLyze
         def each_intermediate
           return enum_for(__method__) unless block_given?
 
-          @node.search('certificate[position() > 1 and position() < last()]').each do |element|
+          @node.xpath('certificate[position() > 1 and position() < last()]').each do |element|
             yield Certificate.new(element)
           end
         end
@@ -91,7 +91,7 @@ module SSLyze
         # @return [Certificate, nil]
         #
         def root
-          if (element = @node.at('certificate[last()]'))
+          if (element = @node.at_xpath('certificate[last()]'))
             Certificate.new(element)
           end
         end
