@@ -89,6 +89,60 @@ describe SSLyze::XML::Certinfo::CertificateValidation::PathValidation::VerifiedC
     end
   end
 
+  describe "#each_intermediate" do
+    context "when there are more than two 'certificate' XML children" do
+      subject do
+        described_class.new(xml.at("#{xpath}[count(certificate) > 2]"))
+      end
+
+      it "should yield the intermediate certificates" do
+        pending "need an example with more than two 'certificate' XML children"
+
+        expect { |b|
+          subject.each_intermediate(&b)
+        }.to yield_successive_args(
+          SSLyze::XML::Certinfo::Certificate
+        )
+      end
+    end
+
+    context "when there are two or fewer 'certificate' XML children" do
+      subject do
+        described_class.new(xml.at("#{xpath}[count(certificate) <= 2]"))
+      end
+
+      it "should not yield anything" do
+        expect { |b|
+          subject.each_intermediate(&b)
+        }.to_not yield_control
+      end
+    end
+  end
+
+  describe "#intermediates" do
+    context "when there are more than two 'certificate' XML children" do
+      subject do
+        described_class.new(xml.at("#{xpath}[count(certificate) > 2]"))
+      end
+
+      it "should yield the intermediate certificates" do
+        pending "need an example with more than two 'certificate' XML children"
+
+        expect(subject.intermediates).to be_a(Array).and(all(be_kind_of(SSLyze::XML::Certinfo::Certificate)))
+      end
+    end
+
+    context "when there are two or fewer 'certificate' XML children" do
+      subject do
+        described_class.new(xml.at("#{xpath}[count(certificate) <= 2]"))
+      end
+
+      it "should not yield anything" do
+        expect(subject.intermediates).to be_empty
+      end
+    end
+  end
+
   describe "#root" do
     context "when at least one 'certificate' XML child exists" do
       subject { described_class.new(xml.at("#{xpath}[certificate]")) }
