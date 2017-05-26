@@ -45,6 +45,57 @@ module SSLyze
 
         alias certs certificates
 
+        #
+        # The leaf certificate.
+        #
+        # @return [Certificate, nil]
+        #
+        def leaf
+          if (element = @node.at('certificate[1]'))
+            Certificate.new(element)
+          end
+        end
+
+        #
+        # Enumerates over any intermediate certificates in the chain.
+        #
+        # @yield [cert]
+        #   The given block will be passed each intermediate certificate.
+        #
+        # @yieldparam [Certificate] cert
+        #   An intermediate certificate in the chain.
+        #
+        # @return [Enumerator]
+        #   If no block was given, an Enumerator will be returned.
+        #
+        def each_intermediate
+          return enum_for(__method__) unless block_given?
+
+          @node.search('certificate[position() > 1 and position() < last()]').each do |element|
+            yield Certificate.new(element)
+          end
+        end
+
+        #
+        # Returns all intermediate certificates in the chain.
+        #
+        # @return [Array<Certificate>]
+        #
+        def intermediates
+          each_intermediate.to_a
+        end
+
+        #
+        # The root certificate.
+        #
+        # @return [Certificate, nil]
+        #
+        def root
+          if (element = @node.at('certificate[last()]'))
+            Certificate.new(element)
+          end
+        end
+
       end
     end
   end
