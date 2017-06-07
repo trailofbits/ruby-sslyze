@@ -17,7 +17,9 @@ module SSLyze
       #   The array of extensions.
       #
       def initialize(extensions)
-        @extensions = extensions
+        @extensions = Hash[extensions.map { |ext|
+          [ext.oid, ext]
+        }]
       end
 
       #
@@ -30,7 +32,7 @@ module SSLyze
       # @return [Enumerator]
       #
       def each(&block)
-        @extensions.each(&block)
+        @extensions.each_value(&block)
       end
 
       #
@@ -41,7 +43,7 @@ module SSLyze
       # @return [Boolean]
       #
       def has?(oid)
-        @extensions.any? { |ext| ext.oid == oid }
+        @extensions.has_key?(oid)
       end
 
       #
@@ -51,7 +53,7 @@ module SSLyze
       # @return [OpenSSL::X509::Extension]
       #
       def [](oid)
-        @extensions.find { |ext| ext.oid == oid }
+        @extensions[oid]
       end
 
       #
@@ -60,7 +62,7 @@ module SSLyze
       # @return [Array<OpenSSL::X509::Extension>]
       #
       def to_a
-        @extensions
+        @extensions.values
       end
 
     end
