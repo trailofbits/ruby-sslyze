@@ -1,7 +1,7 @@
 require 'openssl'
 
 module SSLyze
-  class X509
+  module X509
     #
     # Wrapper object for [OpenSSL::X509::Name][1].
     #
