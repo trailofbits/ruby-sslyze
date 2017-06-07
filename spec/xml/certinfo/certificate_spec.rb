@@ -100,7 +100,7 @@ Y63izHj1KcOdLNg8VVCCEPoEX8IlbLMIY/YTfN5XAFjs
 
   describe "#extensions" do
     it do
-      expect(subject.extensions).to be_a(Array).and(all(be_kind_of(OpenSSL::X509::Extension)))
+      expect(subject.extensions).to be_kind_of(SSLyze::X509::ExtensionSet)
     end
   end
 

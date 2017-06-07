@@ -1,5 +1,6 @@
 require 'sslyze/xml/plugin'
 require 'sslyze/x509/name'
+require 'sslyze/x509/extension_set'
 
 require 'openssl'
 
@@ -46,14 +47,12 @@ module SSLyze
         end
 
         #
-        # @return [Array<OpenSSL::X509::Extension>]
-        #
-        # @see http://www.rubydoc.info/stdlib/openssl/OpenSSL/X509/Extension
+        # @return [X509::ExtensionSet]
         #
         # @group OpenSSL Methods
         #
         def extensions
-          x509.extensions
+          X509::ExtensionSet.new(x509.extensions)
         end
 
         #
