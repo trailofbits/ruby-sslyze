@@ -79,8 +79,12 @@ describe SSLyze::X509::Name do
   end
 
   describe "#common_name" do
-    it "should return the 'CN' entry" do
-      expect(subject.common_name).to be == common_name
+    it do
+      expect(subject.common_name).to be_kind_of(SSLyze::X509::Domain)
+    end
+
+    it "should be equal to the 'CN' entry" do
+      expect(subject.common_name.name).to be == common_name
     end
   end
 end

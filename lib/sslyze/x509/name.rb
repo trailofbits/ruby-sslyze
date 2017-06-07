@@ -1,3 +1,5 @@
+require 'sslyze/x509/domain'
+
 require 'openssl'
 
 module SSLyze
@@ -79,10 +81,10 @@ module SSLyze
       #
       # The Common Name (`CN`) entry.
       #
-      # @return [String]
+      # @return [Domain]
       #
       def common_name
-        @common_name ||= self['CN']
+        @common_name ||= Domain.new(self['CN'])
       end
 
       alias cn common_name
