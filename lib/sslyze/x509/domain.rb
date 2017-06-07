@@ -43,7 +43,7 @@ module SSLyze
       # @return [Boolean]
       #
       def ==(other)
-        @name == other.name
+        other.kind_of?(self.class) && @name == other.name
       end
 
       #
