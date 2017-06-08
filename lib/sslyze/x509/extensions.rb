@@ -1,0 +1,6 @@
+require 'sslyze/x509/extensions/basic_constraints'
+require 'sslyze/x509/extensions/certificate_policies'
+require 'sslyze/x509/extensions/crl_distribution_points'
+require 'sslyze/x509/extensions/extended_key_usage'
+require 'sslyze/x509/extensions/key_usage'
+require 'sslyze/x509/extensions/subject_alt_name'
