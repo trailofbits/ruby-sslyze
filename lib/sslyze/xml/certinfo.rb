@@ -42,9 +42,10 @@ module SSLyze
       # @return [VerifiedCertificateChain, nil]
       #
       def verified_certificate_chain
-        if (path_validation = certificate_validation.path_validations.find(&:verified_certificate_chain))
-          path_validation.verified_certificate_chain
-        end
+        @verified_certificate_chain ||= if (element = @node.at_xpath('certificateValidation/pathValidation/verifiedCertificateChain'))
+                                          CertificateValidation::PathValidation::VerifiedCertificateChain.new(element)
+                                          
+                                        end
       end
 
       alias verified_chain verified_certificate_chain
