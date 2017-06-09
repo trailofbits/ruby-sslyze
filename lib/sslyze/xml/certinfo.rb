@@ -13,6 +13,8 @@ module SSLyze
     class Certinfo < Plugin
 
       #
+      # The received certificate chain.
+      #
       # @return [ReceivedCertificateChain]
       #
       def received_certificate_chain
@@ -21,8 +23,7 @@ module SSLyze
         )
       end
 
-      alias certificate_chain received_certificate_chain
-      alias chain received_certificate_chain
+      alias received_chain received_certificate_chain
 
       #
       # @return [CertificateValidation]
@@ -34,6 +35,19 @@ module SSLyze
       end
 
       alias validation certificate_validation
+
+      #
+      # The verified certificate chain.
+      #
+      # @return [VerifiedCertificateChain, nil]
+      #
+      def verified_certificate_chain
+        if (path_validation = certificate_validation.path_validations.find(&:verified_certificate_chain))
+          path_validation.verified_certificate_chain
+        end
+      end
+
+      alias verified_chain verified_certificate_chain
 
       #
       # @return [OCSPStapling]

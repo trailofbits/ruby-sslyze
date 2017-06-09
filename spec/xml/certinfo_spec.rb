@@ -13,7 +13,7 @@ describe SSLyze::XML::Certinfo do
 
   describe "#received_certificate_chain" do
     it "should return a ReceivedCertificateChain object" do
-      expect(subject.chain).to be_a(described_class::ReceivedCertificateChain)
+      expect(subject.received_certificate_chain).to be_a(described_class::ReceivedCertificateChain)
     end
   end
 
@@ -23,7 +23,13 @@ describe SSLyze::XML::Certinfo do
     end
 
     it "should return a CertificateValidation element" do
-      expect(subject.validation).to be_kind_of(described_class::CertificateValidation)
+      expect(subject.certificate_validation).to be_kind_of(described_class::CertificateValidation)
+    end
+  end
+
+  describe "#verified_certificate_chain" do
+    it "should return the #verified_certificate_chain from within one of the #certificate_validation.path_validations" do
+      expect(subject.verified_certificate_chain).to be_kind_of(described_class::CertificateValidation::PathValidation::VerifiedCertificateChain)
     end
   end
 
