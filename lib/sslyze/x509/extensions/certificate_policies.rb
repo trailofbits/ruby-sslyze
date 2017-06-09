@@ -32,8 +32,10 @@ module SSLyze
           def initialize(policy,qualifiers={})
             @policy = policy
 
-            @cps         = URI(cps) if cps
-            @user_notice = user_notice
+            @cps         = if (cps = qualifiers[:cps])
+                             URI(cps)
+                           end
+            @user_notice = qualifiers[:user_notice]
           end
 
           alias to_uri cps
@@ -51,7 +53,7 @@ module SSLyze
         def policies
           # XXX: ugly multiline regexp to parse the certificate policies and
           # their qualifiers.
-          @policies ||= value.scan(/^Policy: ([^\n]+)\n(?:  CPS: ([^\n]+)\n)?(?:  User Notice: ([^\n]+)\n)?(?:Unknown Qualifier: [^\n]+\n)?/m).map do |(policy,cps,user_notice)|
+          @policies ||= value.scan(/^Policy: ([^\n]+)\n(?:  CPS: ([^\n]+)\n)?(?:  User Notice: ([^\n]+)\n)?(?:  Unknown Qualifier: [^\n]+\n)?/m).map do |(policy,cps,user_notice)|
             Policy.new(policy, cps: cps, user_notice: user_notice)
           end
         end
