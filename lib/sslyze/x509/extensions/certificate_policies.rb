@@ -23,7 +23,7 @@ module SSLyze
           #
           # @param [Hash{Symbol => Object}] qualifiers
           #
-          # @option qualifiers [URI, String, nil] :cps
+          # @option qualifiers [URI::Generic, nil] :cps
           #   The CPS URI.
           #
           # @option qualifiers [String, nil] :user_notice
@@ -32,9 +32,7 @@ module SSLyze
           def initialize(policy,qualifiers={})
             @policy = policy
 
-            @cps         = if (cps = qualifiers[:cps])
-                             URI(cps)
-                           end
+            @cps         = qualifiers[:cps]
             @user_notice = qualifiers[:user_notice]
           end
 
@@ -53,7 +51,16 @@ module SSLyze
         def policies
           # XXX: ugly multiline regexp to parse the certificate policies and
           # their qualifiers.
-          @policies ||= value.scan(/^Policy: ([^\n]+)\n(?:  CPS: ([^\n]+)\n)?(?:  User Notice: ([^\n]+)\n)?(?:  Unknown Qualifier: [^\n]+\n)?/m).map do |(policy,cps,user_notice)|
+          @policies ||= value.scan(/^Policy: [^\n]+\n(?:  [^:]+: [^\n]+\n)*/m).map do |text|
+            policy = text.match(/^Policy: ([^\n]+)/)[1]
+
+            cps = if (match = text.match(/^  CPS: ([^\n]+)/m))
+                    URI.parse(match[1])
+                  end
+            user_notice = if (match = text.match(/^  User Notice: ([^\n]+)/m))
+                            match[1]
+                          end
+
             Policy.new(policy, cps: cps, user_notice: user_notice)
           end
         end
