@@ -1,6 +1,8 @@
 module SSLyze
   module CipherSuites
     # Mapping of OpenSSL cipher names to RFC cipher names
+    #
+    # @note Source https://testssl.sh/openssl-rfc.mapping.html
     OPENSSL_NAMES = {
       "TLS_RSA_WITH_NULL_MD5"=>"NULL-MD5",
       "TLS_RSA_WITH_NULL_SHA"=>"NULL-SHA",
