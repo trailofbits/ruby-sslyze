@@ -1,3 +1,5 @@
+require 'sslyze/x509/extensions'
+
 module SSLyze
   module X509
     #
@@ -63,6 +65,72 @@ module SSLyze
       #
       def to_a
         @extensions.values
+      end
+
+      #
+      # The `basicConstraints` extension.
+      #
+      # @return [Extensions::BasicConstraints, nil]
+      #
+      def basic_constraints
+        @basic_constraints ||= if (ext = self['basicConstraints'])
+                                 Extensions::BasicConstraints.new(ext)
+                               end
+      end
+
+      #
+      # The `certificatePolicies` extension.
+      #
+      # @return [Extensions::CertificatePolicies, nil]
+      #
+      def certificate_policies
+        @certificate_policies ||= if (ext = self['certificatePolicies'])
+                                    Extensions::CertificatePolicies.new(ext)
+                                  end
+      end
+
+      #
+      # The `crlDistributionPoints` extension.
+      #
+      # @return [Extensions::CRLDistributionPoints, nil]
+      #
+      def crl_distribution_points
+        @crl_distribution_points ||= if (ext = self['crlDistributionPoints'])
+                                       Extensions::CRLDistributionPoints.new(ext)
+                                     end
+      end
+
+      #
+      # The `extendedKeyUsage` extension.
+      #
+      # @return [Extensions::ExtendedKeyUsage, nil]
+      #
+      def extended_key_usage
+        @extended_key_usage ||= if (ext = self['extendedKeyUsage'])
+                                  Extensions::ExtendedKeyUsage.new(ext)
+                                end
+      end
+
+      #
+      # The `keyUsage` extension.
+      #
+      # @return [Extensions::KeyUsage, nil]
+      #
+      def key_usage
+        @key_usage ||= if (ext = self['keyUsage'])
+                         Extensions::KeyUsage.new(ext)
+                       end
+      end
+
+      #
+      # The `subjectAltName` extension.
+      #
+      # @return [Extensions::SubjectAltName, nil]
+      #
+      def subject_alt_name
+        @subject_alt_name ||= if (ext = self['subjectAltName'])
+                                Extensions::SubjectAltName.new(ext)
+                              end
       end
 
     end
