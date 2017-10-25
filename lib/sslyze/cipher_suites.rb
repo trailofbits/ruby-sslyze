@@ -1,6 +1,6 @@
 module SSLyze
   module CipherSuites
-    # Mapping of OpenSSL cipher names to RFC cipher names
+    # Mapping of RFC cipher suite names to their OpenSSL equivalents
     #
     # @note Source https://testssl.sh/openssl-rfc.mapping.html
     OPENSSL_NAMES = {
