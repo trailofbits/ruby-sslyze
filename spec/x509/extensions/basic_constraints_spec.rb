@@ -1,4 +1,6 @@
 require 'spec_helper'
+require 'openssl'
+
 require 'sslyze/x509/extensions/basic_constraints'
 
 describe SSLyze::X509::Extensions::BasicConstraints do

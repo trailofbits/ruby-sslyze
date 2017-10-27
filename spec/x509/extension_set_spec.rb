@@ -1,4 +1,6 @@
 require 'spec_helper'
+require 'openssl'
+
 require 'sslyze/x509/extension_set'
 
 describe SSLyze::X509::ExtensionSet do

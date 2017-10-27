@@ -1,4 +1,6 @@
 require 'rspec'
+require 'openssl'
+
 require 'sslyze/x509/name'
 
 describe SSLyze::X509::Name do

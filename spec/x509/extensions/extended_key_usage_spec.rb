@@ -1,4 +1,6 @@
 require 'spec_helper'
+require 'openssl'
+
 require 'sslyze/x509/extensions/extended_key_usage'
 
 describe SSLyze::X509::Extensions::ExtendedKeyUsage do
