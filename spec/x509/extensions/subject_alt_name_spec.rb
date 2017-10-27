@@ -1,4 +1,6 @@
 require 'spec_helper'
+require 'openssl'
+
 require 'sslyze/x509/extensions/subject_alt_name'
 
 describe SSLyze::X509::Extensions::SubjectAltName do

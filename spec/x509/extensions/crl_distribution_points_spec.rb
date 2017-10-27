@@ -1,4 +1,6 @@
 require 'spec_helper'
+require 'openssl'
+
 require 'sslyze/x509/extensions/crl_distribution_points'
 
 describe SSLyze::X509::Extensions::CRLDistributionPoints do

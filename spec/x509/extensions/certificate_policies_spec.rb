@@ -1,4 +1,6 @@
 require 'spec_helper'
+require 'openssl'
+
 require 'sslyze/x509/extensions/certificate_policies'
 
 describe SSLyze::X509::Extensions::CertificatePolicies do
