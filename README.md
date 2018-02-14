@@ -50,7 +50,7 @@ Parsing sslyze XML output:
 ## Requirements
 
 * [rprogram] ~> 0.3
-* [nokogiri] ~> 1.0
+* [nokogiri] ~> 1.8
 * [sslyze] 1.x
 
 ## Install
