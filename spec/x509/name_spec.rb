@@ -27,7 +27,7 @@ describe SSLyze::X509::Name do
     ]
   end
   let(:openssl_x509_name) { OpenSSL::X509::Name.new(entries) }
-  
+
   subject { described_class.new(openssl_x509_name) }
 
   describe "#each" do
