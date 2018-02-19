@@ -8,7 +8,7 @@ group :development do
 
   gem 'rspec', '~> 3.0'
 
-  gem 'yard', '~> 0.8'
+  gem 'yard', '~> 0.9'
   gem 'kramdown'
 end
 
