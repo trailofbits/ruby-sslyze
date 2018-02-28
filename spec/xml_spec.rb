@@ -17,7 +17,7 @@ describe SSLyze::XML do
 
   describe "#version" do
     it "must parse the SSLyzeVersion attribute" do
-      expect(subject.version).to be == '1.1.1'
+      expect(subject.version).to match(/^1\.\d+\.\d+$/)
     end
   end
 
