@@ -49,6 +49,8 @@ module SSLyze
           each_path_validation.to_a
         end
 
+        alias path path_validations
+
       end
     end
   end
