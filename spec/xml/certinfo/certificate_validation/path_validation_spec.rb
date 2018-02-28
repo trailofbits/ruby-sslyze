@@ -11,26 +11,6 @@ describe SSLyze::XML::Certinfo::CertificateValidation::PathValidation do
     described_class.new(xml.at(xpath))
   end
 
-  describe "#verified_certificate_chain" do
-    context "when 'verifiedCertificateChain' XML children are present" do
-      subject do
-        described_class.new(xml.at("#{xpath}[verifiedCertificateChain]"))
-      end
-
-      it do
-        expect(subject.verified_certificate_chain).to be_kind_of(described_class::VerifiedCertificateChain)
-      end
-    end
-
-    context "when there are no 'verifiedCertificateChain' XML children" do
-      subject do
-        described_class.new(xml.at("#{xpath}[not(verifiedCertificateChain)]"))
-      end
-
-      it { expect(subject.verified_certificate_chain).to be nil }
-    end
-  end
-
   describe "#is_extended_validation_certificate?" do
     context "when the 'isExtendedValidationCertificate' XML attribute is present" do
       subject do

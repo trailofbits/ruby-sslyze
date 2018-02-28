@@ -1,7 +1,6 @@
 require 'sslyze/xml/plugin'
 require 'sslyze/xml/types'
 require 'sslyze/xml/attributes/error'
-require 'sslyze/xml/certinfo/certificate_validation/path_validation/verified_certificate_chain'
 
 module SSLyze
   class XML
@@ -25,20 +24,6 @@ module SSLyze
           def initialize(node)
             @node = node
           end
-
-          #
-          # Parses the `<verifiedCertificateChain />` XML element.
-          #
-          # @return [VerifiedCertificateChain, nil]
-          #
-          def verified_certificate_chain
-            @verified_certificate_chain ||= if (element = @node.at_xpath('verifiedCertificateChain'))
-                                              VerifiedCertificateChain.new(element)
-                                            end
-          end
-
-          alias verified_cert_chain verified_certificate_chain
-          alias verified_chain verified_certificate_chain
 
           #
           # @return [Boolean, nil]

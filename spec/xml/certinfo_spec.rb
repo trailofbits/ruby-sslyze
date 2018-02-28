@@ -29,7 +29,7 @@ describe SSLyze::XML::Certinfo do
 
   describe "#verified_certificate_chain" do
     it "should return the #verified_certificate_chain from within one of the #certificate_validation.path_validations" do
-      expect(subject.verified_certificate_chain).to be_kind_of(described_class::CertificateValidation::PathValidation::VerifiedCertificateChain)
+      expect(subject.verified_certificate_chain).to be_kind_of(described_class::CertificateValidation::VerifiedCertificateChain)
     end
   end
 

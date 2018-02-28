@@ -1,11 +1,11 @@
 require 'spec_helper'
 require 'xml_examples'
-require 'sslyze/xml/certinfo/certificate_validation/path_validation'
+require 'sslyze/xml/certinfo/certificate_validation/verified_certificate_chain'
 
-describe SSLyze::XML::Certinfo::CertificateValidation::PathValidation::VerifiedCertificateChain do
+describe SSLyze::XML::Certinfo::CertificateValidation::VerifiedCertificateChain do
   include_examples "XML specs"
 
-  let(:xpath) { '/document/results/target/certinfo/certificateValidation/pathValidation/verifiedCertificateChain' }
+  let(:xpath) { '/document/results/target/certinfo/certificateValidation/verifiedCertificateChain' }
 
   subject { described_class.new(xml.at(xpath)) }
 
