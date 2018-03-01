@@ -17,7 +17,7 @@ describe SSLyze::XML::Certinfo::CertificateValidation::VerifiedCertificateChain 
 
   describe "#each_certificate" do
     context "when at least one 'certificate' XML child exists" do
-      subject { described_class.new(xml.at("#{xpath}[certificate]")) }
+      let(:xpath) { "#{super()}[certificate]" }
 
       it "should yield successive Certificate objects" do
         expect { |b|
@@ -30,7 +30,7 @@ describe SSLyze::XML::Certinfo::CertificateValidation::VerifiedCertificateChain 
     end
 
     context "when no 'certificate' XML children exist" do
-      subject { described_class.new(xml.at("#{xpath}[not(./certificate)]")) }
+      let(:xpath) { "#{super()}[not(./certificate)]" }
 
       it "should not yield control" do
         pending "need an example with no 'certificate' XML children"
@@ -44,7 +44,7 @@ describe SSLyze::XML::Certinfo::CertificateValidation::VerifiedCertificateChain 
 
   describe "#certificates" do
     context "when at least one 'certificate' XML child exists" do
-      subject { described_class.new(xml.at("#{xpath}[certificate]")) }
+      let(:xpath) { "#{super()}[certificate]" }
 
       it do
         expect(subject.certificates).to be_a(Array).and(
@@ -54,7 +54,7 @@ describe SSLyze::XML::Certinfo::CertificateValidation::VerifiedCertificateChain 
     end
 
     context "when no 'certificate' XML children exist" do
-      subject { described_class.new(xml.at("#{xpath}[not(./certificate)]")) }
+      let(:xpath) { "#{super()}[not(./certificate)]" }
 
       it do
         pending "need an example with no 'certificate' XML children"
@@ -66,7 +66,7 @@ describe SSLyze::XML::Certinfo::CertificateValidation::VerifiedCertificateChain 
 
   describe "#leaf" do
     context "when at least one 'certificate' XML child exists" do
-      subject { described_class.new(xml.at("#{xpath}[certificate]")) }
+      let(:xpath) { "#{super()}[certificate]" }
 
       it do
         expect(subject.leaf).to be_a(SSLyze::XML::Certinfo::Certificate)
@@ -79,7 +79,7 @@ describe SSLyze::XML::Certinfo::CertificateValidation::VerifiedCertificateChain 
     end
 
     context "when no 'certificate' XML children exist" do
-      subject { described_class.new(xml.at("#{xpath}[not(./certificate)]")) }
+      let(:xpath) { "#{super()}[not(./certificate)]" }
 
       it do
         pending "need an example with no 'certificate' XML children"
@@ -91,9 +91,7 @@ describe SSLyze::XML::Certinfo::CertificateValidation::VerifiedCertificateChain 
 
   describe "#each_intermediate" do
     context "when there are more than two 'certificate' XML children" do
-      subject do
-        described_class.new(xml.at("#{xpath}[count(certificate) > 2]"))
-      end
+      let(:xpath) { "#{super()}[count(certificate) > 2]" }
 
       it "should yield the intermediate certificates" do
         pending "need an example with more than two 'certificate' XML children"
@@ -107,9 +105,7 @@ describe SSLyze::XML::Certinfo::CertificateValidation::VerifiedCertificateChain 
     end
 
     context "when there are two or fewer 'certificate' XML children" do
-      subject do
-        described_class.new(xml.at("#{xpath}[count(certificate) <= 2]"))
-      end
+      let(:xpath) { "#{super()}[count(certificate) <= 2]" }
 
       it "should not yield anything" do
         expect { |b|
@@ -121,9 +117,7 @@ describe SSLyze::XML::Certinfo::CertificateValidation::VerifiedCertificateChain 
 
   describe "#intermediates" do
     context "when there are more than two 'certificate' XML children" do
-      subject do
-        described_class.new(xml.at("#{xpath}[count(certificate) > 2]"))
-      end
+      let(:xpath) { "#{super()}[count(certificate) > 2]" }
 
       it "should yield the intermediate certificates" do
         pending "need an example with more than two 'certificate' XML children"
@@ -133,9 +127,7 @@ describe SSLyze::XML::Certinfo::CertificateValidation::VerifiedCertificateChain 
     end
 
     context "when there are two or fewer 'certificate' XML children" do
-      subject do
-        described_class.new(xml.at("#{xpath}[count(certificate) <= 2]"))
-      end
+      let(:xpath) { "#{super()}[count(certificate) <= 2]" }
 
       it "should not yield anything" do
         expect(subject.intermediates).to be_empty
@@ -145,7 +137,7 @@ describe SSLyze::XML::Certinfo::CertificateValidation::VerifiedCertificateChain 
 
   describe "#root" do
     context "when at least one 'certificate' XML child exists" do
-      subject { described_class.new(xml.at("#{xpath}[certificate]")) }
+      let(:xpath) { "#{super()}[certificate]" }
 
       it do
         expect(subject.root).to be_a(SSLyze::XML::Certinfo::Certificate)
@@ -158,7 +150,7 @@ describe SSLyze::XML::Certinfo::CertificateValidation::VerifiedCertificateChain 
     end
 
     context "when no 'certificate' XML children exist" do
-      subject { described_class.new(xml.at("#{xpath}[not(./certificate)]")) }
+      let(:xpath) { "#{super()}[not(./certificate)]" }
 
       it do
         pending "need an example with no 'certificate' XML children"
