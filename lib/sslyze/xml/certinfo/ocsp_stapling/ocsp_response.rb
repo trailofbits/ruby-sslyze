@@ -45,11 +45,9 @@ module SSLyze
           #
           # @return [Symbol]
           #
-          def response_status
-            @response_status ||= @node.at_xpath('responseStatus').inner_text.to_sym
+          def status
+            @status ||= @node['status'].downcase.to_sym
           end
-
-          alias status response_status
 
           #
           # Determines if the response status was successful.
@@ -57,7 +55,7 @@ module SSLyze
           # @return [Boolean]
           #
           def successful?
-            response_status == :successful
+            status == :successful
           end
 
           #

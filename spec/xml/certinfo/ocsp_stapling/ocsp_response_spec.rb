@@ -21,16 +21,16 @@ describe SSLyze::XML::Certinfo::OCSPStapling::OCSPResponse do
     end
   end
 
-  describe "#response_status" do
-    it "should query responseStatus" do
-      expect(subject.response_status).to be == :successful
+  describe "#status" do
+    it "should parse the status attribute" do
+      expect(subject.status).to be == :successful
     end
   end
 
   describe "#successful?" do
     context "when responseStatus is 'successful'" do
       subject do
-        described_class.new(xml.at("#{xpath}[responseStatus/text()=\"successful\"]"))
+        described_class.new(xml.at("#{xpath}[@status='SUCCESSFUL']"))
       end
 
       specify { expect(subject.successful?).to be true }
@@ -38,7 +38,7 @@ describe SSLyze::XML::Certinfo::OCSPStapling::OCSPResponse do
 
     context "when status is not :successful" do
       before do
-        expect(subject).to receive(:response_status).and_return(:failed)
+        expect(subject).to receive(:status).and_return(:failed)
       end
 
       specify { expect(subject.successful?).to be false }
