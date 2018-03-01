@@ -10,20 +10,31 @@ describe SSLyze::XML::Target do
   subject { described_class.new(xml.at(xpath)) }
 
   describe "#host" do
+    let(:expected_host) { 'twitter.com' }
+
+    let(:xpath) { "#{super()}[@host='#{expected_host}']" }
+
     it "must parse the host attribute" do
-      expect(subject.host).to be == 'twitter.com'
+      expect(subject.host).to be == expected_host
     end
   end
 
   describe "#ip" do
+    let(:expected_ip) { '192.30.255.113' }
+
+    let(:xpath) { "#{super()}[@ip='#{expected_ip}']" }
+
     it "must parse the ip attribute" do
-      expect(subject.ip).to be == '104.244.42.129'
+      expect(subject.ip).to be == expected_ip
     end
   end
 
   describe "#ipaddr" do
+    let(:expected_ip) { '192.30.255.113' }
+    let(:xpath) { "#{super()}[@ip='#{expected_ip}']" }
+
     it "must parse the ip attribute" do
-      expect(subject.ipaddr).to be == IPAddr.new('104.244.42.129')
+      expect(subject.ipaddr).to be == IPAddr.new(expected_ip)
     end
   end
 

@@ -16,12 +16,18 @@ describe SSLyze::XML::Certinfo::OCSPStapling::OCSPResponse do
   end
 
   describe "#responder_id" do
+    let(:expected_responder_id) { '5168FF90AF0207753CCCD9656462A212B859723B' }
+
+    let(:xpath) { "#{super()}[responderID/text()='#{expected_responder_id}']" }
+
     it "should parse the 'responderID' XML element" do
-      expect(subject.responder_id).to be == '5168FF90AF0207753CCCD9656462A212B859723B'
+      expect(subject.responder_id).to be == expected_responder_id
     end
   end
 
   describe "#status" do
+    let(:xpath) { "#{super()}[@status='SUCCESSFUL']" }
+
     it "should parse the status attribute" do
       expect(subject.status).to be == :successful
     end
@@ -29,9 +35,7 @@ describe SSLyze::XML::Certinfo::OCSPStapling::OCSPResponse do
 
   describe "#successful?" do
     context "when responseStatus is 'successful'" do
-      subject do
-        described_class.new(xml.at("#{xpath}[@status='SUCCESSFUL']"))
-      end
+      let(:xpath) { "#{super()}[@status='SUCCESSFUL']" }
 
       specify { expect(subject.successful?).to be true }
     end
@@ -46,8 +50,12 @@ describe SSLyze::XML::Certinfo::OCSPStapling::OCSPResponse do
   end
 
   describe "#produced_at" do
+    let(:expected_time) { 'Feb 28 19:34:58 2018 GMT' }
+
+    let(:xpath) { "#{super()}[producedAt/text()='#{expected_time}']" }
+
     it "should query producedAt and return a Time object" do
-      expect(subject.produced_at).to be == Time.parse('May 24 11:10:00 2017 GMT')
+      expect(subject.produced_at).to be == Time.parse(expected_time)
     end
   end
 end
