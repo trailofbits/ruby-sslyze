@@ -17,7 +17,7 @@ describe SSLyze::XML::Certinfo::CertificateValidation::HostnameValidation do
 
   describe "#server_hostname" do
     it "should return the serverHostname attribute" do
-      expect(subject.server_hostname).to be == 'twitter.com'
+      expect(subject.server_hostname).to match(/^(?:\w+\.)?\w+\.com$/)
     end
   end
 end
