@@ -28,8 +28,6 @@ describe SSLyze::XML::Reneg do
       end
 
       it do
-        pending "need an example where '<sessionRenegotiation/>' is omitted"
-
         expect(subject.session_renegotiation).to be nil
       end
     end
