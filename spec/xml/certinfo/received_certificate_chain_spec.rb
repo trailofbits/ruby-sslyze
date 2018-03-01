@@ -16,8 +16,6 @@ describe SSLyze::XML::Certinfo::ReceivedCertificateChain do
       subject { described_class.new(xml.at("#{xpath}[certificate]")) }
 
       it "should yield successive Certificate objects" do
-        pending "need an example with 'certificate' child elements"
-
         expect { |b|
           subject.each_certificate(&b)
         }.to yield_successive_args(
@@ -33,8 +31,6 @@ describe SSLyze::XML::Certinfo::ReceivedCertificateChain do
       subject { described_class.new(xml.at("#{xpath}[certificate]")) }
 
       it do
-        pending "need an example with 'certificate' child elements"
-
         expect(subject.certificates).to be_a(Array).and(
           all(be_kind_of(SSLyze::XML::Certinfo::Certificate))
         )
