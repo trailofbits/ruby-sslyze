@@ -27,7 +27,11 @@ describe SSLyze::XML::Heartbleed do
         described_class.new(xml.at("#{xpath}[not(./openSslHeartbleed)]"))
       end
 
-      it { expect(subject.openssl_heartbleed).to be nil }
+      it do
+        pending "need to find a host where <openSslHeartbleed/> is omitted"
+
+        expect(subject.openssl_heartbleed).to be nil
+      end
     end
   end
 end
