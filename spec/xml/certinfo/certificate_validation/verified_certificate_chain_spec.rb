@@ -94,8 +94,6 @@ describe SSLyze::XML::Certinfo::CertificateValidation::VerifiedCertificateChain 
       let(:xpath) { "#{super()}[count(certificate) > 2]" }
 
       it "should yield the intermediate certificates" do
-        pending "need an example with more than two 'certificate' XML children"
-
         expect { |b|
           subject.each_intermediate(&b)
         }.to yield_successive_args(
@@ -120,8 +118,6 @@ describe SSLyze::XML::Certinfo::CertificateValidation::VerifiedCertificateChain 
       let(:xpath) { "#{super()}[count(certificate) > 2]" }
 
       it "should yield the intermediate certificates" do
-        pending "need an example with more than two 'certificate' XML children"
-
         expect(subject.intermediates).to be_a(Array).and(all(be_kind_of(SSLyze::XML::Certinfo::Certificate)))
       end
     end
