@@ -33,13 +33,15 @@ describe SSLyze::XML::Certinfo::CertificateValidation::PathValidation do
 
   describe "#trust_store_version" do
     it "must return the 'trustStoreVersion' XML attribute" do
-      expect(subject.trust_store_version).to be == '7.0.0 r1'
+      expect(subject.trust_store_version).to_not be_empty
     end
   end
 
   describe "#using_trust_store" do
+    let(:trust_stores) { %w[Android iOS macOS Mozilla Windows] }
+
     it "must return the 'usingTrustStore' XML attribute" do
-      expect(subject.using_trust_store).to be == 'AOSP'
+      expect(trust_stores).to include(subject.using_trust_store)
     end
   end
 
