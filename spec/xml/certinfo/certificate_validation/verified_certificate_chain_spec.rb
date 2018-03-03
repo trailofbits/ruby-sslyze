@@ -18,13 +18,13 @@ describe SSLyze::XML::Certinfo::CertificateValidation::VerifiedCertificateChain 
   describe "#each_certificate" do
     context "when at least one 'certificate' XML child exists" do
       let(:xpath) { "#{super()}[certificate]" }
+      let(:xpath_count) { xml.at(xpath).xpath('certificate').count }
 
       it "should yield successive Certificate objects" do
         expect { |b|
           subject.each_certificate(&b)
         }.to yield_successive_args(
-          SSLyze::XML::Certinfo::Certificate,
-          SSLyze::XML::Certinfo::Certificate
+          *Array.new(xpath_count,SSLyze::XML::Certinfo::Certificate)
         )
       end
     end
@@ -45,6 +45,7 @@ describe SSLyze::XML::Certinfo::CertificateValidation::VerifiedCertificateChain 
   describe "#certificates" do
     context "when at least one 'certificate' XML child exists" do
       let(:xpath) { "#{super()}[certificate]" }
+      let(:xpath_count) { xml.at(xpath).xpath('certificate').count }
 
       it do
         expect(subject.certificates).to be_a(Array).and(
@@ -106,6 +107,8 @@ describe SSLyze::XML::Certinfo::CertificateValidation::VerifiedCertificateChain 
       let(:xpath) { "#{super()}[count(certificate) <= 2]" }
 
       it "should not yield anything" do
+        pending "<vertifiedCertificateChain/> does not appear to ever have two or fewer <certificate/> children"
+
         expect { |b|
           subject.each_intermediate(&b)
         }.to_not yield_control
@@ -126,6 +129,8 @@ describe SSLyze::XML::Certinfo::CertificateValidation::VerifiedCertificateChain 
       let(:xpath) { "#{super()}[count(certificate) <= 2]" }
 
       it "should not yield anything" do
+        pending "<vertifiedCertificateChain/> does not appear to ever have two or fewer <certificate/> children"
+
         expect(subject.intermediates).to be_empty
       end
     end
