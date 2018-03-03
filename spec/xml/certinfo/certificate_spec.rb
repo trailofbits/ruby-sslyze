@@ -9,28 +9,6 @@ describe SSLyze::XML::Certinfo::Certificate do
 
   subject { described_class.new(xml.at(xpath)) }
 
-  describe "#position" do
-    context "when the 'position' attribute is set" do
-      subject do
-        described_class.new(xml.at("#{xpath}[@position]"))
-      end
-
-      it "should parse the position attribute" do
-        pending "need an example with the 'position' attribute set"
-
-        expect(subject.position).to be :leaf
-      end
-    end
-
-    context "when the 'position' attribute is omitted" do
-      subject do
-        described_class.new(xml.at("#{xpath}[not(@position)]"))
-      end
-
-      it { expect(subject.position).to be nil }
-    end
-  end
-
   describe "#sha1_fingerprint" do
     let(:expected_sha1) { 'd79f076110b39293e349ac89845b0380c19e2f8b' }
 

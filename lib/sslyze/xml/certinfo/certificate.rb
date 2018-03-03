@@ -152,17 +152,6 @@ module SSLyze
         end
 
         #
-        # The position of the certificate within the cert chain.
-        #
-        # @return [Symbol, nil]
-        #
-        def position
-          @position ||= if (value = @node['position'])
-                          value.to_sym
-                        end
-        end
-
-        #
         # The SHA1 fingerprint of the cert.
         #
         # @return [String]
