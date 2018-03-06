@@ -4,8 +4,8 @@ before_install:
   - pip install --upgrade --user pip setuptools
   - pip install --user sslyze
 rvm:
-- 2.1
-- 2.2
+- 2.3
+- 2.4
 - ruby-head
 - jruby
 addons:
