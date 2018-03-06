@@ -8,6 +8,8 @@ module SSLyze
     #
     # [1]: http://www.rubydoc.info/stdlib/openssl/OpenSSL/X509/Extension
     #
+    # @since 1.0.0
+    #
     class ExtensionSet
 
       include Enumerable

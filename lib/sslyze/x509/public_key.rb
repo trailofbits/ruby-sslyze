@@ -8,6 +8,8 @@ module SSLyze
     #
     # [OpenSSL::PKey]: http://www.rubydoc.info/stdlib/openssl/OpenSSL/PKey
     #
+    # @since 1.0.0
+    #
     class PublicKey < SimpleDelegator
 
       #

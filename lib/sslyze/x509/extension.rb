@@ -7,6 +7,8 @@ module SSLyze
     #
     # @see http://www.rubydoc.info/stdlib/openssl/OpenSSL/X509/Extension
     #
+    # @since 1.0.0
+    #
     class Extension < SimpleDelegator
     end
   end

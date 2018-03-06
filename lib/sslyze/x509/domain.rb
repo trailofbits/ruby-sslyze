@@ -3,6 +3,8 @@ module SSLyze
     #
     # Represents a domain name pattern.
     #
+    # @since 1.0.0
+    #
     class Domain
 
       # The subject name.
