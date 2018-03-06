@@ -13,13 +13,6 @@ describe SSLyze::X509::Name do
 
   let(:entries) do
     [
-      ["businessCategory", "Private Organization", 12],
-      ["jurisdictionC", "US", 19],
-      ["jurisdictionST", "Delaware", 19],
-      ["serialNumber", "4337446", 19],
-      ["street", "Suite 900", 19],
-      ["street", "1355 Market St", 19],
-      ["postalCode", "94103", 19],
       ["C", country_name, 19],
       ["ST", state_name, 19],
       ["L", location_name, 19],
