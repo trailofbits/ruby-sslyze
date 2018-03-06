@@ -1,6 +1,7 @@
 require 'sslyze/xml/plugin'
 require 'sslyze/xml/certinfo/received_certificate_chain'
 require 'sslyze/xml/certinfo/certificate_validation'
+require 'sslyze/xml/certinfo/certificate_validation/verified_certificate_chain'
 require 'sslyze/xml/certinfo/ocsp_stapling'
 
 module SSLyze
