@@ -6,7 +6,7 @@ module SSLyze
     class Certinfo < Plugin
       class CertificateValidation
         #
-        # Represents the `<verifiedCertificateChain />` XML element.
+        # Represents the `<verifiedCertificateChain>` XML element.
         #
         # @since 1.0.0
         #
@@ -15,10 +15,18 @@ module SSLyze
           include Types
           include HasCertificates
 
+          #
+          # Initializes the {VerifiedCertificateChain} object.
+          #
+          # @param [Nokogiri::XML::Element] node
+          #   The `<verifiedCertificateChain>` XML element.
+          #
           def initialize(node)
             @node = node
           end
 
+          #
+          # Parses the `hasSha1SignedCertificate` XML attribute.
           #
           # @return [Boolean]
           #

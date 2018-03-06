@@ -6,7 +6,7 @@ module SSLyze
     class Certinfo < Plugin
       class CertificateValidation
         #
-        # Represents the `<hostnameValidation />` XML element.
+        # Represents the `<hostnameValidation>` XML element.
         #
         # @since 1.0.0
         #
@@ -18,6 +18,7 @@ module SSLyze
           # Initializes the element.
           #
           # @param [Nokogiri::XML::Element] node
+          #   The `<hostnameValidation>` XML element.
           #
           def initialize(node)
             @node = node

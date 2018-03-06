@@ -17,10 +17,15 @@ module SSLyze
         include Attributes::IsSupported
         include Attributes::Exception
 
+        #
+        # Initializes the {HTTPStrictTransportSecurity} object.
+        #
         def initialize(node)
           @node = node
         end
 
+        #
+        # Parses the `includeSubDomains` XML attribute.
         #
         # @return [Boolean]
         #
@@ -28,6 +33,8 @@ module SSLyze
           Boolean[@node['includeSubDomains']]
         end
 
+        #
+        # Parses the `maxAge` XML attribute.
         #
         # @return [Integer, nil]
         #
@@ -37,6 +44,8 @@ module SSLyze
                        end
         end
 
+        #
+        # Parses the `preload` XML attribute.
         #
         # @return [Boolean]
         #

@@ -2,8 +2,15 @@ require 'sslyze/xml/plugin'
 
 module SSLyze
   class XML
+    #
+    # Represents the `<fallback>` XML element.
+    #
+    # @since 1.0.0
+    #
     class Fallback < Plugin
 
+      #
+      # Parses the `<tlsFallbackScsv>` XML element.
       #
       # @return [TLSFallbackSCSV]
       #

@@ -4,7 +4,7 @@ require 'sslyze/xml/attributes/exception'
 module SSLyze
   class XML
     #
-    # Common base class for all plugin elements.
+    # Common base class for all plugin XML elements.
     #
     # @since 1.0.0
     #
@@ -13,6 +13,11 @@ module SSLyze
       include Attributes::Title
       include Attributes::Exception
 
+      #
+      # Initializes the plugin.
+      # 
+      # @param [Nokogiri::XML::Element] node
+      #
       def initialize(node)
         @node = node
       end

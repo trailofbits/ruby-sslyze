@@ -5,7 +5,7 @@ module SSLyze
   class XML
     class Heartbleed < Plugin
       #
-      # Represents the `<openSslHeartbleed />` XML element.
+      # Represents the `<openSslHeartbleed>` XML element.
       #
       # @since 1.0.0
       #
@@ -14,7 +14,10 @@ module SSLyze
         include Attributes::IsVulnerable
 
         #
-        # Initializes the element.
+        # Initializes the {OpenSSLHeartbleed} object.
+        #
+        # @param [Nokogiri::XML::Element] node
+        #   The `<openSslHeartbleed>` XML element.
         #
         def initialize(node)
           @node = node

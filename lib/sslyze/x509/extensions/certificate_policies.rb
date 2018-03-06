@@ -5,14 +5,25 @@ require 'uri'
 module SSLyze
   module X509
     module Extensions
+      #
+      # Represents the `certificatePolicies` X509v3 extension.
+      #
+      # @since 1.0.0
+      #
       class CertificatePolicies < Extension
 
+        #
+        # Represents an individual certificate policy.
+        #
         class Policy
 
+          # @return [String]
           attr_reader :policy
 
+          # @return [URI::Generic, nil]
           attr_reader :cps
 
+          # @return [String, nil]
           attr_reader :user_notice
 
           #
@@ -57,6 +68,7 @@ module SSLyze
             cps = if (match = text.match(/^  CPS: ([^\n]+)/m))
                     URI.parse(match[1])
                   end
+
             user_notice = if (match = text.match(/^  User Notice: ([^\n]+)/m))
                             match[1]
                           end

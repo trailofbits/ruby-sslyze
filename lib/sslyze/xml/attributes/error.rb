@@ -1,6 +1,11 @@
 module SSLyze
   class XML
     module Attributes
+      #
+      # Provides methods for parsing the `error` XML attribute.
+      #
+      # @since 1.0.0
+      #
       module Error
         #
         # The error message, if an error occurred.

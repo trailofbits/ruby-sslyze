@@ -6,16 +6,24 @@ module SSLyze
   class XML
     class Certinfo < Plugin
       #
-      # Represents the `<certificateValidation />` XML element.
+      # Represents the `<certificateValidation>` XML element.
       #
       # @since 1.0.0
       #
       class CertificateValidation
 
+        #
+        # Initializes the {CertificateValidation} object.
+        #
+        # @param [Nokogiri::XML::Element] node
+        #   The `<certificateValidation>` XML element.
+        #
         def initialize(node)
           @node = node
         end
 
+        #
+        # Hostname based validation information.
         #
         # @return [HostnameValidation]
         #
@@ -27,6 +35,8 @@ module SSLyze
 
         alias hostname hostname_validation
 
+        #
+        # Enumerates over the path-based validation information.
         #
         # @yield [path_validation]
         #
@@ -44,6 +54,8 @@ module SSLyze
 
         #
         # @return [Array<PathValidation>]
+        #
+        # @see #each_path_validation
         #
         def path_validations
           each_path_validation.to_a

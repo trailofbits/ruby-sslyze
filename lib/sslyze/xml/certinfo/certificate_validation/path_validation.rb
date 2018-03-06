@@ -7,7 +7,7 @@ module SSLyze
     class Certinfo < Plugin
       class CertificateValidation
         #
-        # Represents the `<pathValidation />` XML element.
+        # Represents the `<pathValidation>` XML element.
         #
         # @since 1.0.0
         #
@@ -20,6 +20,7 @@ module SSLyze
           # Initializes the element.
           #
           # @param [Nokogiri::XML::Element] node
+          #   The `<pathValidation>` XML element.
           #
           def initialize(node)
             @node = node

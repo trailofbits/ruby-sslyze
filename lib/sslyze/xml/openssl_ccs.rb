@@ -3,7 +3,7 @@ require 'sslyze/xml/plugin'
 module SSLyze
   class XML
     #
-    # Represents the `<openssl_ccs />` XML element.
+    # Represents the `<openssl_ccs>` XML element.
     #
     # @since 1.0.0
     #

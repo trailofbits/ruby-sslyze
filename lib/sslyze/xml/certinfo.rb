@@ -6,7 +6,7 @@ require 'sslyze/xml/certinfo/ocsp_stapling'
 module SSLyze
   class XML
     #
-    # Represents the `<certinfo />` XML element.
+    # Represents the `<certinfo>` XML element.
     #
     # @since 1.0.0
     #
@@ -25,6 +25,8 @@ module SSLyze
 
       alias received_chain received_certificate_chain
 
+      #
+      # Certificate validation information.
       #
       # @return [CertificateValidation]
       #
@@ -50,6 +52,8 @@ module SSLyze
 
       alias verified_chain verified_certificate_chain
 
+      #
+      # OCSP Stapling.
       #
       # @return [OCSPStapling]
       #

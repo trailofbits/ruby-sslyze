@@ -5,14 +5,14 @@ require 'sslyze/xml/heartbleed/openssl_heartbleed'
 module SSLyze
   class XML
     #
-    # Represents the `<heartbleed/>` XML element.
+    # Represents the `<heartbleed>` XML element.
     #
     # @since 1.0.0
     #
     class Heartbleed < Plugin
 
       #
-      # Parses the `<openSslHeartbleed/>` XML element.
+      # Parses the `<openSslHeartbleed>` XML element.
       #
       # @return [OpenSSLHeartbleed]
       #

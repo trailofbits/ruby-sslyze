@@ -8,7 +8,7 @@ module SSLyze
     class Certinfo < Plugin
       class OCSPStapling
         #
-        # Represents the `<ocspResponse/>` XML element.
+        # Represents the `<ocspResponse>` XML element.
         #
         # @since 1.0.0
         #
@@ -16,6 +16,12 @@ module SSLyze
 
           include Types
 
+          #
+          # Initializes the {OCSPResponse} object.
+          #
+          # @param [Nokogiri::XML::Element] node
+          #   The `<ocspResponse>` XML element.
+          #
           def initialize(node)
             @node = node
           end
@@ -34,6 +40,8 @@ module SSLyze
           alias id responder_id
 
           #
+          # When the response was produced at.
+          #
           # @return [Time]
           #
           def produced_at
@@ -43,7 +51,9 @@ module SSLyze
           alias to_time produced_at
 
           #
-          # @return [Symbol]
+          # The status.
+          #
+          # @return [:successful]
           #
           def status
             @status ||= @node['status'].downcase.to_sym

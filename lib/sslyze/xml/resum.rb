@@ -5,14 +5,14 @@ require 'sslyze/xml/resum/session_resumption_with_tls_tickets'
 module SSLyze
   class XML
     #
-    # Represents the `<resum/>` XML element.
+    # Represents the `<resum>` XML element.
     #
     # @since 1.0.0
     #
     class Resum < Plugin
 
       #
-      # Parses the `<sessionResumptionWithSessionIDs/>` XML element.
+      # Parses the `<sessionResumptionWithSessionIDs>` XML element.
       #
       # @return [SessionResumptionWithSessionIDs, nil]
       #
@@ -25,7 +25,7 @@ module SSLyze
       alias with_session_ids session_resumption_with_session_ids
 
       #
-      # Parses the `<sessionResumptionWithTLSTickets/>` XML element.
+      # Parses the `<sessionResumptionWithTLSTickets>` XML element.
       #
       # @return [SessionResumptionWithTLSTickets, nil]
       #

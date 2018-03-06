@@ -7,7 +7,7 @@ module SSLyze
   class XML
     class HTTPHeaders < Plugin
       #
-      # Represents the `<httpPublicKeyPinning/>` XML element.
+      # Represents the `<httpPublicKeyPinning>` XML element.
       #
       # @since 1.0.0
       #
@@ -17,14 +17,21 @@ module SSLyze
         include Attributes::IsSupported
         include Attributes::Exception
 
+        #
+        # Initializes the {HTTPPublicKeyPinning} element.
+        #
         def initialize(node)
           @node = node
         end
 
         #
+        # Parses each `pinSha256` XML element.
+        #
         # @yield [sha256]
+        #   Yields each SHA256 checksum.
         #
         # @yieldparam [String] sha256
+        #   An individual pinned SHA256 checksum.
         #
         # @return [Enumerator]
         #
@@ -41,6 +48,8 @@ module SSLyze
         #
         # @return [Array<String>]
         #
+        # @see #each_pin_sha256
+        #
         def pin_sha256s
           each_pin_sha256.to_a
         end
@@ -48,12 +57,16 @@ module SSLyze
         alias sha256s pin_sha256s
 
         #
+        # Parses the `includeSubDomains` XML attribute.
+        #
         # @return [Boolean]
         #
         def include_sub_domains?
           Boolean[@node['includeSubDomains']]
         end
 
+        #
+        # Parses the `maxAge` attribute.
         #
         # @return [Integer, nil]
         #
@@ -64,12 +77,16 @@ module SSLyze
         end
 
         #
+        # Parses the `reportOnly` XML attribute.
+        #
         # @return [Boolean]
         #
         def report_only
           Boolean[@node['reportOnly']]
         end
 
+        #
+        # Parses the `reportUri` XML attribute.
         #
         # @return [String, nil]
         #
@@ -81,12 +98,16 @@ module SSLyze
         end
 
         #
+        # Parses the `isValidPinConfigured` XML attribute.
+        #
         # @return [Boolean]
         #
         def is_valid_pin_configured?
           Boolean[@node['isValidPinConfigured']]
         end
 
+        #
+        # Parses the `isBackupPinConfigured` XML attribute.
         #
         # @return [Boolean]
         #

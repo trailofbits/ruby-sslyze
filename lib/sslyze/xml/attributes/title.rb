@@ -1,6 +1,11 @@
 module SSLyze
   class XML
     module Attributes
+      #
+      # Provides methods for accessing the `title` XML attribute.
+      #
+      # @since 1.0.0
+      #
       module Title
         #
         # The title.

@@ -8,7 +8,7 @@ module SSLyze
   class XML
     class Certinfo < Plugin
       #
-      # Represents the `<certificate />` XML element.
+      # Represents the `<certificate>` XML element.
       #
       class Certificate
 

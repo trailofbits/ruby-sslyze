@@ -5,7 +5,7 @@ module SSLyze
   class XML
     class Reneg < Plugin
       #
-      # Represents the `<sessionRenegotiation/>` XML element.
+      # Represents the `<sessionRenegotiation>` XML element.
       #
       # @since 1.0.0
       #
@@ -13,6 +13,12 @@ module SSLyze
 
         include Types
 
+        #
+        # Initializes the {SessionRenegotiation} object.
+        #
+        # @param [Nokogiri::XML::Element] node
+        #   The `<sessionRenegotiation>` XML element.
+        #
         def initialize(node)
           @node = node
         end

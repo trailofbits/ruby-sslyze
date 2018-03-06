@@ -6,7 +6,7 @@ module SSLyze
   class XML
     class Resum < Plugin
       #
-      # Represents the `<sessionResumptionWithSessionIDs/>` XML element.
+      # Represents the `<sessionResumptionWithSessionIDs>` XML element.
       #
       # @since 1.0.0
       #
@@ -15,6 +15,12 @@ module SSLyze
         include Types
         include Attributes::IsSupported
 
+        #
+        # Initializes the {SessionResumptionWithSessionIDs} object.
+        #
+        # @param [Nokogiri::XML::Element] node
+        #   The `<sessionResumptionWithSessionIDs>` XML element.
+        #
         def initialize(node)
           @node = node
         end

@@ -4,14 +4,14 @@ require 'sslyze/xml/reneg/session_renegotiation'
 module SSLyze
   class XML
     #
-    # Represents the `<reneg/>` element.
+    # Represents the `<reneg>` element.
     #
     # @since 1.0.0
     #
     class Reneg < Plugin
 
       #
-      # Parses the `sessionRenegotiation` element.
+      # Session Renegotiation information.
       #
       # @return [SessionRenegotiation, nil]
       #

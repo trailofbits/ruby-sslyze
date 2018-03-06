@@ -13,6 +13,9 @@ module SSLyze
 
         include Attributes::IsVulnerable
 
+        #
+        # Initializes the {OpenSSLCCSInjection} object.
+        #
         def initialize(node)
           @node = node
         end

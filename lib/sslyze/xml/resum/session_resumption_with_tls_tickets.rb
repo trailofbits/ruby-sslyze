@@ -7,7 +7,7 @@ module SSLyze
   class XML
     class Resum < Plugin
       #
-      # Represents the `<sessionResumptionWithTLSTickets/>` XML element.
+      # Represents the `<sessionResumptionWithTLSTickets>` XML element.
       #
       # @since 1.0.0
       #
@@ -17,6 +17,12 @@ module SSLyze
         include Attributes::IsSupported
         include Attributes::Error
 
+        #
+        # Initializes the {SessionResumptionWithTLSTickets} object.
+        #
+        # @param [Nokogiri::XML::Element] node
+        #   The `<sessionResumptionWithTLSTickets>` XML element.
+        #
         def initialize(node)
           @node = node
         end

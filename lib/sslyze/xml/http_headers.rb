@@ -5,14 +5,14 @@ require 'sslyze/xml/http_headers/http_public_key_pinning'
 module SSLyze
   class XML
     #
-    # Represents the `<http_headers/>` XML element.
+    # Represents the `<http_headers>` XML element.
     #
     # @since 1.0.0
     #
     class HTTPHeaders < Plugin
 
       #
-      # Parses the `<httpStrictTransportSecurity/>` XML element.
+      # HTTP Strict-Transport-Security header information.
       #
       # @return [HTTPStrictTransportSecurity, nil]
       #
@@ -25,7 +25,7 @@ module SSLyze
       alias strict_transport_security http_strict_transport_security
 
       #
-      # Parses the `<httpPublicKeyPinning/>` XML element.
+      # HTTP Public-Key-Pinning header information.
       #
       # @return [HTTPPublicKeyPinning, nil]
       #

@@ -6,7 +6,7 @@ module SSLyze
   class XML
     class Certinfo < Plugin
       #
-      # Represents the `<ocspStapling />` XML element.
+      # Represents the `<ocspStapling>` XML element.
       #
       # @since 1.0.0
       #
@@ -14,6 +14,12 @@ module SSLyze
 
         include Attributes::IsSupported
 
+        #
+        # Initializes the {OCSPStapling} object.
+        #
+        # @param [Nokogiri::XML::Element] node
+        #   The `<ocspStapling>` XML element.
+        #
         def initialize(node)
           @node = node
         end
@@ -23,7 +29,7 @@ module SSLyze
         #
         # @return [OCSPResponse, nil]
         #
-        # @note Parses the `<ocspResponse />` XML element.
+        # @note Parses the `<ocspResponse>` XML element.
         #
         def ocsp_response
           @ocsp_response ||= if (element = @node.at_xpath('ocspResponse'))

@@ -6,7 +6,7 @@ module SSLyze
   class XML
     class Certinfo < Plugin
       #
-      # Represents the `<receivedCertificateChain />` XML element.
+      # Represents the `<receivedCertificateChain>` XML element.
       #
       # @since 1.0.0
       #
@@ -15,10 +15,17 @@ module SSLyze
         include Types
         include HasCertificates
 
+        #
+        # Initializes the {ReceivedCertificateChain} object.
+        #
+        # @param [Nokogiri::XML::Element] node
+        #
         def initialize(node)
           @node = node
         end
 
+        #
+        # Parses the `isChainOrderValid` XML attribute.
         #
         # @return [Boolean]
         #
@@ -26,6 +33,8 @@ module SSLyze
           Boolean[@node['isChainOrderValid']]
         end
 
+        #
+        # Parses the `containsAnchorCertificate` XML attribute.
         #
         # @return [Boolean]
         #

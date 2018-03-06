@@ -5,7 +5,7 @@ module SSLyze
   class XML
     class Compression < Plugin
       #
-      # Represents the `<compressionMethod />` XML element.
+      # Represents the `<compressionMethod>` XML element.
       #
       # @since 1.0.0
       #
@@ -13,6 +13,12 @@ module SSLyze
 
         include Attributes::IsSupported
 
+        #
+        # Initializes the {CompressionMethod} object.
+        #
+        # @param [Nokogiri::XML::Element] node
+        #   The `<compressionMethod>` XML element.
+        #
         def initialize(node)
           @node = node
         end
