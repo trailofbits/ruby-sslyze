@@ -1,6 +1,7 @@
 require 'sslyze/xml/plugin'
 require 'sslyze/x509/name'
 require 'sslyze/x509/extension_set'
+require 'sslyze/x509/public_key'
 
 require 'openssl'
 
@@ -85,14 +86,12 @@ module SSLyze
         end
 
         #
-        # @return [OpenSSL::PKey::RSA]
-        #
-        # @see http://www.rubydoc.info/stdlib/openssl/OpenSSL/PKey/RSA
+        # @return [X509::PublicKey]
         #
         # @group OpenSSL Methods
         #
         def public_key
-          x509.public_key
+          @public_key ||= X509::PublicKey.new(x509.public_key)
         end
 
         #
