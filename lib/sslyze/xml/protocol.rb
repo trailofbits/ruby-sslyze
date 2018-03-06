@@ -130,7 +130,7 @@ module SSLyze
       #
       # The errored cipher suites.
       #
-      # @eturn [Array<CipherSuite>]
+      # @return [Array<CipherSuite>]
       #
       # @since 1.0.0
       #
