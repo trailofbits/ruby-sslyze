@@ -17,7 +17,7 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ['lib']
 
-  gem.requirements << 'sslyze 1.x'
+  gem.requirements << 'sslyze >= 1.3.4'
 
   gem.add_dependency 'rprogram', '~> 0.3'
   gem.add_dependency 'nokogiri', '~> 1.8'
