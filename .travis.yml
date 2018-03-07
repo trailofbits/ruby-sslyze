@@ -3,16 +3,24 @@ sudo: false
 before_install:
   - pip install --upgrade --user pip setuptools
   - pip install --user sslyze
+
 rvm:
-- 2.3
-- 2.4
-- ruby-head
-- jruby
+  - 2.3
+  - 2.4
+  - ruby-head
+  - jruby
+
+matrix:
+  allow_failures:
+    - rvm: jruby
+   
 addons:
   code_climate:
     repo_token: 2a03fa37ce5a5cb21bb117a736be5d83dcf9f1c3ea2b248f7af4c0a7b330d8c8
+
 after_success:
   - bundle exec codeclimate-test-reporter
+
 notifications:
   slack:
     secure: IfKhtia5nM6KA9nK8jiSkNnVOLN96er6gK5jgjYKFNrVyWAKRUJZ0TB9L+igjUWDq7t+tRvj8yGT2k61xVJgF+ZDlQiWvyazTsgQeqbjieCxCrj/BTGZLyD1hhOLg7vqpyeQvp/34hDahx6XNp6XPvkxeofjc0H6STv2UjJkpQk=
