@@ -20,13 +20,36 @@ module SSLyze
       end
 
       #
-      # The host name of the target.
+      # The target name.
+      #
+      # @return [String]
+      #
+      # @since 1.1.0
+      #
+      def target
+        @target ||= @node.inner_text
+      end
+
+      #
+      # The host component of the target.
       #
       # @return [String]
       #
       def host
-        @host ||= @node.inner_text
+        @host ||= target.split(':',2).first
       end
+
+      #
+      # The port component of the target.
+      #
+      # @return [Integer]
+      #
+      # @since 1.1.0
+      #
+      def port
+        @port ||= target.split(':',2).last.to_i
+      end
+
 
     end
   end
