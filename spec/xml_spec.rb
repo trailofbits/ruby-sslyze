@@ -21,12 +21,6 @@ describe SSLyze::XML do
     end
   end
 
-  describe "#network_timeout" do
-    it "must parse the networkTimeout attribute" do
-      expect(subject.network_timeout).to be == 5
-    end
-  end
-
   describe "#total_scan_time" do
     it "must parse the totalScanTime attribute" do
       expect(subject.total_scan_time).to be_kind_of(Float)

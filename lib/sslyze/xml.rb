@@ -67,7 +67,9 @@ module SSLyze
     # @since 1.0.0
     #
     def network_timeout
-      @default_time ||= @doc.at_xpath('/document/results/@networkTimeout').value.to_i
+      @default_time ||= if (attr = @doc.at_xpath('/document/results/@networkTimeout'))
+                          attr.value.to_i
+                        end
     end
 
     #
