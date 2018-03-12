@@ -62,7 +62,7 @@ module SSLyze
     #
     # The default timeout used.
     #
-    # @return [Integer]
+    # @return [Integer, nil]
     #
     # @since 1.0.0
     #
