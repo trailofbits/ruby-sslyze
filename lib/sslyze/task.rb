@@ -59,6 +59,9 @@ module SSLyze
     # CompressionPlugin:
     long_option flag: '--compression'
 
+    # RobotPlugin:
+    long_option flag: '--robot'
+
     # FallbackScsvPlugin:
     long_option flag: '--fallback'
 
