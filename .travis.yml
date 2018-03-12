@@ -2,7 +2,7 @@ language: ruby
 sudo: false
 before_install:
   - pip install --upgrade --user pip setuptools
-  - pip install --user sslyze
+  - pip install --upgrade --user nassl sslyze
 
 rvm:
   - 2.3
