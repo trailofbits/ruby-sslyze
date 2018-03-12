@@ -11,6 +11,9 @@ module SSLyze
     long_option flag: '--help'
     long_option flag: '--regular'
 
+    # Trust stores options:
+    long_option flag: '--update_trust_stores'
+
     # Client certificate support:
     long_option flag: '--cert', equals: true
     long_option flag: '--key', equals: true
