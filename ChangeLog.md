@@ -1,3 +1,12 @@
+### 1.1.0 / 2018-03-12
+
+* Require [sslyze] >= 1.4.0
+* Added {SSLyze::XML::InvalidTarget#target}.
+* Added {SSLyze::XML::InvalidTarget#port}.
+* Added the `--update_trust_stores` option.
+* Added the `--robot` option.
+* Replaced the `--timeout` and `--nb_retries` options with `--slow_connection`.
+
 ### 1.0.0 / 2018-03-06
 
 * Require [sslyze] >= 1.3.4.
