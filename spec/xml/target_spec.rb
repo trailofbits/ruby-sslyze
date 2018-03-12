@@ -6,6 +6,7 @@ describe SSLyze::XML::Target do
   include_examples "XML specs"
 
   let(:xpath) { '/document/results/target' }
+  let(:expected_ip) { '192.30.255.112' }
 
   subject { described_class.new(xml.at(xpath)) }
 
@@ -20,8 +21,6 @@ describe SSLyze::XML::Target do
   end
 
   describe "#ip" do
-    let(:expected_ip) { '192.30.255.113' }
-
     let(:xpath) { "#{super()}[@ip='#{expected_ip}']" }
 
     it "must parse the ip attribute" do
@@ -30,7 +29,6 @@ describe SSLyze::XML::Target do
   end
 
   describe "#ipaddr" do
-    let(:expected_ip) { '192.30.255.113' }
     let(:xpath) { "#{super()}[@ip='#{expected_ip}']" }
 
     it "must parse the ip attribute" do

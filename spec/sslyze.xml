@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<document SSLyzeVersion="1.3.4" SSLyzeWeb="https://github.com/nabla-c0d3/sslyze" title="SSLyze Scan Results">
-  <results networkMaxRetries="3" networkTimeout="5" totalScanTime="7.40024709702">
-    <target host="github.com" ip="192.30.255.113" port="443" tlsWrappedProtocol="https">
+<document SSLyzeVersion="1.4.0" SSLyzeWeb="https://github.com/nabla-c0d3/sslyze" title="SSLyze Scan Results">
+  <results totalScanTime="8.4713280201">
+    <target host="github.com" ip="192.30.255.112" port="443" tlsWrappedProtocol="https">
       <certinfo title="Certificate Information">
         <receivedCertificateChain containsAnchorCertificate="False" hasMustStapleExtension="False" includedSctsCount="3" isChainOrderValid="True" suppliedServerNameIndication="github.com">
           <certificate hpkpSha256Pin="pL1+qb9HTMRZJmuC/bB/ZI9d302BYrrqiVuRyW+DGrU=" sha1Fingerprint="d79f076110b39293e349ac89845b0380c19e2f8b">
@@ -101,11 +101,11 @@ oVWNWlZopCJwqjyBcdmdqEU79OX2olHdx3ti6G8MdOu42vi/hw15UJGQmxg7kVkn
         </receivedCertificateChain>
         <certificateValidation>
           <hostnameValidation certificateMatchesServerHostname="True" serverHostname="github.com"/>
-          <pathValidation trustStoreVersion="8.1.0_r7" usingTrustStore="Android" validationResult="ok"/>
+          <pathValidation trustStoreVersion="8.1.0_r9" usingTrustStore="Android" validationResult="ok"/>
           <pathValidation trustStoreVersion="11" usingTrustStore="iOS" validationResult="ok"/>
           <pathValidation trustStoreVersion="High Sierra" usingTrustStore="macOS" validationResult="ok"/>
           <pathValidation isExtendedValidationCertificate="True" trustStoreVersion="2018-01-14" usingTrustStore="Mozilla" validationResult="ok"/>
-          <pathValidation trustStoreVersion="2017-12-28" usingTrustStore="Windows" validationResult="ok"/>
+          <pathValidation trustStoreVersion="2018-02-09" usingTrustStore="Windows" validationResult="ok"/>
           <verifiedCertificateChain hasMustStapleExtension="False" hasSha1SignedCertificate="False" includedSctsCount="3" successfulTrustStore="Windows" suppliedServerNameIndication="github.com">
             <certificate hpkpSha256Pin="pL1+qb9HTMRZJmuC/bB/ZI9d302BYrrqiVuRyW+DGrU=" sha1Fingerprint="d79f076110b39293e349ac89845b0380c19e2f8b">
               <asPEM>-----BEGIN CERTIFICATE-----
@@ -673,10 +673,10 @@ vEsXCS+0yx5DaMkHJ8HSXPfqIbloEpw8nL+e/IBcm2PN7EeqJSdnoDfzAIJ9VNep
           </cipherSuite>
         </preferredCipherSuite>
         <acceptedCipherSuites>
-          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="256" name="TLS_RSA_WITH_AES_256_CBC_SHA256"/>
           <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="256" name="TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA">
             <keyExchange A="0x00ffffffff00000001000000000000000000000000fffffffffffffffffffffffc" B="0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b" Cofactor="1" Field_Type="prime-field" Generator="0x046b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c2964fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5" GeneratorType="uncompressed" GroupSize="256" Order="0x00ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551" Prime="0x00ffffffff00000001000000000000000000000000ffffffffffffffffffffffff" Seed="0xc49d360886e704936a6678e1139d26b7819f7e90" Type="ECDH"/>
           </cipherSuite>
+          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="256" name="TLS_RSA_WITH_AES_256_CBC_SHA256"/>
           <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="256" name="TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384">
             <keyExchange A="0x00ffffffff00000001000000000000000000000000fffffffffffffffffffffffc" B="0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b" Cofactor="1" Field_Type="prime-field" Generator="0x046b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c2964fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5" GeneratorType="uncompressed" GroupSize="256" Order="0x00ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551" Prime="0x00ffffffff00000001000000000000000000000000ffffffffffffffffffffffff" Seed="0xc49d360886e704936a6678e1139d26b7819f7e90" Type="ECDH"/>
           </cipherSuite>
@@ -692,8 +692,8 @@ vEsXCS+0yx5DaMkHJ8HSXPfqIbloEpw8nL+e/IBcm2PN7EeqJSdnoDfzAIJ9VNep
             <keyExchange A="0x00ffffffff00000001000000000000000000000000fffffffffffffffffffffffc" B="0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b" Cofactor="1" Field_Type="prime-field" Generator="0x046b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c2964fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5" GeneratorType="uncompressed" GroupSize="256" Order="0x00ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551" Prime="0x00ffffffff00000001000000000000000000000000ffffffffffffffffffffffff" Seed="0xc49d360886e704936a6678e1139d26b7819f7e90" Type="ECDH"/>
           </cipherSuite>
           <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="128" name="TLS_RSA_WITH_AES_128_CBC_SHA"/>
-          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="128" name="TLS_RSA_WITH_AES_128_GCM_SHA256"/>
           <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="128" name="TLS_RSA_WITH_AES_128_CBC_SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="128" name="TLS_RSA_WITH_AES_128_GCM_SHA256"/>
           <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="128" name="TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256">
             <keyExchange A="0x00ffffffff00000001000000000000000000000000fffffffffffffffffffffffc" B="0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b" Cofactor="1" Field_Type="prime-field" Generator="0x046b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c2964fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5" GeneratorType="uncompressed" GroupSize="256" Order="0x00ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551" Prime="0x00ffffffff00000001000000000000000000000000ffffffffffffffffffffffff" Seed="0xc49d360886e704936a6678e1139d26b7819f7e90" Type="ECDH"/>
           </cipherSuite>
@@ -800,7 +800,7 @@ vEsXCS+0yx5DaMkHJ8HSXPfqIbloEpw8nL+e/IBcm2PN7EeqJSdnoDfzAIJ9VNep
         <errors/>
       </tlsv1_3>
     </target>
-    <target host="www.yahoo.com" ip="206.190.39.42" port="443" tlsWrappedProtocol="https">
+    <target host="www.yahoo.com" ip="206.190.39.43" port="443" tlsWrappedProtocol="https">
       <certinfo title="Certificate Information">
         <receivedCertificateChain containsAnchorCertificate="False" hasMustStapleExtension="False" includedSctsCount="2" isChainOrderValid="True" suppliedServerNameIndication="www.yahoo.com">
           <certificate hpkpSha256Pin="Zp964pqQpx94buKz5C8LxtmtQQWq2ZcWnLzrmt187go=" sha1Fingerprint="ae699d5ebddce6ed574111262f19bb18efbe73b0">
@@ -951,11 +951,11 @@ cPUeybQ=
         </receivedCertificateChain>
         <certificateValidation>
           <hostnameValidation certificateMatchesServerHostname="True" serverHostname="www.yahoo.com"/>
-          <pathValidation trustStoreVersion="8.1.0_r7" usingTrustStore="Android" validationResult="ok"/>
+          <pathValidation trustStoreVersion="8.1.0_r9" usingTrustStore="Android" validationResult="ok"/>
           <pathValidation trustStoreVersion="11" usingTrustStore="iOS" validationResult="ok"/>
           <pathValidation trustStoreVersion="High Sierra" usingTrustStore="macOS" validationResult="ok"/>
           <pathValidation trustStoreVersion="2018-01-14" usingTrustStore="Mozilla" validationResult="ok"/>
-          <pathValidation trustStoreVersion="2017-12-28" usingTrustStore="Windows" validationResult="ok"/>
+          <pathValidation trustStoreVersion="2018-02-09" usingTrustStore="Windows" validationResult="ok"/>
           <verifiedCertificateChain hasMustStapleExtension="False" hasSha1SignedCertificate="False" includedSctsCount="2" successfulTrustStore="Windows" suppliedServerNameIndication="www.yahoo.com">
             <certificate hpkpSha256Pin="Zp964pqQpx94buKz5C8LxtmtQQWq2ZcWnLzrmt187go=" sha1Fingerprint="ae699d5ebddce6ed574111262f19bb18efbe73b0">
               <asPEM>-----BEGIN CERTIFICATE-----
@@ -1140,7 +1140,7 @@ vEsXCS+0yx5DaMkHJ8HSXPfqIbloEpw8nL+e/IBcm2PN7EeqJSdnoDfzAIJ9VNep
         <ocspStapling isSupported="True">
           <ocspResponse isTrustedByMozillaCAStore="True" status="SUCCESSFUL">
             <responderID>5168FF90AF0207753CCCD9656462A212B859723B</responderID>
-            <producedAt>Feb 28 19:34:58 2018 GMT</producedAt>
+            <producedAt>Mar 12 12:34:51 2018 GMT</producedAt>
           </ocspResponse>
         </ocspStapling>
       </certinfo>
@@ -1184,7 +1184,7 @@ vEsXCS+0yx5DaMkHJ8HSXPfqIbloEpw8nL+e/IBcm2PN7EeqJSdnoDfzAIJ9VNep
         <sessionResumptionWithTLSTickets isSupported="True"/>
       </resum>
       <resum_rate title="Resumption Rate">
-        <sessionResumptionWithSessionIDs errors="0" failedAttempts="97" isSupported="False" successfulAttempts="3" totalAttempts="100"/>
+        <sessionResumptionWithSessionIDs errors="0" failedAttempts="100" isSupported="False" successfulAttempts="0" totalAttempts="100"/>
       </resum_rate>
       <robot title="ROBOT Attack">
         <robotAttack resultEnum="NOT_VULNERABLE_NO_ORACLE"/>
@@ -1745,59 +1745,55 @@ vEsXCS+0yx5DaMkHJ8HSXPfqIbloEpw8nL+e/IBcm2PN7EeqJSdnoDfzAIJ9VNep
         <errors/>
       </tlsv1_3>
     </target>
-    <target host="twitter.com" ip="104.244.42.129" port="443" tlsWrappedProtocol="https">
+    <target host="twitter.com" ip="104.244.42.193" port="443" tlsWrappedProtocol="https">
       <certinfo title="Certificate Information">
-        <receivedCertificateChain containsAnchorCertificate="False" hasMustStapleExtension="False" includedSctsCount="3" isChainOrderValid="True" suppliedServerNameIndication="twitter.com">
-          <certificate hpkpSha256Pin="PS12nvydU5dSxolqCn3V11wWF5Z12JRhXT2dhyawT4M=" sha1Fingerprint="235a79b3270d790505e0bea2cf5c149f9038821b">
+        <receivedCertificateChain containsAnchorCertificate="False" hasMustStapleExtension="False" includedSctsCount="2" isChainOrderValid="True" suppliedServerNameIndication="twitter.com">
+          <certificate hpkpSha256Pin="TfHW/l4khWKX6OE4Jra+u3onnsH4IfzWgHPJGE88rEo=" sha1Fingerprint="265c85f65b044dc830645c6fb9cfa7d28f28bc1b">
             <asPEM>-----BEGIN CERTIFICATE-----
-MIIHnTCCBoWgAwIBAgIQB3a13cqDpLnKWY9ddx+eRjANBgkqhkiG9w0BAQsFADB1
+MIIG6DCCBdCgAwIBAgIQDmdXKeZyRvcaXeXGF6L5UTANBgkqhkiG9w0BAQsFADB1
 MQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3
 d3cuZGlnaWNlcnQuY29tMTQwMgYDVQQDEytEaWdpQ2VydCBTSEEyIEV4dGVuZGVk
-IFZhbGlkYXRpb24gU2VydmVyIENBMB4XDTE2MDMwOTAwMDAwMFoXDTE4MDMxNDEy
-MDAwMFowggEhMR0wGwYDVQQPDBRQcml2YXRlIE9yZ2FuaXphdGlvbjETMBEGCysG
-AQQBgjc8AgEDEwJVUzEZMBcGCysGAQQBgjc8AgECEwhEZWxhd2FyZTEQMA4GA1UE
-BRMHNDMzNzQ0NjESMBAGA1UECRMJU3VpdGUgOTAwMRcwFQYDVQQJEw4xMzU1IE1h
-cmtldCBTdDEOMAwGA1UEERMFOTQxMDMxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpD
-YWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJhbmNpc2NvMRYwFAYDVQQKEw1Ud2l0
-dGVyLCBJbmMuMRkwFwYDVQQLExBUd2l0dGVyIFNlY3VyaXR5MRQwEgYDVQQDEwt0
-d2l0dGVyLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMIImPpn
-AAVVtgthDhrXtYrBzAO+PBf7lPfZ+kyfRmCcaq19OuU0WhKwsguq7JbhWIEvrWCr
-R5Np44R1U8H5D7lGq57qqxiYjGhUCFFlQxphlydcXg8V6c0Wq91RW3Yv/NMRmZ3S
-pj2HAnXmJJbiBD4UnPp+uHFCNwC1sIriM5WL2j/7Y003YtUcAuowftwNU9XUC7ij
-EBNtH4mUC2qURGcpgq3m1bBS/JVXBtbRImaE05IqAseUVt9VP8IT8nwWeDOhU/d3
-l1y3lgXVRPS/74MiXXrmj+Ss3zSetg8KU/Aa23E3aZL2FKkcdWVyRSQJOyxq17lp
-pdzfbZxr/MaiWzECAwEAAaOCA3kwggN1MB8GA1UdIwQYMBaAFD3TUKXWoK3u80pg
-CmXTIdT4+NYPMB0GA1UdDgQWBBSfYnuyiA7uG3ngaSTluj9HpgsC8DAnBgNVHREE
-IDAeggt0d2l0dGVyLmNvbYIPd3d3LnR3aXR0ZXIuY29tMA4GA1UdDwEB/wQEAwIF
-oDAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwdQYDVR0fBG4wbDA0oDKg
-MIYuaHR0cDovL2NybDMuZGlnaWNlcnQuY29tL3NoYTItZXYtc2VydmVyLWcxLmNy
-bDA0oDKgMIYuaHR0cDovL2NybDQuZGlnaWNlcnQuY29tL3NoYTItZXYtc2VydmVy
-LWcxLmNybDBLBgNVHSAERDBCMDcGCWCGSAGG/WwCATAqMCgGCCsGAQUFBwIBFhxo
-dHRwczovL3d3dy5kaWdpY2VydC5jb20vQ1BTMAcGBWeBDAEBMIGIBggrBgEFBQcB
-AQR8MHowJAYIKwYBBQUHMAGGGGh0dHA6Ly9vY3NwLmRpZ2ljZXJ0LmNvbTBSBggr
-BgEFBQcwAoZGaHR0cDovL2NhY2VydHMuZGlnaWNlcnQuY29tL0RpZ2lDZXJ0U0hB
-MkV4dGVuZGVkVmFsaWRhdGlvblNlcnZlckNBLmNydDAMBgNVHRMBAf8EAjAAMIIB
-fAYKKwYBBAHWeQIEAgSCAWwEggFoAWYAdgCkuQmQtBhYFIe7E6LMZ3AKPDWYBPkb
-37jjd80OyA3cEAAAAVNdgFLZAAAEAwBHMEUCICZCA9wZjkyHJRy3UTCYnwI21m/U
-XKRXWc7US9arx68qAiEAtK1UZMDl2wRt/o1OxInzFdQCQ+2QTIvLbHe5slXu6boA
-dQBo9pj4H2SCvjqM7rkoHUz8cVFdZ5PURNEKZ6y7T0/7xAAAAVNdgFKcAAAEAwBG
-MEQCIGF6AFQ8TKA8AqktUZ/45JJuKYHCIFIkqcPWIIDLWIZmAiA5PVUV5BBCM2AK
-ce/CeXCyim1y140g/4RxghYW6sNCNwB1AFYUBpov18Ls0/XhvUSyPsdGdrm8mRFc
-wO+UmFXWidDdAAABU12AU6YAAAQDAEYwRAIgXUM1kBRW2bTGAqVvy/aDoYTrdKvM
-I6x5p0FF2S+jGmkCIFmAWDXHV/YBi4thS8HGZc3iVCh5wwaCGM3kztEaUYmQMA0G
-CSqGSIb3DQEBCwUAA4IBAQC7+PUbZaNQAx8YEMg1Uy+cih5Iar3l5ljJ0eih/KsD
-Qo9Y8woYppEuwVC3cN0V2q0I8RXSRE105BgrZbYF2fn32CRs21/sbH0/v6VMonNo
-OEJBzeL20fjYidN1Sr39q02e7kjJNCPVg8yTlRREpSXlsfwXWFOnACSBwpRzmD43
-bRKVH6zjIPiy2wmxXP6ibb3p0ITHnosxLsf3pWXjL/YeWqQq6mUDMRKmeCRR3k1E
-03kXQyxV4AD4hccLqP4K6m17dOkpWbKWNN+/wxWy/ApMuP0hNPgoZSLQBaMidNzh
-Y63izHj1KcOdLNg8VVCCEPoEX8IlbLMIY/YTfN5XAFjs
+IFZhbGlkYXRpb24gU2VydmVyIENBMB4XDTE4MDIyMzAwMDAwMFoXDTE5MDQwODEy
+MDAwMFowgeQxHTAbBgNVBA8MFFByaXZhdGUgT3JnYW5pemF0aW9uMRMwEQYLKwYB
+BAGCNzwCAQMTAlVTMRkwFwYLKwYBBAGCNzwCAQITCERlbGF3YXJlMRAwDgYDVQQF
+Ewc0MzM3NDQ2MQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQG
+A1UEBxMNU2FuIEZyYW5jaXNjbzEWMBQGA1UEChMNVHdpdHRlciwgSW5jLjEZMBcG
+A1UECxMQVHdpdHRlciBTZWN1cml0eTEUMBIGA1UEAxMLdHdpdHRlci5jb20wggEi
+MA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDRDIxB2Cj0SQtIOuWHjdzO5XKD
+lqUEFW69HmazatAWqN0Up9jel/8GMzfwMso650IRBBrhvJTPc3TdHn/JEscGAcnp
+IRrZkbTtpKMIJeNuWiACQosREt0Ur8gGLce4PJlt2BqMRJJ++SE8eV9Ryyl2Sgm+
+kqY65SML27IecrOkNmMuZKIUw/gLpt8msOnxy5JJWsjA3z9ND6FAx2DCbZ5GDIpt
+gK07FIV2z+cg1MStpf1TbgZ93pmmX9hnFk4F7VDS6Uf2K5YsPdsI0SwpW9HiG3TK
+9oz2GvsXffU6HGGM9Vcrpi5WhlaYHT1xCQ13caOduBxCkwhRZY2AFdyCR2MpAgMB
+AAGjggMCMIIC/jAfBgNVHSMEGDAWgBQ901Cl1qCt7vNKYApl0yHU+PjWDzAdBgNV
+HQ4EFgQUjI1wmILOVLL4dplPJjT+dTMjsUUwJwYDVR0RBCAwHoILdHdpdHRlci5j
+b22CD3d3dy50d2l0dGVyLmNvbTAOBgNVHQ8BAf8EBAMCBaAwHQYDVR0lBBYwFAYI
+KwYBBQUHAwEGCCsGAQUFBwMCMHUGA1UdHwRuMGwwNKAyoDCGLmh0dHA6Ly9jcmwz
+LmRpZ2ljZXJ0LmNvbS9zaGEyLWV2LXNlcnZlci1nMi5jcmwwNKAyoDCGLmh0dHA6
+Ly9jcmw0LmRpZ2ljZXJ0LmNvbS9zaGEyLWV2LXNlcnZlci1nMi5jcmwwSwYDVR0g
+BEQwQjA3BglghkgBhv1sAgEwKjAoBggrBgEFBQcCARYcaHR0cHM6Ly93d3cuZGln
+aWNlcnQuY29tL0NQUzAHBgVngQwBATCBiAYIKwYBBQUHAQEEfDB6MCQGCCsGAQUF
+BzABhhhodHRwOi8vb2NzcC5kaWdpY2VydC5jb20wUgYIKwYBBQUHMAKGRmh0dHA6
+Ly9jYWNlcnRzLmRpZ2ljZXJ0LmNvbS9EaWdpQ2VydFNIQTJFeHRlbmRlZFZhbGlk
+YXRpb25TZXJ2ZXJDQS5jcnQwDAYDVR0TAQH/BAIwADCCAQUGCisGAQQB1nkCBAIE
+gfYEgfMA8QB3AKS5CZC0GFgUh7sTosxncAo8NZgE+RvfuON3zQ7IDdwQAAABYcBN
+gy8AAAQDAEgwRgIhAOW65zPD/WuWN0kNEKx0LZBxTqLrQSkh6G7db+TT+FQcAiEA
+o9jTxePOzkuDoq+kO/FY8wKYp+/RWLXj2VbL8wKI/SkAdgBWFAaaL9fC7NP14b1E
+sj7HRna5vJkRXMDvlJhV1onQ3QAAAWHATYOxAAAEAwBHMEUCIQCUWpCOm+ejKxg1
+LyfPlxMEyTqmEyrajGx8PbTaBet8XwIgUKQXhoLMKb66Cvs4goSt3wWLDkX4WmFW
+DPcR9Mbq87gwDQYJKoZIhvcNAQELBQADggEBAJlV+Uez02kinJi7AHiYujgJ5j1k
+icieSrL+qspP6CMv6OCAa353vrVc95+iwDWimE9ovJZrANWpW2bNHClLb/R4pjlc
+yDpzXdCzrQzkqUXmIZZ95hU7SxC56fC3ybINy2e2YqOjUPxBoZjZjWBa20opMMxg
+ntG1ZqcZ9mZE7JJbOqfCyFbe5eyszpujATD3K24IVW5IXdzWd1udumbL5jUdYA56
+TjnyBCxlBjjLdQt2IWOiMATp+IlslwEpNScMl/gSLEX5b550/tn/5MaIY7cPNG38
+WNiLTkomw//7coTN6HdctcTSojOWQqjl8PLzcG+UxZd3vFe7Kf07VFBHav4=
 -----END CERTIFICATE-----
 </asPEM>
-            <subject>businessCategory=Private Organization, jurisdictionCountryName=US, jurisdictionStateOrProvinceName=Delaware, serialNumber=4337446, streetAddress=Suite 900, streetAddress=1355 Market St, postalCode=94103, countryName=US, stateOrProvinceName=California, localityName=San Francisco, organizationName=Twitter, Inc., organizationalUnitName=Twitter Security, commonName=twitter.com</subject>
+            <subject>businessCategory=Private Organization, jurisdictionCountryName=US, jurisdictionStateOrProvinceName=Delaware, serialNumber=4337446, countryName=US, stateOrProvinceName=California, localityName=San Francisco, organizationName=Twitter, Inc., organizationalUnitName=Twitter Security, commonName=twitter.com</subject>
             <issuer>countryName=US, organizationName=DigiCert Inc, organizationalUnitName=www.digicert.com, commonName=DigiCert SHA2 Extended Validation Server CA</issuer>
-            <serialNumber>9920975688038816536871498077062536774</serialNumber>
-            <notBefore>2016-03-09 00:00:00</notBefore>
-            <notAfter>2018-03-14 12:00:00</notAfter>
+            <serialNumber>19145766406727795172801612582821755217</serialNumber>
+            <notBefore>2018-02-23 00:00:00</notBefore>
+            <notAfter>2019-04-08 12:00:00</notAfter>
             <signatureAlgorithm>sha256</signatureAlgorithm>
             <publicKey algorithm="RSA" exponent="65537" size="2048"/>
             <subjectAlternativeName>
@@ -1846,62 +1842,58 @@ oVWNWlZopCJwqjyBcdmdqEU79OX2olHdx3ti6G8MdOu42vi/hw15UJGQmxg7kVkn
         </receivedCertificateChain>
         <certificateValidation>
           <hostnameValidation certificateMatchesServerHostname="True" serverHostname="twitter.com"/>
-          <pathValidation trustStoreVersion="8.1.0_r7" usingTrustStore="Android" validationResult="ok"/>
+          <pathValidation trustStoreVersion="8.1.0_r9" usingTrustStore="Android" validationResult="ok"/>
           <pathValidation trustStoreVersion="11" usingTrustStore="iOS" validationResult="ok"/>
           <pathValidation trustStoreVersion="High Sierra" usingTrustStore="macOS" validationResult="ok"/>
           <pathValidation isExtendedValidationCertificate="True" trustStoreVersion="2018-01-14" usingTrustStore="Mozilla" validationResult="ok"/>
-          <pathValidation trustStoreVersion="2017-12-28" usingTrustStore="Windows" validationResult="ok"/>
-          <verifiedCertificateChain hasMustStapleExtension="False" hasSha1SignedCertificate="False" includedSctsCount="3" successfulTrustStore="Windows" suppliedServerNameIndication="twitter.com">
-            <certificate hpkpSha256Pin="PS12nvydU5dSxolqCn3V11wWF5Z12JRhXT2dhyawT4M=" sha1Fingerprint="235a79b3270d790505e0bea2cf5c149f9038821b">
+          <pathValidation trustStoreVersion="2018-02-09" usingTrustStore="Windows" validationResult="ok"/>
+          <verifiedCertificateChain hasMustStapleExtension="False" hasSha1SignedCertificate="False" includedSctsCount="2" successfulTrustStore="Windows" suppliedServerNameIndication="twitter.com">
+            <certificate hpkpSha256Pin="TfHW/l4khWKX6OE4Jra+u3onnsH4IfzWgHPJGE88rEo=" sha1Fingerprint="265c85f65b044dc830645c6fb9cfa7d28f28bc1b">
               <asPEM>-----BEGIN CERTIFICATE-----
-MIIHnTCCBoWgAwIBAgIQB3a13cqDpLnKWY9ddx+eRjANBgkqhkiG9w0BAQsFADB1
+MIIG6DCCBdCgAwIBAgIQDmdXKeZyRvcaXeXGF6L5UTANBgkqhkiG9w0BAQsFADB1
 MQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3
 d3cuZGlnaWNlcnQuY29tMTQwMgYDVQQDEytEaWdpQ2VydCBTSEEyIEV4dGVuZGVk
-IFZhbGlkYXRpb24gU2VydmVyIENBMB4XDTE2MDMwOTAwMDAwMFoXDTE4MDMxNDEy
-MDAwMFowggEhMR0wGwYDVQQPDBRQcml2YXRlIE9yZ2FuaXphdGlvbjETMBEGCysG
-AQQBgjc8AgEDEwJVUzEZMBcGCysGAQQBgjc8AgECEwhEZWxhd2FyZTEQMA4GA1UE
-BRMHNDMzNzQ0NjESMBAGA1UECRMJU3VpdGUgOTAwMRcwFQYDVQQJEw4xMzU1IE1h
-cmtldCBTdDEOMAwGA1UEERMFOTQxMDMxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpD
-YWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJhbmNpc2NvMRYwFAYDVQQKEw1Ud2l0
-dGVyLCBJbmMuMRkwFwYDVQQLExBUd2l0dGVyIFNlY3VyaXR5MRQwEgYDVQQDEwt0
-d2l0dGVyLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMIImPpn
-AAVVtgthDhrXtYrBzAO+PBf7lPfZ+kyfRmCcaq19OuU0WhKwsguq7JbhWIEvrWCr
-R5Np44R1U8H5D7lGq57qqxiYjGhUCFFlQxphlydcXg8V6c0Wq91RW3Yv/NMRmZ3S
-pj2HAnXmJJbiBD4UnPp+uHFCNwC1sIriM5WL2j/7Y003YtUcAuowftwNU9XUC7ij
-EBNtH4mUC2qURGcpgq3m1bBS/JVXBtbRImaE05IqAseUVt9VP8IT8nwWeDOhU/d3
-l1y3lgXVRPS/74MiXXrmj+Ss3zSetg8KU/Aa23E3aZL2FKkcdWVyRSQJOyxq17lp
-pdzfbZxr/MaiWzECAwEAAaOCA3kwggN1MB8GA1UdIwQYMBaAFD3TUKXWoK3u80pg
-CmXTIdT4+NYPMB0GA1UdDgQWBBSfYnuyiA7uG3ngaSTluj9HpgsC8DAnBgNVHREE
-IDAeggt0d2l0dGVyLmNvbYIPd3d3LnR3aXR0ZXIuY29tMA4GA1UdDwEB/wQEAwIF
-oDAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwdQYDVR0fBG4wbDA0oDKg
-MIYuaHR0cDovL2NybDMuZGlnaWNlcnQuY29tL3NoYTItZXYtc2VydmVyLWcxLmNy
-bDA0oDKgMIYuaHR0cDovL2NybDQuZGlnaWNlcnQuY29tL3NoYTItZXYtc2VydmVy
-LWcxLmNybDBLBgNVHSAERDBCMDcGCWCGSAGG/WwCATAqMCgGCCsGAQUFBwIBFhxo
-dHRwczovL3d3dy5kaWdpY2VydC5jb20vQ1BTMAcGBWeBDAEBMIGIBggrBgEFBQcB
-AQR8MHowJAYIKwYBBQUHMAGGGGh0dHA6Ly9vY3NwLmRpZ2ljZXJ0LmNvbTBSBggr
-BgEFBQcwAoZGaHR0cDovL2NhY2VydHMuZGlnaWNlcnQuY29tL0RpZ2lDZXJ0U0hB
-MkV4dGVuZGVkVmFsaWRhdGlvblNlcnZlckNBLmNydDAMBgNVHRMBAf8EAjAAMIIB
-fAYKKwYBBAHWeQIEAgSCAWwEggFoAWYAdgCkuQmQtBhYFIe7E6LMZ3AKPDWYBPkb
-37jjd80OyA3cEAAAAVNdgFLZAAAEAwBHMEUCICZCA9wZjkyHJRy3UTCYnwI21m/U
-XKRXWc7US9arx68qAiEAtK1UZMDl2wRt/o1OxInzFdQCQ+2QTIvLbHe5slXu6boA
-dQBo9pj4H2SCvjqM7rkoHUz8cVFdZ5PURNEKZ6y7T0/7xAAAAVNdgFKcAAAEAwBG
-MEQCIGF6AFQ8TKA8AqktUZ/45JJuKYHCIFIkqcPWIIDLWIZmAiA5PVUV5BBCM2AK
-ce/CeXCyim1y140g/4RxghYW6sNCNwB1AFYUBpov18Ls0/XhvUSyPsdGdrm8mRFc
-wO+UmFXWidDdAAABU12AU6YAAAQDAEYwRAIgXUM1kBRW2bTGAqVvy/aDoYTrdKvM
-I6x5p0FF2S+jGmkCIFmAWDXHV/YBi4thS8HGZc3iVCh5wwaCGM3kztEaUYmQMA0G
-CSqGSIb3DQEBCwUAA4IBAQC7+PUbZaNQAx8YEMg1Uy+cih5Iar3l5ljJ0eih/KsD
-Qo9Y8woYppEuwVC3cN0V2q0I8RXSRE105BgrZbYF2fn32CRs21/sbH0/v6VMonNo
-OEJBzeL20fjYidN1Sr39q02e7kjJNCPVg8yTlRREpSXlsfwXWFOnACSBwpRzmD43
-bRKVH6zjIPiy2wmxXP6ibb3p0ITHnosxLsf3pWXjL/YeWqQq6mUDMRKmeCRR3k1E
-03kXQyxV4AD4hccLqP4K6m17dOkpWbKWNN+/wxWy/ApMuP0hNPgoZSLQBaMidNzh
-Y63izHj1KcOdLNg8VVCCEPoEX8IlbLMIY/YTfN5XAFjs
+IFZhbGlkYXRpb24gU2VydmVyIENBMB4XDTE4MDIyMzAwMDAwMFoXDTE5MDQwODEy
+MDAwMFowgeQxHTAbBgNVBA8MFFByaXZhdGUgT3JnYW5pemF0aW9uMRMwEQYLKwYB
+BAGCNzwCAQMTAlVTMRkwFwYLKwYBBAGCNzwCAQITCERlbGF3YXJlMRAwDgYDVQQF
+Ewc0MzM3NDQ2MQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQG
+A1UEBxMNU2FuIEZyYW5jaXNjbzEWMBQGA1UEChMNVHdpdHRlciwgSW5jLjEZMBcG
+A1UECxMQVHdpdHRlciBTZWN1cml0eTEUMBIGA1UEAxMLdHdpdHRlci5jb20wggEi
+MA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDRDIxB2Cj0SQtIOuWHjdzO5XKD
+lqUEFW69HmazatAWqN0Up9jel/8GMzfwMso650IRBBrhvJTPc3TdHn/JEscGAcnp
+IRrZkbTtpKMIJeNuWiACQosREt0Ur8gGLce4PJlt2BqMRJJ++SE8eV9Ryyl2Sgm+
+kqY65SML27IecrOkNmMuZKIUw/gLpt8msOnxy5JJWsjA3z9ND6FAx2DCbZ5GDIpt
+gK07FIV2z+cg1MStpf1TbgZ93pmmX9hnFk4F7VDS6Uf2K5YsPdsI0SwpW9HiG3TK
+9oz2GvsXffU6HGGM9Vcrpi5WhlaYHT1xCQ13caOduBxCkwhRZY2AFdyCR2MpAgMB
+AAGjggMCMIIC/jAfBgNVHSMEGDAWgBQ901Cl1qCt7vNKYApl0yHU+PjWDzAdBgNV
+HQ4EFgQUjI1wmILOVLL4dplPJjT+dTMjsUUwJwYDVR0RBCAwHoILdHdpdHRlci5j
+b22CD3d3dy50d2l0dGVyLmNvbTAOBgNVHQ8BAf8EBAMCBaAwHQYDVR0lBBYwFAYI
+KwYBBQUHAwEGCCsGAQUFBwMCMHUGA1UdHwRuMGwwNKAyoDCGLmh0dHA6Ly9jcmwz
+LmRpZ2ljZXJ0LmNvbS9zaGEyLWV2LXNlcnZlci1nMi5jcmwwNKAyoDCGLmh0dHA6
+Ly9jcmw0LmRpZ2ljZXJ0LmNvbS9zaGEyLWV2LXNlcnZlci1nMi5jcmwwSwYDVR0g
+BEQwQjA3BglghkgBhv1sAgEwKjAoBggrBgEFBQcCARYcaHR0cHM6Ly93d3cuZGln
+aWNlcnQuY29tL0NQUzAHBgVngQwBATCBiAYIKwYBBQUHAQEEfDB6MCQGCCsGAQUF
+BzABhhhodHRwOi8vb2NzcC5kaWdpY2VydC5jb20wUgYIKwYBBQUHMAKGRmh0dHA6
+Ly9jYWNlcnRzLmRpZ2ljZXJ0LmNvbS9EaWdpQ2VydFNIQTJFeHRlbmRlZFZhbGlk
+YXRpb25TZXJ2ZXJDQS5jcnQwDAYDVR0TAQH/BAIwADCCAQUGCisGAQQB1nkCBAIE
+gfYEgfMA8QB3AKS5CZC0GFgUh7sTosxncAo8NZgE+RvfuON3zQ7IDdwQAAABYcBN
+gy8AAAQDAEgwRgIhAOW65zPD/WuWN0kNEKx0LZBxTqLrQSkh6G7db+TT+FQcAiEA
+o9jTxePOzkuDoq+kO/FY8wKYp+/RWLXj2VbL8wKI/SkAdgBWFAaaL9fC7NP14b1E
+sj7HRna5vJkRXMDvlJhV1onQ3QAAAWHATYOxAAAEAwBHMEUCIQCUWpCOm+ejKxg1
+LyfPlxMEyTqmEyrajGx8PbTaBet8XwIgUKQXhoLMKb66Cvs4goSt3wWLDkX4WmFW
+DPcR9Mbq87gwDQYJKoZIhvcNAQELBQADggEBAJlV+Uez02kinJi7AHiYujgJ5j1k
+icieSrL+qspP6CMv6OCAa353vrVc95+iwDWimE9ovJZrANWpW2bNHClLb/R4pjlc
+yDpzXdCzrQzkqUXmIZZ95hU7SxC56fC3ybINy2e2YqOjUPxBoZjZjWBa20opMMxg
+ntG1ZqcZ9mZE7JJbOqfCyFbe5eyszpujATD3K24IVW5IXdzWd1udumbL5jUdYA56
+TjnyBCxlBjjLdQt2IWOiMATp+IlslwEpNScMl/gSLEX5b550/tn/5MaIY7cPNG38
+WNiLTkomw//7coTN6HdctcTSojOWQqjl8PLzcG+UxZd3vFe7Kf07VFBHav4=
 -----END CERTIFICATE-----
 </asPEM>
-              <subject>businessCategory=Private Organization, jurisdictionCountryName=US, jurisdictionStateOrProvinceName=Delaware, serialNumber=4337446, streetAddress=Suite 900, streetAddress=1355 Market St, postalCode=94103, countryName=US, stateOrProvinceName=California, localityName=San Francisco, organizationName=Twitter, Inc., organizationalUnitName=Twitter Security, commonName=twitter.com</subject>
+              <subject>businessCategory=Private Organization, jurisdictionCountryName=US, jurisdictionStateOrProvinceName=Delaware, serialNumber=4337446, countryName=US, stateOrProvinceName=California, localityName=San Francisco, organizationName=Twitter, Inc., organizationalUnitName=Twitter Security, commonName=twitter.com</subject>
               <issuer>countryName=US, organizationName=DigiCert Inc, organizationalUnitName=www.digicert.com, commonName=DigiCert SHA2 Extended Validation Server CA</issuer>
-              <serialNumber>9920975688038816536871498077062536774</serialNumber>
-              <notBefore>2016-03-09 00:00:00</notBefore>
-              <notAfter>2018-03-14 12:00:00</notAfter>
+              <serialNumber>19145766406727795172801612582821755217</serialNumber>
+              <notBefore>2018-02-23 00:00:00</notBefore>
+              <notAfter>2019-04-08 12:00:00</notAfter>
               <signatureAlgorithm>sha256</signatureAlgorithm>
               <publicKey algorithm="RSA" exponent="65537" size="2048"/>
               <subjectAlternativeName>
@@ -2451,8 +2443,8 @@ vEsXCS+0yx5DaMkHJ8HSXPfqIbloEpw8nL+e/IBcm2PN7EeqJSdnoDfzAIJ9VNep
           <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="256" name="TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384">
             <keyExchange A="0x00ffffffff00000001000000000000000000000000fffffffffffffffffffffffc" B="0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b" Cofactor="1" Field_Type="prime-field" Generator="0x046b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c2964fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5" GeneratorType="uncompressed" GroupSize="256" Order="0x00ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551" Prime="0x00ffffffff00000001000000000000000000000000ffffffffffffffffffffffff" Seed="0xc49d360886e704936a6678e1139d26b7819f7e90" Type="ECDH"/>
           </cipherSuite>
-          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="256" name="TLS_RSA_WITH_AES_256_GCM_SHA384"/>
           <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="256" name="TLS_RSA_WITH_AES_256_CBC_SHA"/>
+          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="256" name="TLS_RSA_WITH_AES_256_GCM_SHA384"/>
           <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="128" name="TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA">
             <keyExchange A="0x00ffffffff00000001000000000000000000000000fffffffffffffffffffffffc" B="0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b" Cofactor="1" Field_Type="prime-field" Generator="0x046b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c2964fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5" GeneratorType="uncompressed" GroupSize="256" Order="0x00ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551" Prime="0x00ffffffff00000001000000000000000000000000ffffffffffffffffffffffff" Seed="0xc49d360886e704936a6678e1139d26b7819f7e90" Type="ECDH"/>
           </cipherSuite>
@@ -2460,8 +2452,8 @@ vEsXCS+0yx5DaMkHJ8HSXPfqIbloEpw8nL+e/IBcm2PN7EeqJSdnoDfzAIJ9VNep
             <keyExchange A="0x00ffffffff00000001000000000000000000000000fffffffffffffffffffffffc" B="0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b" Cofactor="1" Field_Type="prime-field" Generator="0x046b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c2964fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5" GeneratorType="uncompressed" GroupSize="256" Order="0x00ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551" Prime="0x00ffffffff00000001000000000000000000000000ffffffffffffffffffffffff" Seed="0xc49d360886e704936a6678e1139d26b7819f7e90" Type="ECDH"/>
           </cipherSuite>
           <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="128" name="TLS_RSA_WITH_AES_128_CBC_SHA"/>
-          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="128" name="TLS_RSA_WITH_AES_128_GCM_SHA256"/>
           <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="128" name="TLS_RSA_WITH_AES_128_CBC_SHA256"/>
+          <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="128" name="TLS_RSA_WITH_AES_128_GCM_SHA256"/>
           <cipherSuite anonymous="False" connectionStatus="HTTP 200 OK" keySize="128" name="TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256">
             <keyExchange A="0x00ffffffff00000001000000000000000000000000fffffffffffffffffffffffc" B="0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b" Cofactor="1" Field_Type="prime-field" Generator="0x046b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c2964fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5" GeneratorType="uncompressed" GroupSize="256" Order="0x00ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551" Prime="0x00ffffffff00000001000000000000000000000000ffffffffffffffffffffffff" Seed="0xc49d360886e704936a6678e1139d26b7819f7e90" Type="ECDH"/>
           </cipherSuite>
@@ -2572,7 +2564,7 @@ vEsXCS+0yx5DaMkHJ8HSXPfqIbloEpw8nL+e/IBcm2PN7EeqJSdnoDfzAIJ9VNep
     </target>
   </results>
   <invalidTargets>
-    <invalidTarget error="Could not resolve foo">foo</invalidTarget>
-    <invalidTarget error="Could not resolve bar">bar</invalidTarget>
+    <invalidTarget error="Could not resolve hostname">foo:443</invalidTarget>
+    <invalidTarget error="Could not resolve hostname">bar:443</invalidTarget>
   </invalidTargets>
 </document>

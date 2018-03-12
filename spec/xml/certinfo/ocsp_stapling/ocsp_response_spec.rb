@@ -50,7 +50,7 @@ describe SSLyze::XML::Certinfo::OCSPStapling::OCSPResponse do
   end
 
   describe "#produced_at" do
-    let(:expected_time) { 'Feb 28 19:34:58 2018 GMT' }
+    let(:expected_time) { 'Mar 12 12:34:51 2018 GMT' }
 
     let(:xpath) { "#{super()}[producedAt/text()='#{expected_time}']" }
 
