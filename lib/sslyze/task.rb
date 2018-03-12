@@ -24,8 +24,7 @@ module SSLyze
     long_option flag: '--quiet'
 
     # Connectivity options:
-    long_option flag: '--timeout', equals: true
-    long_option flag: '--nb_retries', equals: true
+    long_option flag: '--slow_connection'
     long_option flag: '--https_tunnel', equals: true
     long_option flag: '--starttls', equals: true
     long_option flag: '--xmpp_to', equals: true
