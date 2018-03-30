@@ -50,9 +50,7 @@ describe SSLyze::XML::Certinfo::OCSPStapling::OCSPResponse do
   end
 
   describe "#produced_at" do
-    let(:expected_time) { 'Mar 12 12:34:51 2018 GMT' }
-
-    let(:xpath) { "#{super()}[producedAt/text()='#{expected_time}']" }
+    let(:expected_time) { node.at_xpath('producedAt').inner_text }
 
     it "should query producedAt and return a Time object" do
       expect(subject.produced_at).to be == Time.parse(expected_time)

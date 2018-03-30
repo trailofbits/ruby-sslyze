@@ -6,7 +6,7 @@ describe SSLyze::XML::Target do
   include_examples "XML specs"
 
   let(:xpath) { '/document/results/target' }
-  let(:expected_ip) { '192.30.255.112' }
+  let(:expected_ip) { '172.217.3.206' }
 
   subject { described_class.new(xml.at(xpath)) }
 

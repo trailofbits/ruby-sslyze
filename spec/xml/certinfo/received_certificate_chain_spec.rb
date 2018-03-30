@@ -13,15 +13,14 @@ describe SSLyze::XML::Certinfo::ReceivedCertificateChain do
 
   describe "#each_certificate" do
     context "when 'certificate' XML children are present" do
-      let(:xpath)       { "#{super()}[certificate]" }
-      let(:xpath_count) { xml.xpath(xpath).count    }
+      let(:xpath) { "#{super()}[certificate]" }
+      let(:count) { node.xpath('./certificate').count    }
 
       it "should yield successive Certificate objects" do
         expect { |b|
           subject.each_certificate(&b)
         }.to yield_successive_args(
-          SSLyze::XML::Certinfo::Certificate,
-          SSLyze::XML::Certinfo::Certificate
+          *[SSLyze::XML::Certinfo::Certificate] * count
         )
       end
     end
@@ -70,8 +69,6 @@ describe SSLyze::XML::Certinfo::ReceivedCertificateChain do
       let(:xpath_count) { xml.at(xpath).xpath('certificate').count - 2 }
 
       it "should yield the intermediate certificates" do
-        pending "<receivedCertificateChain/> always has at most two <certificate/> children"
-
         expect { |b|
           subject.each_intermediate(&b)
         }.to yield_successive_args(
@@ -97,8 +94,6 @@ describe SSLyze::XML::Certinfo::ReceivedCertificateChain do
       let(:xpath_count) { xml.at(xpath).xpath('certificate').count - 2 }
 
       it "should yield the intermediate certificates" do
-        pending "<receivedCertificateChain/> always has at most two <certificate/> children"
-
         expect(subject.intermediates).to be_a(Array).and(all(be_kind_of(SSLyze::XML::Certinfo::Certificate)))
       end
     end
