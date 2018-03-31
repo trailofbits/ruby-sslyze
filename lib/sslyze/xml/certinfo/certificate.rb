@@ -91,7 +91,7 @@ module SSLyze
         # @group OpenSSL Methods
         #
         def public_key
-          @public_key ||= PublicKey.new(x509.public_key)
+          @public_key ||= PublicKey.new(@node.at_xpath('publicKey'))
         end
 
         #
