@@ -18,7 +18,7 @@ module SSLyze
       # @return [SessionResumptionWithSessionIDs, nil]
       #
       def session_resumption_with_session_ids
-        @session_resumption_with_session_ids ||= if (element = @node.at('sessionResumptionWithSessionIDs'))
+        @session_resumption_with_session_ids ||= if (element = @node.at_xpath('sessionResumptionWithSessionIDs'))
                                                    SessionResumptionWithSessionIDs.new(element)
                                                  end
       end
