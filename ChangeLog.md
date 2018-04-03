@@ -1,3 +1,8 @@
+### 1.2.0 / 2018-04-03
+
+* Replaced `SSLyze::X509::PublicKey` with
+  {SSLyze::XML::Certinfo::Certificate::PublicKey}.
+
 ### 1.1.0 / 2018-03-12
 
 * Require [sslyze] >= 1.4.0
@@ -20,7 +25,7 @@
 * Added {SSLyze::X509::Extensions::KeyUsage}.
 * Added {SSLyze::X509::Extensions::SubjectAltName}.
 * Added {SSLyze::X509::Name}.
-* Added {SSLyze::X509::PublicKey}.
+* Added `SSLyze::X509::PublicKey`.
 * Moved all XML related classes into {SSLyze::XML}.
 * Updated {SSLyze::XML} and classes to represent the current sslyze 1.3.4 XSD.
 
