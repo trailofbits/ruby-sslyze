@@ -5,29 +5,38 @@ require 'sslyze/xml/protocol/cipher_suite'
 describe SSLyze::XML::Protocol::CipherSuite do
   include_examples "XML specs"
 
-  subject { described_class.new(xml.at('/document/results/target/tlsv1_2/preferredCipherSuite/cipherSuite')) }
+  let(:expected_name) { 'TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256' }
+
+  let(:xpath) { '/document/results/target/tlsv1_2/preferredCipherSuite/cipherSuite' }
 
   describe "#name" do
+    let(:xpath) { "#{super()}[@name='#{expected_name}']"  }
+
     it "should parse the name attribute" do
-      expect(subject.name).to be == 'TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256'
+      expect(subject.name).to be == expected_name
     end
   end
 
   describe "#rfc_name" do
+    let(:xpath) { "#{super()}[@name='#{expected_name}']"  }
+
     it "should return the RFC cipher suite name" do
-      expect(subject.rfc_name).to be == 'TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256'
+      expect(subject.rfc_name).to be == expected_name
     end
   end
 
   describe "#openssl_name" do
+    let(:openssl_name) { 'ECDHE-RSA-AES128-GCM-SHA256' }
+    let(:xpath) { "#{super()}[@name='#{expected_name}']"  }
+
     it "should map the RFC name back to the OpenSSL name" do
-      expect(subject.openssl_name).to be == 'ECDHE-RSA-AES128-GCM-SHA256'
+      expect(subject.openssl_name).to be == openssl_name
     end
   end
 
   describe "#connection_status" do
     it "should parse the connectionStatus attribute" do
-      expect(subject.connection_status).to be == 'HTTP 200 OK'
+      expect(subject.connection_status).to be == node['connectionStatus']
     end
   end
 
@@ -44,10 +53,10 @@ describe SSLyze::XML::Protocol::CipherSuite do
   end
 
   describe "#key_exchange" do
+    let(:xpath) { '/document/results/target/tlsv1_2/acceptedCipherSuites/cipherSuite' }
+
     context "when the keyExchange child is present" do
-      subject do
-        described_class.new(xml.at('/document/results/target/tlsv1_2/acceptedCipherSuites/cipherSuite[keyExchange]'))
-      end
+      let(:xpath) { "#{super()}[keyExchange]" }
 
       it do
         expect(subject.key_exchange).to be_kind_of(described_class::KeyExchange)
@@ -55,9 +64,7 @@ describe SSLyze::XML::Protocol::CipherSuite do
     end
 
     context "when the keyExchange object is missing" do
-      subject do
-        described_class.new(xml.at('/document/results/target/tlsv1_2/acceptedCipherSuites/cipherSuite[not(./keyExchange)]'))
-      end
+      let(:xpath) { "#{super()}[not(./keyExchange)]" }
 
       it { expect(subject.key_exchange).to be nil }
     end

@@ -116,7 +116,7 @@ JqbaIVifYwqwNN+4lRxS3F5lNlA/il12IOgbRioLI62o8G0DaEUQgHNf8vSG
 
   describe "#public_key" do
     it do
-      expect(subject.public_key).to be_a(SSLyze::X509::PublicKey)
+      expect(subject.public_key).to be_a(described_class::PublicKey)
     end
   end
 

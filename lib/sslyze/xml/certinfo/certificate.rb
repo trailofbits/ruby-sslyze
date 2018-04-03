@@ -1,7 +1,7 @@
 require 'sslyze/xml/plugin'
+require 'sslyze/xml/certinfo/certificate/public_key'
 require 'sslyze/x509/name'
 require 'sslyze/x509/extension_set'
-require 'sslyze/x509/public_key'
 
 require 'openssl'
 
@@ -86,12 +86,12 @@ module SSLyze
         end
 
         #
-        # @return [X509::PublicKey]
+        # @return [PublicKey]
         #
         # @group OpenSSL Methods
         #
         def public_key
-          @public_key ||= X509::PublicKey.new(x509.public_key)
+          @public_key ||= PublicKey.new(@node.at_xpath('publicKey'))
         end
 
         #

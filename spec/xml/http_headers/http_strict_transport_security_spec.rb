@@ -28,8 +28,6 @@ describe SSLyze::XML::HTTPHeaders::HTTPStrictTransportSecurity do
       end
 
       it do
-        pending "need an example with no 'includeSubDomains' attribute"
-
         expect(subject.include_sub_domains?).to be nil
       end
     end
@@ -50,8 +48,6 @@ describe SSLyze::XML::HTTPHeaders::HTTPStrictTransportSecurity do
       end
 
       it do
-        pending "need an example where 'isSupported' is 'False'"
-
         expect(subject.is_supported?).to be false
       end
     end
@@ -74,8 +70,6 @@ describe SSLyze::XML::HTTPHeaders::HTTPStrictTransportSecurity do
       end
 
       it do
-        pending "need an example with no 'maxAge' attribute"
-
         expect(subject.max_age).to be nil
       end
     end
@@ -98,8 +92,6 @@ describe SSLyze::XML::HTTPHeaders::HTTPStrictTransportSecurity do
       end
 
       it do
-        pending "need an example with no 'preload' attribute"
-
         expect(subject.preload?).to be nil
       end
     end
