@@ -6,7 +6,7 @@ describe SSLyze::XML::Target do
   include_examples "XML specs"
 
   let(:xpath) { '/document/results/target' }
-  let(:expected_ip) { '172.217.3.206' }
+  let(:expected_ip) { node['ip'] }
 
   subject { described_class.new(xml.at(xpath)) }
 
@@ -29,8 +29,6 @@ describe SSLyze::XML::Target do
   end
 
   describe "#ipaddr" do
-    let(:xpath) { "#{super()}[@ip='#{expected_ip}']" }
-
     it "must parse the ip attribute" do
       expect(subject.ipaddr).to be == IPAddr.new(expected_ip)
     end
