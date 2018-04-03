@@ -18,7 +18,7 @@ module SSLyze
           #
           # Initializes the public-key information.
           #
-          # @param [Nokogiri::XML::Node]
+          # @param [Nokogiri::XML::Node] node
           #
           def initialize(node)
             @node = node
