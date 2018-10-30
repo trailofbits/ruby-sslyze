@@ -1,3 +1,5 @@
+require 'sslyze/xml/exceptions'
+
 module SSLyze
   class XML
     module Attributes
@@ -23,6 +25,24 @@ module SSLyze
         #
         def exception?
           !exception.nil?
+        end
+
+        private
+
+        #
+        # Checks for the exception attribute and raises an exception if present.
+        #
+        # @yield []
+        #   If no exception attribute is present, the method will yield control.
+        #
+        # @raise [PluginException]
+        #
+        def exception!
+          if (message = exception)
+            raise(PluginException,message)
+          else
+            yield
+          end
         end
       end
     end
