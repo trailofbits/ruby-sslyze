@@ -24,11 +24,25 @@ describe SSLyze::XML::Reneg do
 
     context "when the '<sessionRenegotiation/>' element is omitted" do
       subject do
-        described_class.new(xml.at("#{xpath}[not(./sessionRenegotiation)]"))
+        described_class.new(xml.at("#{xpath}[not(./sessionRenegotiation) and not(@exception)]"))
       end
 
       it do
+        pending "need an example with no 'sessionRenegotiation' element and no 'exception' attribute"
+
         expect(subject.session_renegotiation).to be nil
+      end
+    end
+
+    context "when an 'exception' attribute is present" do
+      subject do
+        described_class.new(xml.at("#{xpath}[@exception]"))
+      end
+
+      it do
+        expect {
+          subject.session_renegotiation
+        }.to raise_error(SSLyze::XML::PluginException)
       end
     end
   end
