@@ -16,10 +16,14 @@ module SSLyze
       #
       # @return [SessionResumptionWithSessionIDs, nil]
       #
+      # @raise [PluginException]
+      #
       def session_resumption_with_session_ids
-        @session_resumption_with_session_ids ||= if (element = @node.at_xpath('sessionResumptionWithSessionIDs'))
-                                                   SessionResumptionWithSessionIDs.new(element)
-                                                 end
+        @session_resumption_with_session_ids ||= exception! do
+          if (element = @node.at_xpath('sessionResumptionWithSessionIDs'))
+            SessionResumptionWithSessionIDs.new(element)
+          end
+        end
       end
 
       alias with_session_ids session_resumption_with_session_ids
@@ -29,10 +33,14 @@ module SSLyze
       #
       # @return [SessionResumptionWithTLSTickets, nil]
       #
+      # @raise [PluginException]
+      #
       def session_resumption_with_tls_tickets
-        @session_resumption_with_tls_tickets ||= if (element = @node.at_xpath('sessionResumptionWithTLSTickets'))
-                                                   SessionResumptionWithTLSTickets.new(element)
-                                                 end
+        @session_resumption_with_tls_tickets ||= exception! do
+          if (element = @node.at_xpath('sessionResumptionWithTLSTickets'))
+            SessionResumptionWithTLSTickets.new(element)
+          end
+        end
       end
 
       alias with_tls_tickets session_resumption_with_tls_tickets

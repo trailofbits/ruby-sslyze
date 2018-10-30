@@ -34,10 +34,12 @@ module SSLyze
       # @return [Boolean]
       #   Specifies whether any cipher suite was accepted.
       #
+      # @raise [PluginException]
+      #
       # @since 1.0.0
       #
       def is_protocol_supported?
-        Boolean[@node['isProtocolSupported']]
+        exception! { Boolean[@node['isProtocolSupported']] }
       end
 
       alias is_supported? is_protocol_supported?
@@ -52,11 +54,15 @@ module SSLyze
       #
       # @return [Enumerator]
       #
+      # @raise [PluginException]
+      #
       def each_rejected_cipher_suite
         return enum_for(__method__) unless block_given?
 
-        @node.xpath('rejectedCipherSuites/cipherSuite').each do |cipher_suite|
-          yield CipherSuite.new(cipher_suite)
+        exception! do
+          @node.xpath('rejectedCipherSuites/cipherSuite').each do |cipher_suite|
+            yield CipherSuite.new(cipher_suite)
+          end
         end
       end
 
@@ -78,11 +84,15 @@ module SSLyze
       #
       # @return [Enumerator]
       #
+      # @raise [PluginException]
+      #
       def each_accepted_cipher_suite
         return enum_for(__method__) unless block_given?
 
-        @node.xpath('acceptedCipherSuites/cipherSuite').each do |cipher_suite|
-          yield CipherSuite.new(cipher_suite)
+        exception! do
+          @node.xpath('acceptedCipherSuites/cipherSuite').each do |cipher_suite|
+            yield CipherSuite.new(cipher_suite)
+          end
         end
       end
 
@@ -102,10 +112,14 @@ module SSLyze
       #
       # @since 1.0.0
       #
+      # @raise [PluginException]
+      #
       def preferred_cipher_suite
-        @preferred_cipher_suite ||= if (element = @node.at_xpath('preferredCipherSuite/cipherSuite'))
-                                      CipherSuite.new(element)
-                                    end
+        @preferred_cipher_suite ||= exception! do
+          if (element = @node.at_xpath('preferredCipherSuite/cipherSuite'))
+            CipherSuite.new(element)
+          end
+        end
       end
 
       #
@@ -117,13 +131,17 @@ module SSLyze
       #
       # @return [Enumerator]
       #
+      # @raise [PluginException]
+      #
       # @since 1.0.0
       #
       def each_error
         return enum_for(__method__) unless block_given?
 
-        @node.xpath('errors/cipherSuite').each do |cipher_suite|
-          yield CipherSuite.new(cipher_suite)
+        exception! do
+          @node.xpath('errors/cipherSuite').each do |cipher_suite|
+            yield CipherSuite.new(cipher_suite)
+          end
         end
       end
 
@@ -131,6 +149,8 @@ module SSLyze
       # The errored cipher suites.
       #
       # @return [Array<CipherSuite>]
+      #
+      # @raise [PluginException]
       #
       # @since 1.0.0
       #

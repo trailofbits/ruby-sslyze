@@ -18,9 +18,11 @@ module SSLyze
       # @return [SessionResumptionWithSessionIDs, nil]
       #
       def session_resumption_with_session_ids
-        @session_resumption_with_session_ids ||= if (element = @node.at_xpath('sessionResumptionWithSessionIDs'))
-                                                   SessionResumptionWithSessionIDs.new(element)
-                                                 end
+        @session_resumption_with_session_ids ||= exception! do
+          if (element = @node.at_xpath('sessionResumptionWithSessionIDs'))
+            SessionResumptionWithSessionIDs.new(element)
+          end
+        end
       end
 
       alias with_session_ids session_resumption_with_session_ids

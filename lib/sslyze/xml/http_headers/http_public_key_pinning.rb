@@ -38,8 +38,10 @@ module SSLyze
         def each_pin_sha256
           return enum_for(__method__) unless block_given?
 
-          @node.xpath('pinSha256').each do |element|
-            yield element.inner_text
+          exception! do
+            @node.xpath('pinSha256').each do |element|
+              yield element.inner_text
+            end
           end
         end
 
@@ -62,7 +64,7 @@ module SSLyze
         # @return [Boolean]
         #
         def include_sub_domains?
-          Boolean[@node['includeSubDomains']]
+          exception! { Boolean[@node['includeSubDomains']] }
         end
 
         #
@@ -71,9 +73,11 @@ module SSLyze
         # @return [Integer, nil]
         #
         def max_age
-          @max_age ||= if (value = @node['maxAge'])
-                         value.to_i
-                       end
+          @max_age ||= exception! do
+            if (value = @node['maxAge'])
+              value.to_i
+            end
+          end
         end
 
         #
@@ -82,7 +86,7 @@ module SSLyze
         # @return [Boolean]
         #
         def report_only
-          Boolean[@node['reportOnly']]
+          exception! { Boolean[@node['reportOnly']] }
         end
 
         #
@@ -91,10 +95,12 @@ module SSLyze
         # @return [String, nil]
         #
         def report_uri
-          @report_uri ||= case (value = @node['reportUri'])
-                          when nil, 'None' then nil
-                          else                  value
-                          end
+          @report_uri ||= exception! do
+            case (value = @node['reportUri'])
+            when nil, 'None' then nil
+            else                  value
+            end
+          end
         end
 
         #
@@ -103,7 +109,7 @@ module SSLyze
         # @return [Boolean]
         #
         def is_valid_pin_configured?
-          Boolean[@node['isValidPinConfigured']]
+          exception! { Boolean[@node['isValidPinConfigured']] }
         end
 
         #
@@ -112,7 +118,7 @@ module SSLyze
         # @return [Boolean]
         #
         def is_backup_pin_configured?
-          Boolean[@node['isBackupPinConfigured']]
+          exception! { Boolean[@node['isBackupPinConfigured']] }
         end
 
       end

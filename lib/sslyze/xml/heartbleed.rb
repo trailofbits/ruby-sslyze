@@ -16,10 +16,14 @@ module SSLyze
       #
       # @return [OpenSSLHeartbleed]
       #
+      # @raise [PluginException]
+      #
       def openssl_heartbleed
-        @openssl_heartbleed ||= if (element = @node.at_xpath('openSslHeartbleed'))
-                                  OpenSSLHeartbleed.new(element)
-                                end
+        @openssl_heartbleed ||= exception! do
+          if (element = @node.at_xpath('openSslHeartbleed'))
+            OpenSSLHeartbleed.new(element)
+          end
+        end
       end
 
       alias openssl openssl_heartbleed

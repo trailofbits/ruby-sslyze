@@ -30,7 +30,7 @@ module SSLyze
         # @return [Boolean]
         #
         def include_sub_domains?
-          Boolean[@node['includeSubDomains']]
+          exception! { Boolean[@node['includeSubDomains']] }
         end
 
         #
@@ -39,9 +39,11 @@ module SSLyze
         # @return [Integer, nil]
         #
         def max_age
-          @max_age ||= if (value = @node['maxAge'])
-                         value.to_i
-                       end
+          @max_age ||= exception! do
+            if (value = @node['maxAge'])
+              value.to_i
+            end
+          end
         end
 
         #
@@ -50,7 +52,7 @@ module SSLyze
         # @return [Boolean]
         #
         def preload?
-          Boolean[@node['preload']]
+          exception! { Boolean[@node['preload']] }
         end
 
       end

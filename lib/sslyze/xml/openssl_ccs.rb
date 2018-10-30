@@ -12,16 +12,20 @@ module SSLyze
       #
       # @return [OpenSSLCCSInjection]
       #
+      # @raise [PluginException]
+      #
       def openssl_ccs_injection
-        @openssl_ccs_injection ||= OpenSSLCCSInjection.new(
-          @node.at_xpath('openSslCcsInjection')
-        )
+        @openssl_ccs_injection ||= exception! do
+          OpenSSLCCSInjection.new(@node.at_xpath('openSslCcsInjection'))
+        end
       end
 
       alias injection openssl_ccs_injection
 
       #
       # @return [Boolean]
+      #
+      # @raise [PluginException]
       #
       def is_vulnerable?
         openssl_ccs_injection.is_vulnerable?

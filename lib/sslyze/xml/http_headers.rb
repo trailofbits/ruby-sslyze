@@ -16,10 +16,14 @@ module SSLyze
       #
       # @return [HTTPStrictTransportSecurity, nil]
       #
+      # @raise [PluginException]
+      #
       def http_strict_transport_security
-        @http_strict_transport_security ||= if (element = @node.at_xpath('httpStrictTransportSecurity'))
-                                              HTTPStrictTransportSecurity.new(element)
-                                            end
+        @http_strict_transport_security ||= exception! do
+          if (element = @node.at_xpath('httpStrictTransportSecurity'))
+            HTTPStrictTransportSecurity.new(element)
+          end
+        end
       end
 
       alias strict_transport_security http_strict_transport_security
@@ -29,10 +33,14 @@ module SSLyze
       #
       # @return [HTTPPublicKeyPinning, nil]
       #
+      # @raise [PluginException]
+      #
       def http_public_key_pinning
-        @http_public_key_pinning ||= if (element = @node.at_xpath('httpPublicKeyPinning'))
-                                       HTTPPublicKeyPinning.new(element)
-                                     end
+        @http_public_key_pinning ||= exception! do
+          if (element = @node.at_xpath('httpPublicKeyPinning'))
+            HTTPPublicKeyPinning.new(element)
+          end
+        end
       end
 
       alias public_key_pinning http_public_key_pinning

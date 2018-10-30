@@ -18,10 +18,14 @@ module SSLyze
       #
       # @return [ReceivedCertificateChain]
       #
+      # @raise [PluginException]
+      #
       def received_certificate_chain
-        @received_certificate_chain ||= ReceivedCertificateChain.new(
-          @node.at_xpath('receivedCertificateChain')
-        )
+        @received_certificate_chain ||= exception! do
+          ReceivedCertificateChain.new(
+            @node.at_xpath('receivedCertificateChain')
+          )
+        end
       end
 
       alias received_chain received_certificate_chain
@@ -31,10 +35,14 @@ module SSLyze
       #
       # @return [CertificateValidation]
       #
+      # @raise [PluginException]
+      #
       def certificate_validation
-        @certificate_validation ||= CertificateValidation.new(
-          @node.at_xpath('certificateValidation')
-        )
+        @certificate_validation ||= exception! do
+          CertificateValidation.new(
+            @node.at_xpath('certificateValidation')
+          )
+        end
       end
 
       alias validation certificate_validation
@@ -44,11 +52,15 @@ module SSLyze
       #
       # @return [VerifiedCertificateChain, nil]
       #
+      # @raise [PluginException]
+      #
       def verified_certificate_chain
-        @verified_certificate_chain ||= if (element = @node.at_xpath('certificateValidation/verifiedCertificateChain'))
-                                          CertificateValidation::VerifiedCertificateChain.new(element)
-                                          
-                                        end
+        @verified_certificate_chain ||= exception! do
+          if (element = @node.at_xpath('certificateValidation/verifiedCertificateChain'))
+            CertificateValidation::VerifiedCertificateChain.new(element)
+
+          end
+        end
       end
 
       alias verified_chain verified_certificate_chain
@@ -58,8 +70,12 @@ module SSLyze
       #
       # @return [OCSPStapling]
       #
+      # @raise [PluginException]
+      #
       def ocsp_stapling
-        @ocsp_stapling ||= OCSPStapling.new(@node.at_xpath('ocspStapling'))
+        @ocsp_stapling ||= exception! do
+          OCSPStapling.new(@node.at_xpath('ocspStapling'))
+        end
       end
 
     end

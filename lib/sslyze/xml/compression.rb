@@ -15,10 +15,14 @@ module SSLyze
       #
       # @return [CompressionMethod]
       #
+      # @raise [PluginException]
+      #
       def deflate
-        @compression_method ||= CompressionMethod.new(
-          @node.at_xpath('compressionMethod[@type="DEFLATE"]')
-        )
+        @compression_method ||= exception! do
+          CompressionMethod.new(
+            @node.at_xpath('compressionMethod[@type="DEFLATE"]')
+          )
+        end
       end
 
       #

@@ -15,10 +15,14 @@ module SSLyze
       #
       # @return [SessionRenegotiation, nil]
       #
+      # @raise [PluginException]
+      #
       def session_renegotiation
-        @session_renegotiation ||= if (element = @node.at_xpath('sessionRenegotiation'))
-                                     SessionRenegotiation.new(element)
-                                   end
+        @session_renegotiation ||= exception! do
+          if (element = @node.at_xpath('sessionRenegotiation'))
+            SessionRenegotiation.new(element)
+          end
+        end
       end
 
       alias session session_renegotiation
