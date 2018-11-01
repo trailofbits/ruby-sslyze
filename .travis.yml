@@ -14,9 +14,9 @@ rvm:
   - 2.5
   - ruby-head
   - jruby
-
 matrix:
   allow_failures:
+    - rvm: ruby-head
     - rvm: jruby
    
 before_script:
