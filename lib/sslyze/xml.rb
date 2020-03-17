@@ -78,7 +78,7 @@ module SSLyze
     # @return [Float]
     #
     def total_scan_time
-      @start_tls ||= @doc.at_xpath('/document/results/@totalScanTime').value.to_f
+      @total_scan_time ||= @doc.at_xpath('/document/results/@totalScanTime').value.to_f
     end
 
     # Enumerates over each invalid target.
