@@ -75,7 +75,7 @@ module SSLyze
     #
     # Duration of the scan.
     #
-    # @return [Float]
+    # @return [Float, nil]
     #
     def total_scan_time
       @total_scan_time ||= if (attr = @doc.at_xpath('/document/results/@totalScanTime'))
