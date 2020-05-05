@@ -78,7 +78,9 @@ module SSLyze
     # @return [Float]
     #
     def total_scan_time
-      @total_scan_time ||= @doc.at_xpath('/document/results/@totalScanTime').value.to_f
+      @total_scan_time ||= if (attr = @doc.at_xpath('/document/results/@totalScanTime'))
+                             attr.value.to_f
+                           end
     end
 
     # Enumerates over each invalid target.
