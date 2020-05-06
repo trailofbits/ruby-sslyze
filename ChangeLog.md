@@ -1,3 +1,8 @@
+### 1.2.1 / 2020-05-05
+
+* Allow {SSLyze::XML#total_scan_time} to return `nil`, if the `totalScanTime`
+  attribute is missing.
+
 ### 1.2.0 / 2018-04-03
 
 * Replaced `SSLyze::X509::PublicKey` with
