@@ -58,7 +58,7 @@ Parsing sslyze XML output:
 
 ## Copyright
 
-Copyright (c) 2014-2018 Hal Brodigan
+Copyright (c) 2014-2020 Hal Brodigan
 
 See {file:LICENSE.txt} for details.
 
